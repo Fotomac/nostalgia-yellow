@@ -8,6 +8,8 @@ It builds the following rom:
 
 It's also an update of all three, with bug fixes and new features. It's still a work in progress, but there's still potential.
 
+This is the international full-color version.
+
 The current version is v10.0.3 (Summer of Adventure)
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md). Also see the main Pokeyellow repository for more information.

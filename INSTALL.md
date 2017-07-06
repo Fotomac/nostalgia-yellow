@@ -5,8 +5,8 @@
 	git clone https://github.com/bentley/rgbds
 	sudo make -C rgbds install
 
-	git clone --recursive https://github.com/Fotomac/nostalgia-yellow
-	cd nostalgia-yellow
+	git clone --recursive https://github.com/Fotomac/nostalgia-yellow-gbc
+	cd nostalgia-yellow-gbc
 
 To build **pokeyellow.gbc**:
 
@@ -22,8 +22,8 @@ In **Terminal**, run:
 	git clone https://github.com/bentley/rgbds
 	sudo make -C rgbds install
 
-	git clone --recursive https://github.com/Fotomac/nostalgia-yellow
-	cd nostalgia-yellow
+	git clone --recursive https://github.com/Fotomac/nostalgia-yellow-gbc
+	cd nostalgia-yellow-gbc
 
 Then run (in the shell):
 
@@ -41,8 +41,8 @@ Extract the archive and put `rgbasm.exe`, `rgblink.exe` and `rgbfix.exe` in `C:\
 
 In the **Cygwin terminal**:
 
-	git clone --recursive https://github.com/Fotomac/nostalgia-yellow
-	cd nostalgia-yellow
+	git clone --recursive https://github.com/Fotomac/nostalgia-yellow-gbc
+	cd nostalgia-yellow-gbc
 
 Then run (in the Cygwin terminal):
 
