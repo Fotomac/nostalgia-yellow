@@ -1,11 +1,25 @@
 ChoosePlayerName:
 	call OakSpeechSlidePicRight
+	ld a, [wPlayerGender]   ; Added gender check
+	bit 2, a        ; Added gender check
+	jr nz, .AreGirl ; Skip to girl names if you are a girl instead
 	ld de, DefaultNamesPlayer
 	call DisplayIntroNameTextBox
 	ld a, [wCurrentMenuItem]
 	and a
 	jr z, .customName
 	ld hl, DefaultNamesPlayerList
+	call GetDefaultName
+	ld de, wPlayerName
+	call OakSpeechSlidePicLeft
+	jr .done
+.AreGirl
+	ld de, DefaultNamesGirl
+	call DisplayIntroNameTextBox
+	ld a, [wCurrentMenuItem]
+	and a
+	jr z, .customName
+	ld hl, DefaultNamesGirlList
 	call GetDefaultName
 	ld de, wPlayerName
 	call OakSpeechSlidePicLeft
@@ -22,6 +36,12 @@ ChoosePlayerName:
 	call Delay3
 	ld de, RedPicFront
 	ld b, BANK(RedPicFront)
+	ld a, [wPlayerGender] ; Added gender check
+	bit 2, a      ; Added gender check
+	jr z, .AreBoy3
+	ld de, LeafPicFront
+	ld b, BANK(LeafPicFront)
+.AreBoy3
 	call IntroDisplayPicCenteredOrUpperRight
 .done
 	ld hl, YourNameIsText
@@ -194,6 +214,13 @@ DefaultNamesPlayer:
 	next "JACK"
 	db   "@"
 
+DefaultNamesGirl:
+	db   "NEW NAME"
+	next "LEAF"
+	next "ASHLEY"
+	next "JUNE"
+	db   "@"
+
 DefaultNamesRival:
 	db   "NEW NAME"
 	next "BLUE"
@@ -230,6 +257,12 @@ DefaultNamesPlayerList:
 	db "YELLOW@"
 	db "ASH@"
 	db "JACK@"
+
+DefaultNamesGirlList:
+	db "NEW NAME@"
+	db "LEAF@"
+	db "ASHLEY@"
+	db "JUNE@"
 
 DefaultNamesRivalList:
 	db "NEW NAME@"

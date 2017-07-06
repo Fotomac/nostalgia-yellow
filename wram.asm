@@ -3557,6 +3557,9 @@ wDayCareMonOT::   ds NAME_LENGTH ; da53
 
 wDayCareMon:: box_struct wDayCareMon ; da5e
 
+wPlayerGender::
+	ds 1
+
 wMainDataEnd::
 
 

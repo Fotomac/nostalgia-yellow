@@ -14,8 +14,7 @@ SpecialTrainerMoves:
 	db 0
 
 	db BROCK,$1
-	db 2,3,BIND
-	db 2,4,BIDE
+	db 2,4,ROCK_TOMB
 	db 0
 
 	db MISTY,$1
@@ -64,7 +63,7 @@ SpecialTrainerMoves:
 	db 0
 
 	db GIOVANNI,$3
-	db 1,3,FISSURE
+	db 1,3,EARTHQUAKE
 	db 2,2,DOUBLE_TEAM
 	db 3,1,EARTHQUAKE
 	db 3,3,THUNDER

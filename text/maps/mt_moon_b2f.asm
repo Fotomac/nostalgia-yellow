@@ -77,6 +77,9 @@ _MtMoon3BattleText3::
 	text "We, TEAM ROCKET,"
 	line "are #MON"
 	cont "gangsters!"
+
+	para "We strike fear"
+	line "with our strength!"
 	done
 
 _MtMoon3EndBattleText3::
@@ -85,9 +88,9 @@ _MtMoon3EndBattleText3::
 	prompt
 
 _MtMoon3AfterBattleText3::
-	text "Darn it all! My"
-	line "associates won't"
-	cont "stand for this!"
+	text "Damn! My comrades"
+	line "won't shut up"
+	cont "about this!"
 	done
 
 _MtMoon3BattleText4::
@@ -103,14 +106,18 @@ _MtMoon3EndBattleText4::
 
 _MtMoon3AfterBattleText4::
 	text "If you find a"
-	line "fossil, give it"
-	cont "to me and scram!"
+	line "fossil, tell me"
+	cont "where and scram!"
 	done
 
 _MtMoon3BattleText5::
 	text "Little kids"
-	line "should leave"
-	cont "grown-ups alone!"
+	line "shouldn't be"
+	cont "messing around"
+	cont "with grown-ups!"
+
+	para "It could be bad"
+	line "news!"
 	done
 
 _MtMoon3EndBattleText5::

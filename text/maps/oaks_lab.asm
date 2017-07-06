@@ -8,19 +8,19 @@ _OaksLabGaryText1::
 	cont "#MON for me."
 	done
 
-_OaksLabText40::
+_OaksLabText41::
 	text "<RIVAL>: Humph!"
 	line "I'll get a better"
 	cont "#MON than you!"
 	done
 
-_OaksLabText41::
+_OaksLabText42::
 	text "<RIVAL>: Heh, my"
 	line "#MON looks a"
 	cont "lot stronger."
 	done
 
-_OaksLabText39::
+_OaksLabText40::
 	text "That's a #"
 	line "BALL. There's a"
 	cont "#MON inside!"
@@ -82,43 +82,8 @@ _OaksLabAroundWorldText::
 	text "#MON around the"
 	line "world wait for"
 	cont "you, <PLAYER>!"
-	done
 
-_OaksLabGivePokeballsText1::
-	text "OAK: You can't get"
-	line "detailed data on"
-	cont "#MON by just"
-	cont "seeing them."
-
-	para "You must catch"
-	line "them! Use these"
-	cont "to capture wild"
-	cont "#MON."
-
-	para "<PLAYER> got 5"
-	line "# BALLs!@@"
-
-_OaksLabGivePokeballsText2::
-	text ""
-	para "When a wild"
-	line "#MON appears,"
-	cont "it's fair game."
-
-	para "Just like I showed"
-	line "you, throw a #"
-	cont "BALL at it and try"
-	cont "to catch it!"
-
-	para "This won't always"
-	line "work, though."
-
-	para "A healthy #MON"
-	line "could escape. You"
-	cont "have to be lucky!"
-	done
-
-_OaksLabPleaseVisitText::
-	text "OAK: Come see me"
+	para "Come see me"
 	line "sometimes."
 
 	para "I want to know how"
@@ -254,11 +219,14 @@ _OaksLabLeavingText::
 _OaksLabRivalChallengeText::
 	text "<RIVAL>: Wait"
 	line "<PLAYER>!"
-	cont "Let's check out"
-	cont "our #MON!"
+	cont "We did receive"
+	cont "new #MON from"
+	cont "dear old Gramps,"
+	cont "didn't we?"
 
-	para "Come on, I'll take"
-	line "you on!"
+	para "Least we could do"
+	line "is show him which"
+	cont "is stronger!"
 	done
 
 _OaksLabText_1d3be::
@@ -274,10 +242,10 @@ _OaksLabText_1d3c3::
 	prompt
 
 _OaksLabRivalToughenUpText::
-	text "<RIVAL>: Okay!"
-	line "I'll make my"
-	cont "#MON fight to"
-	cont "toughen it up!"
+	text "<RIVAL>: I get it!"
+	line "If my #MON"
+	cont "fights, it'll"
+	cont "toughen up!"
 
 	para "<PLAYER>! Gramps!"
 	line "Smell you later!"
@@ -350,7 +318,37 @@ _OaksLabText25::
 	line "#DEX from OAK!@@"
 
 _OaksLabText26::
-	text "To make a complete"
+	text "You can't get"
+	line "detailed data on"
+	cont "#MON by just"
+	cont "seeing them."
+
+	para "You must catch"
+	line "them! Use these"
+	cont "to capture wild"
+	cont "#MON."
+
+	para "<PLAYER> got 5"
+	line "# BALLs!@@"
+
+_OaksLabText27::
+	text "When a wild"
+	line "#MON appears,"
+	cont "it's fair game."
+
+	para "Just like I showed"
+	line "you, throw a #"
+	cont "BALL at it and"
+	cont "try to catch it!"
+
+	para "This won't always"
+	line "work, though."
+
+	para "A healthy #MON"
+	line "could escape. You"
+	cont "have to be lucky!"
+
+	para "To make a complete"
 	line "guide on all the"
 	cont "#MON in the"
 	cont "world..."
@@ -360,22 +358,22 @@ _OaksLabText26::
 	para "But, I'm too old!"
 	line "I can't do it!"
 
-	para "So, I want you two"
-	line "to fulfill my"
-	cont "dream for me!"
+	para "So, I'm charging"
+	line "you two with"
+	cont "doing it instead!"
 
 	para "Get moving, you"
 	line "two!"
 
-	para "This is a great"
-	line "undertaking in"
+	para "This will leave an"
+	line "indelible mark on"
 	cont "#MON history!"
 	done
 
-_OaksLabText27::
+_OaksLabText28::
 	text "<RIVAL>: Alright"
-	line "Gramps! Leave it"
-	cont "all to me!"
+	line "Gramps! You can"
+	cont "count on me!"
 
 	para "<PLAYER>, I hate to"
 	line "say it, but I"
@@ -387,7 +385,12 @@ _OaksLabText27::
 
 	para "I'll tell her not"
 	line "to lend you one,"
-	cont "<PLAYER>! Hahaha!"
+	cont "<PLAYER>, because"
+	cont "I believe this is"
+	cont "family business!"
+	cont "And you're not"
+	cont "part of the"
+	cont "family, right?"
 	done
 
 _OaksLabText_1d405::

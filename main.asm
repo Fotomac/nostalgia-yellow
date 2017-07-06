@@ -133,13 +133,15 @@ PokedexTileGraphicsEnd:
 WorldMapTileGraphics:           INCBIN "gfx/town_map.2bpp"
 WorldMapTileGraphicsEnd:
 PlayerCharacterTitleGraphics:   INCBIN "gfx/player_title.2bpp"
+FemaleCharacterTitleGraphics:   INCBIN "gfx/player_title_2.2bpp"
 
 INCLUDE "engine/menu/status_screen.asm"
 INCLUDE "engine/menu/party_menu.asm"
 
-RedPicFront: INCBIN "pic/ytrainer/red.pic"
-ShrinkPic1:  INCBIN "pic/trainer/shrink1.pic"
-ShrinkPic2:  INCBIN "pic/trainer/shrink2.pic"
+RedPicFront:  INCBIN "pic/ytrainer/red.pic"
+LeafPicFront: INCBIN "pic/ytrainer/leaf.pic"
+ShrinkPic1:   INCBIN "pic/trainer/shrink1.pic"
+ShrinkPic2:   INCBIN "pic/trainer/shrink2.pic"
 
 INCLUDE "engine/menu/start_sub_menus.asm"
 INCLUDE "engine/items/tms.asm"
@@ -165,16 +167,6 @@ SsCaptainSprite:       INCBIN "gfx/sprites/ss_captain.2bpp"
 Fisher2Sprite:         INCBIN "gfx/sprites/fisher2.2bpp"
 BlackbeltSprite:       INCBIN "gfx/sprites/blackbelt.2bpp"
 GuardSprite:           INCBIN "gfx/sprites/guard.2bpp"
-BallSprite:            INCBIN "gfx/sprites/ball.2bpp"
-OmanyteSprite:         INCBIN "gfx/sprites/omanyte.2bpp"
-BoulderSprite:         INCBIN "gfx/sprites/boulder.2bpp"
-PaperSheetSprite:      INCBIN "gfx/sprites/paper_sheet.2bpp"
-BookMapDexSprite:      INCBIN "gfx/sprites/book_map_dex.2bpp"
-ClipboardSprite:       INCBIN "gfx/sprites/clipboard.2bpp"
-SnorlaxSprite:         INCBIN "gfx/sprites/snorlax.2bpp"
-OldAmberSprite:        INCBIN "gfx/sprites/old_amber.2bpp"
-LyingOldManSprite:     INCBIN "gfx/sprites/lying_old_man.2bpp"
-QuestionMarkSprite:    INCBIN "gfx/sprites/question_mark.2bpp"
 
 INCLUDE "engine/battle/end_of_battle.asm"
 INCLUDE "engine/battle/wild_encounters.asm"
@@ -190,6 +182,8 @@ INCLUDE "engine/overworld/map_sprites.asm"
 
 RedCyclingSprite:     INCBIN "gfx/sprites/cycling.2bpp"
 RedSprite:            INCBIN "gfx/sprites/red.2bpp"
+LeafSprite:           INCBIN "gfx/sprites/leaf.2bpp"
+LeafCyclingSprite:    INCBIN "gfx/sprites/leafcycling.2bpp"
 BlueSprite:           INCBIN "gfx/sprites/blue.2bpp"
 OakSprite:            INCBIN "gfx/sprites/oak.2bpp"
 BugCatcherSprite:     INCBIN "gfx/sprites/bug_catcher.2bpp"
@@ -211,11 +205,9 @@ SailorSprite:         INCBIN "gfx/sprites/sailor.2bpp"
 CookSprite:           INCBIN "gfx/sprites/cook.2bpp"
 BikeShopGuySprite:    INCBIN "gfx/sprites/bike_shop_guy.2bpp"
 MrFujiSprite:         INCBIN "gfx/sprites/mr_fuji.2bpp"
-GiovanniSprite:       INCBIN "gfx/sprites/giovanni.2bpp"
 RocketSprite:         INCBIN "gfx/sprites/rocket.2bpp"
 MediumSprite:         INCBIN "gfx/sprites/medium.2bpp"
 WaiterSprite:         INCBIN "gfx/sprites/waiter.2bpp"
-ErikaSprite:          INCBIN "gfx/sprites/erika.2bpp"
 MomGeishaSprite:      INCBIN "gfx/sprites/mom_geisha.2bpp"
 BrunetteGirlSprite:   INCBIN "gfx/sprites/brunette_girl.2bpp"
 LanceSprite:          INCBIN "gfx/sprites/lance.2bpp"
@@ -227,7 +219,6 @@ ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
 AgathaSprite:         INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite:          INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite:        INCBIN "gfx/sprites/lorelei.2bpp"
-SeelSprite:           INCBIN "gfx/sprites/seel.2bpp"
 
 INCLUDE "engine/battle/moveEffects/substitute_effect.asm"
 INCLUDE "engine/menu/pc.asm"
@@ -1225,7 +1216,7 @@ MistyPic:         INCBIN "pic/ytrainer/misty.pic"
 LtSurgePic:       INCBIN "pic/trainer/lt.surge.pic"
 ErikaPic:         INCBIN "pic/ytrainer/erika.pic"
 KogaPic:          INCBIN "pic/trainer/koga.pic"
-BlainePic:        INCBIN "pic/trainer/blaine.pic"
+BlainePic:        INCBIN "pic/ytrainer/blaine.pic"
 SabrinaPic:       INCBIN "pic/trainer/sabrina.pic"
 GentlemanPic:     INCBIN "pic/trainer/gentleman.pic"
 Rival2Pic:        INCBIN "pic/ytrainer/rival2.pic"
@@ -1977,11 +1968,6 @@ INCLUDE "engine/overworld/cut2.asm"
 
 INCLUDE "engine/overworld/ssanne.asm"
 
-RedFishingTilesFront: INCBIN "gfx/red_fishing_tile_front.2bpp"
-RedFishingTilesBack:  INCBIN "gfx/red_fishing_tile_back.2bpp"
-RedFishingTilesSide:  INCBIN "gfx/red_fishing_tile_side.2bpp"
-RedFishingRodTiles:   INCBIN "gfx/red_fishingrod_tiles.2bpp"
-
 INCLUDE "data/animations.asm"
 
 
@@ -2129,6 +2115,33 @@ SurfingPikachu3GraphicsEnd:
 INCLUDE "engine/unknown_ea3ea.asm"
 
 INCLUDE "engine/overworld/npc_movement_2.asm"
+
+
+SECTION "bank3B",ROMX,BANK[$3B]
+
+SeelSprite:            INCBIN "gfx/sprites/seel.2bpp"
+LaprasSprite:          INCBIN "gfx/sprites/lapras.2bpp"
+
+BrockOverworld:        INCBIN "gfx/sprites/brock.2bpp"
+MistyOverworld:        INCBIN "gfx/sprites/misty.2bpp"
+SurgeOverworld:        INCBIN "gfx/sprites/surge.2bpp"
+ErikaSprite:           INCBIN "gfx/sprites/erika.2bpp"
+KogaOverworld:         INCBIN "gfx/sprites/koga.2bpp"
+SabrinaOverworld:      INCBIN "gfx/sprites/sabrina.2bpp"
+BlaineOverworld:       INCBIN "gfx/sprites/blaine.2bpp"
+GiovanniSprite:        INCBIN "gfx/sprites/giovanni.2bpp"
+
+BallSprite:            INCBIN "gfx/sprites/ball.2bpp"
+OmanyteSprite:         INCBIN "gfx/sprites/omanyte.2bpp"
+BoulderSprite:         INCBIN "gfx/sprites/boulder.2bpp"
+PaperSheetSprite:      INCBIN "gfx/sprites/paper_sheet.2bpp"
+BookMapDexSprite:      INCBIN "gfx/sprites/book_map_dex.2bpp"
+ClipboardSprite:       INCBIN "gfx/sprites/clipboard.2bpp"
+SnorlaxSprite:         INCBIN "gfx/sprites/snorlax.2bpp"
+OldAmberSprite:        INCBIN "gfx/sprites/old_amber.2bpp"
+LyingOldManSprite:     INCBIN "gfx/sprites/lying_old_man.2bpp"
+QuestionMarkSprite:    INCBIN "gfx/sprites/question_mark.2bpp"
+
 
 SECTION "bank3C",ROMX,BANK[$3C]
 

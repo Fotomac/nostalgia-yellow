@@ -97,8 +97,9 @@ _Route11BattleText7::
 	done
 
 _Route11EndBattleText7::
-	text "I saw"
-	line "this coming..."
+	text "Ah hell,"
+	line "I saw this"
+	cont "coming..."
 	prompt
 
 _Route11AfterBattleText7::

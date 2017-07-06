@@ -6,9 +6,9 @@ UseItem_:
 	jp nc, ItemUseTMHM
 	ld hl, ItemUsePtrTable
 	dec a
-	add a
 	ld c, a
 	ld b, 0
+	add hl, bc
 	add hl, bc
 	ld a, [hli]
 	ld h, [hl]
@@ -196,6 +196,11 @@ ItemUseBall:
 .loop
 	call Random
 	ld b,a
+
+; Captures always succeed on Route 1.
+	ld a, [wCurMap]
+	cp a,ROUTE_1
+	jp z, .captured
 
 ; Get the item ID.
 	ld hl,wcf91
@@ -529,11 +534,12 @@ ItemUseBall:
 	cp BATTLE_TYPE_OLD_MAN ; is this the old man battle?
 	jp z,.oldManCaughtMon ; if so, don't give the player the caught Pokémon
 	cp BATTLE_TYPE_PIKACHU
-	jr z,.oldManCaughtMon ; same with Pikachu battle
+	jp z,.oldManCaughtMon ; same with Pikachu battle
 	ld hl,ItemUseBallText05
 	call PrintText
 
 ; Add the caught Pokémon to the Pokédex.
+	callba PlayDefeatedWildMonMusic
 	predef IndexToPokedex
 	ld a, [wd11e]
 	dec a
@@ -2622,7 +2628,7 @@ ThrowBallAtTrainerMon:
 	call PrintText
 	ld hl, ThrowBallAtTrainerMonText2
 	call PrintText
-	jr RemoveUsedItem
+	ret
 
 NoCyclingAllowedHere:
 	ld hl, NoCyclingAllowedHereText

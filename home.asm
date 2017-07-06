@@ -304,16 +304,6 @@ DrawHPBar::
 LoadMonData::
 	jpab LoadMonData_
 
-OverwritewMoves::
-; Write c to [wMoves + b]. Unused.
-	ld hl, wMoves
-	ld e, b
-	ld d, 0
-	add hl, de
-	ld a, c
-	ld [hl], a
-	ret
-
 LoadFlippedFrontSpriteByMonIndex::
 	ld a, 1
 	ld [wSpriteFlipped], a
@@ -608,15 +598,6 @@ PrintLevelCommon::
 	ld de, wd11e
 	ld b, LEFT_ALIGN | 1 ; 1 byte
 	jp PrintNumber
-
-GetwMoves::
-; Unused. Returns the move at index a from wMoves in a
-	ld hl, wMoves
-	ld c, a
-	ld b, 0
-	add hl, bc
-	ld a, [hl]
-	ret
 
 ; copies the base stat data of a pokemon to wMonHeader
 ; INPUT:
@@ -2503,6 +2484,7 @@ DisplayEnemyTrainerTextAndStartBattle::
 	and $1
 	ret nz ; return if the enemy trainer hasn't finished walking to the player's sprite
 	ld [wJoyIgnore], a
+	callba FaceEnemyTrainer
 	ld a, [wSpriteIndex]
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
@@ -3208,13 +3190,6 @@ YesNoChoicePokeCenter::
 	coord hl, 11, 6
 	lb bc, 8, 12
 	jr DisplayYesNoChoice
-
-WideYesNoChoice:: ; unused
-	call SaveScreenTilesToBuffer1
-	ld a, WIDE_YES_NO_MENU
-	ld [wTwoOptionMenuID], a
-	coord hl, 12, 7
-	lb bc, 8, 13
 
 DisplayYesNoChoice::
 	ld a, TWO_OPTION_MENU

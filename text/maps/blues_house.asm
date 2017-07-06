@@ -1,18 +1,22 @@
 _DaisyInitialText::
-	text "Hi ",$52,"!"
-	line $53," is out at"
+	text "Hi <PLAYER>!"
+	line "My brother"
+	cont "<RIVAL> is out at"
 	cont "Grandpa's lab."
 	done
 
 _DaisyOfferMapText::
 	text "Grandpa asked you"
 	line "to run an errand?"
-	cont "Here, this will"
-	cont "help you!"
+	cont "Gee, that's lazy"
+	cont "of him!"
+
+	para "Here, this will"
+	line "help you!"
 	prompt
 
 _GotMapText::
-	text $52," got a"
+	text "<PLAYER> got a"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -23,9 +27,11 @@ _DaisyBagFullText::
 	done
 
 _DaisyUseMapText::
-	text "Use the TOWN MAP"
-	line "to find out where"
-	cont "you are."
+	text "You can use the"
+	line "TOWN MAP to find"
+	cont "out where you are"
+	cont "or check the"
+	cont "names of places."
 	done
 
 _BluesHouseText2::
@@ -36,6 +42,8 @@ _BluesHouseText2::
 	done
 
 _BluesHouseText3::
-	text "It's a big map!"
-	line "This is useful!"
+	text "A map of the KANTO"
+	line "region! I hope"
+	cont "she gives it to"
+	cont "me..."
 	done
