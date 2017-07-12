@@ -1767,7 +1767,7 @@ _NoRoomToStoreText::
 
 _WhatToWithdrawText::
 	text "What do you want"
-	line "to withdraw?"
+	line "to take?"
 	done
 
 _WithdrawHowManyText::
