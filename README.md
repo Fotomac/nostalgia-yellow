@@ -6,9 +6,9 @@ It builds the following rom:
 
 * Pokemon Yellow
 
-It's also an update of all three, with bug fixes and new features. It's still a work in progress, but there's still potential.
+It's also an update with bug fixes and new features. It's still a work in progress, but there's still potential.
 
-The current version is v10.0.3 (Summer of Adventure)
+The current version is v10.0.4 (Summer of Adventure)
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md). Also see the main Pokeyellow repository for more information.
 

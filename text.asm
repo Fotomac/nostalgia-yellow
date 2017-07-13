@@ -1204,6 +1204,11 @@ _NoRunningText::
 	cont "trainer battle!"
 	prompt
 
+_RickRollText::
+	text "No! There's no"
+	line "running around!"
+	prompt
+
 _GotAwayText::
 	text "Got away safely!"
 	prompt

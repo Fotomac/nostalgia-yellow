@@ -1702,6 +1702,10 @@ TryRunningFromBattle:
 	ld hl, CantEscapeText
 	jr .printCantEscapeOrNoRunningText
 .trainerBattle
+	call BattleRandom
+	cp 80
+	ld hl, RickRollText
+	jr c, .printCantEscapeOrNoRunningText
 	ld hl, NoRunningText
 .printCantEscapeOrNoRunningText
 	call PrintText
@@ -1745,6 +1749,10 @@ CantEscapeText:
 
 NoRunningText:
 	TX_FAR _NoRunningText
+	db "@"
+
+RickRollText:
+	TX_FAR _RickRollText
 	db "@"
 
 GotAwayText:
@@ -5380,19 +5388,23 @@ MirrorMoveCopyMove:
 	and a
 ; values for player turn
 	ld a,[wEnemyUsedMove]
-	ld hl,wPlayerSelectedMove
 	ld de,wPlayerMoveNum
+	ld hl,wPlayerSelectedMove
+	ld bc,wEnemySelectedMove
 	jr z,.next
 ; values for enemy turn
 	ld a,[wPlayerUsedMove]
 	ld de,wEnemyMoveNum
 	ld hl,wEnemySelectedMove
+	ld bc,wPlayerSelectedMove
 .next
-	ld [hl],a
 	cp a,MIRROR_MOVE ; did the target Pokemon last use Mirror Move, and miss?
 	jr z,.mirrorMoveFailed
 	and a ; has the target selected any move yet?
-	jr nz,ReloadMoveData
+	jr z,.mirrorMoveFailed
+	ld a,[bc]
+	ld [hl],a
+	jr ReloadMoveData
 .mirrorMoveFailed
 	ld hl,MirrorMoveFailedText
 	call PrintText
