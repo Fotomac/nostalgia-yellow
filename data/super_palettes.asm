@@ -287,6 +287,12 @@ SuperPalettes:
 	RGB 28, 23,  9
 	RGB  6,  6,  6
 
+	; PAL_CHARIZARD
+	RGB 31, 31, 30
+	RGB 27, 15, 10
+	RGB 14, 23, 28
+	RGB  6,  6,  6
+
 GBCBasePalettes:
 	; PAL_ROUTE
 	RGB 31, 31, 31
@@ -574,4 +580,10 @@ GBCBasePalettes:
 	RGB 31, 31, 31
 	RGB 31, 20, 15
 	RGB 28, 14,  0
+	RGB  3,  3,  3
+
+	; PAL_CHARIZARD
+	RGB 31, 31, 31
+	RGB 25,  8,  5
+	RGB  9, 14, 31
 	RGB  3,  3,  3

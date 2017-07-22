@@ -65,3 +65,4 @@ const_value = 0
 	const PAL_GREEN_TRAINER  ; $2D
 	const PAL_PINK_TRAINER   ; $2E
 	const PAL_YELLOW_TRAINER ; $2F
+	const PAL_CHARIZARD ; $30
