@@ -775,12 +775,6 @@ SECTION "bank0F",ROMX,BANK[$0F]
 
 INCLUDE "engine/battle/core.asm"
 
-LoadBackSpriteUnzoomed:
-	ld a, $66
-	ld de, vBackPic
-	push de
-	jp LoadUncompressedBackSprite
-
 
 SECTION "bank10",ROMX,BANK[$10]
 

@@ -6660,8 +6660,6 @@ LoadPlayerBackPic:
 	ld a, BANK(RedPicBack)
 	call UncompressSpriteFromDE
 	call LoadBackSpriteUnzoomed
-	nop
-	nop
 	ld hl, wOAMBuffer
 	xor a
 	ld [hOAMTile], a ; initial tile number
@@ -6695,12 +6693,6 @@ LoadPlayerBackPic:
 	ld e, a
 	dec b
 	jr nz, .loop
-	nop
-	nop
-	nop
-	nop
-	nop
-	nop
 	ld a, $0
 	call SwitchSRAMBankAndLatchClockData
 	ld hl, vSprites
@@ -8745,6 +8737,12 @@ PlayBattleAnimationGotID:
 	pop de
 	pop hl
 	ret
+
+LoadBackSpriteUnzoomed:
+	ld a, $66
+	ld de, vBackPic
+	push de
+	jp LoadUncompressedBackSprite
 
 PlayDefeatedWildMonMusic:
 	call WaitForSoundToFinish
