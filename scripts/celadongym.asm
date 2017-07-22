@@ -47,13 +47,13 @@ CeladonGymText_48963:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_ERIKA
-	lb bc, TM_21, 1
+	lb bc, TM_19, 1
 	call GiveItem
 	jr nc, .BagFull
 	ld a, $a
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM21
+	SetEvent EVENT_GOT_TM19
 	jr .asm_4898c
 .BagFull
 	ld a, $b
@@ -80,8 +80,8 @@ CeladonGymTextPointers:
 	dw CeladonGymText7
 	dw CeladonGymText8
 	dw CeladonGymText9
-	dw TM21Text
-	dw TM21NoRoomText
+	dw TM19Text
+	dw TM19NoRoomText
 
 CeladonGymTrainerHeaders:
 CeladonGymTrainerHeader0:
@@ -153,7 +153,7 @@ CeladonGymText1:
 	TX_ASM
 	CheckEvent EVENT_BEAT_ERIKA
 	jr z, .asm_48a2d
-	CheckEventReuseA EVENT_GOT_TM21
+	CheckEventReuseA EVENT_GOT_TM19
 	jr nz, .asm_48a25
 	call z, CeladonGymText_48963
 	call DisableWaitingAfterTextDisplay
@@ -199,14 +199,14 @@ CeladonGymText9:
 	TX_FAR _CeladonGymText9
 	db "@"
 
-TM21Text:
-	TX_FAR _ReceivedTM21Text
+TM19Text:
+	TX_FAR _ReceivedTM19Text
 	db $0B
-	TX_FAR _TM21ExplanationText
+	TX_FAR _TM19ExplanationText
 	db "@"
 
-TM21NoRoomText:
-	TX_FAR _TM21NoRoomText
+TM19NoRoomText:
+	TX_FAR _TM19NoRoomText
 	db "@"
 
 CeladonGymText2:

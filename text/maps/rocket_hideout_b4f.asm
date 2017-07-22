@@ -1,11 +1,12 @@
 _RocketHideoutJessieJamesText1::
-	text "Not another step,"
-	line "brat!@@"
+	text "JESSIE: Not"
+	line "another step,"
+	cont "brat!@@"
 
 _RocketHideoutJessieJamesText2::
-	text "How dare you"
-	line "humiliate us at"
-	cont "MT.MOON!"
+	text "JESSIE: How dare"
+	line "you humiliate us"
+	cont "at MT.MOON!"
 
 	para "It's payback time,"
 	line "you brat!"

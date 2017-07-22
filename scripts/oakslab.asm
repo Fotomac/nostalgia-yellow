@@ -475,7 +475,7 @@ OaksLabScript17:
 	ld [wPikachuSpawnState], a
 	callba SchedulePikachuSpawnForAfterText
 	call EnablePikachuOverworldSpriteDrawing
-	ld a, $1a
+	ld a, $1b
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	ld a, $12
@@ -483,7 +483,7 @@ OaksLabScript17:
 	ret
 
 OaksLabScript18:
-	ld a, $1b
+	ld a, $1c
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	xor a

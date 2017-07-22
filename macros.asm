@@ -817,6 +817,11 @@ ENDC
 	db x
 ENDM
 
+add_pic: MACRO
+	db BANK(\1)
+	dw \1
+ENDM
+
 sine_wave: MACRO
 ; \1: amplitude
 

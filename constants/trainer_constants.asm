@@ -53,3 +53,4 @@ const_value = 1
 	trainer_const CHANNELER     ; $2D | OPP = $F5
 	trainer_const AGATHA        ; $2E | OPP = $F6
 	trainer_const LANCE         ; $2F | OPP = $F7
+	trainer_const JANINE        ; $30 | OPP = $F8

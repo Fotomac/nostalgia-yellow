@@ -33,7 +33,7 @@ _CardKeyFailText::
 	done
 
 _TrainerNameText::
-	TX_RAM wcd6d
+	TX_RAM wTrainerName
 	text ": @@"
 
 _NoNibbleText::
@@ -2534,12 +2534,11 @@ INCLUDE "text/maps/cerulean_pokecenter.asm"
 INCLUDE "text/maps/cerulean_gym.asm"
 INCLUDE "text/maps/bike_shop.asm"
 INCLUDE "text/maps/cerulean_mart.asm"
-INCLUDE "text/maps/cerulean_badge_house_1.asm"
 
 
 SECTION "Text 6", ROMX, BANK[TEXT_6]
 
-INCLUDE "text/maps/cerulean_badge_house_2.asm"
+INCLUDE "text/maps/cerulean_badge_house.asm"
 INCLUDE "text/maps/lavender_pokecenter.asm"
 INCLUDE "text/maps/pokemon_tower_1f.asm"
 INCLUDE "text/maps/pokemon_tower_2f.asm"

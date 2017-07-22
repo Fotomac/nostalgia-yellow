@@ -33,8 +33,11 @@ asm_f601d:
 	sub $c8
 	jp c, InitWildBattle
 	ld [wTrainerClass], a
+	ld [wTrainerPicID], a
+	ld [wTrainerAINumber], a
 	call GetTrainerInformation
 	callab ReadTrainer
+	callab LoadTrainerPicPointer
 	callab DoBattleTransitionAndInitBattleVariables
 	call _LoadTrainerPic
 	xor a
@@ -155,12 +158,7 @@ _LoadTrainerPic:
 	ld e, a
 	ld a, [wTrainerPicPointer + 1]
 	ld d, a ; de contains pointer to trainer pic
-	ld a, [wLinkState]
-	and a
-	ld a, Bank(TrainerPics) ; this is where all the trainer pics are (not counting Red's)
-	jr z, .loadSprite
-	ld a, Bank(RedPicFront)
-.loadSprite
+	ld a, [wTrainerPicBank]
 	call UncompressSpriteFromDE
 	ld de, vFrontPic
 	ld a, $77
@@ -177,9 +175,7 @@ LoadMonBackPic:
 	call ClearScreenArea
 	ld hl,  wMonHBackSprite - wMonHeader
 	call UncompressMonSprite
-	predef ScaleSpriteByTwo
-	ld de, vBackPic
-	call InterlaceMergeSpriteBuffers ; combine the two buffers to a single 2bpp sprite
+	call LoadBackSpriteUnzoomed
 	ld hl, vSprites
 	ld de, vBackPic
 	ld c, (2*SPRITEBUFFERSIZE)/16 ; count of 16-byte chunks to be copied
@@ -187,12 +183,14 @@ LoadMonBackPic:
 	ld b, a
 	jp CopyVideoData
 
+	ds $8
+
 AnimateSendingOutMon:
 	ld a, [wPredefRegisters]
 	ld h, a
 	ld a, [wPredefRegisters + 1]
 	ld l, a
-	ld a, [$ffe1]
+	ld a, [hStartTileID]
 	ld [H_DOWNARROWBLINKCNT1], a
 	ld b, $4c
 	ld a, [wIsInBattle]
@@ -232,7 +230,7 @@ CopyUncompressedPicToTilemap:
 	ld h, a
 	ld a, [wPredefRegisters + 1]
 	ld l, a
-	ld a, [$ffe1]
+	ld a, [hStartTileID]
 CopyUncompressedPicToHL:
 	ld bc, $707
 	ld de, $14

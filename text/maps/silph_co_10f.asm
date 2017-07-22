@@ -42,12 +42,13 @@ _SilphCo10AfterBattleText2::
 	done
 
 _SilphCoJessieJamesText1::
-	text "Hold it right"
-	line "there, brat!@@"
+	text "JESSIE: Hold it"
+	line "right there,"
+	cont "brat!@@"
 
 _SilphCoJessieJamesText2::
-	text "Our BOSS is in a"
-	line "meeting!"
+	text "MEOWTH: Da BOSS is"
+	line "in a meeting!"
 
 	para "You better not"
 	line "disturb him!"

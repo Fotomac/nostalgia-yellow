@@ -1,12 +1,18 @@
 _MtMoonJessieJamesText1::
-	text "Stop right there!@@"
+	text "JESSIE: Stop right"
+	line "there!@@"
 
 _MtMoonJessieJamesText2::
-	text "That fossil is"
-	line "TEAM ROCKET's!"
+	text "JESSIE: That"
+	line "fossil is TEAM"
+	cont "ROCKET's!"
 
-	para "Surrender now, or "
-	line "prepare to fight!"
+	para "JAMES: Surrender"
+	line "now, or  prepare"
+	cont "to fight!"
+
+	para "MEOWTH! Meowth!"
+	line "That's right!"
 	done
 
 _MtMoonJessieJamesText3::

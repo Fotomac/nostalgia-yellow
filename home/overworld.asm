@@ -241,12 +241,6 @@ OverworldLoopLessDelay::
 	xor a
 	ld [wd435], a
 	call DoBikeSpeedup
-	jr .notRunning
-	ld a, [hJoyHeld] ; Check what buttons are being pressed
-	and B_BUTTON ; Are you holding B?
-	jr z, .notRunning ; If you aren't holding B, skip ahead to step normally.
-	call DoBikeSpeedup ; Make you go faster if you were holding B
-.notRunning ; Normal code resumes here
 	call AdvancePlayerSprite
 	ld a, [wWalkCounter]
 	and a

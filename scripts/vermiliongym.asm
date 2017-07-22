@@ -67,13 +67,13 @@ VermilionGymScript_5caaa:
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
 	SetEvent EVENT_BEAT_LT_SURGE
-	lb bc, TM_24, 1
+	lb bc, TM_34, 1
 	call GiveItem
 	jr nc, .BagFull
 	ld a, $7
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	SetEvent EVENT_GOT_TM24
+	SetEvent EVENT_GOT_TM34
 	jr .set_gym_flags
 
 .BagFull
@@ -135,7 +135,7 @@ VermilionGymText1:
 	TX_ASM
 	CheckEvent EVENT_BEAT_LT_SURGE
 	jr z, .engage_surge
-	CheckEventReuseA EVENT_GOT_TM24
+	CheckEventReuseA EVENT_GOT_TM34
 	jr nz, .after_win_text
 	call z, VermilionGymScript_5caaa
 	call DisableWaitingAfterTextDisplay
@@ -182,13 +182,13 @@ VermilionGymText6:
 	db "@"
 
 VermilionGymText7:
-	TX_FAR _ReceivedTM24Text
+	TX_FAR _ReceivedTM34Text
 	TX_SFX_KEY_ITEM
-	TX_FAR _TM24ExplanationText
+	TX_FAR _TM34ExplanationText
 	db "@"
 
 VermilionGymText8:
-	TX_FAR _TM24NoRoomText
+	TX_FAR _TM34NoRoomText
 	db "@"
 
 ReceivedThunderbadgeText:

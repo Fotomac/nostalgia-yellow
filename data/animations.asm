@@ -165,20 +165,27 @@ AttackAnimationPointers:
 	dw SubstituteAnim
 	dw MetalClawAnim
 	dw CrunchAnim
+	dw ThiefAnim
 	dw FaintAttackAnim
 	dw OutrageAnim
 	dw TwisterAnim
 	dw RolloutAnim
 	dw AncientPowerAnim
 	dw RockTombAnim
+	dw CalmMindAnim
 	dw SludgeBombAnim
 	dw CrossChopAnim
+	dw BrickBreakAnim
 	dw PowderSnowAnim
 	dw GigaDrainAnim
+	dw BulletSeedAnim
 	dw ZapCannonAnim
+	dw ShockWaveAnim
+	dw WaterPulseAnim
 	dw FlameWheelAnim
 	dw RapidSpinAnim
 	dw ScaryFaceAnim
+	dw SecretPowerAnim
 	dw ReturnAnim
 	dw StruggleAnim
 	dw ShowPicAnim
@@ -226,6 +233,7 @@ AttackAnimationPointers:
 ;	db special_effect_id, sound_id
 ; $FF terminated
 PoundAnim:
+ThiefAnim:
 RolloutAnim:
 ReturnAnim:
 StruggleAnim:
@@ -234,6 +242,7 @@ StruggleAnim:
 
 KarateChopAnim:
 CrossChopAnim:
+BrickBreakAnim:
 	db $08,$01,$03
 	db $FF
 
@@ -329,6 +338,7 @@ SlamAnim:
 	db $FF
 
 VineWhipAnim:
+SecretPowerAnim:
 	db $01,$15,$16
 	db $08,$FF,$01
 	db $FF
@@ -429,6 +439,7 @@ TailWhipAnim:
 	db $FF
 
 PoisonStingAnim:
+BulletSeedAnim:
 	db $06,$27,$00
 	db $FF
 
@@ -540,6 +551,7 @@ PsyBeamAnim:
 	db $FF
 
 BubbleBeamAnim:
+WaterPulseAnim:
 	db $12,$3C,$35
 	db $FF
 
@@ -689,6 +701,7 @@ ThunderBoltAnim:
 	db $FF
 
 ThunderWaveAnim:
+ShockWaveAnim:
 	db $42,$55,$29
 	db $02,$FF,$23
 	db $04,$FF,$23
@@ -884,6 +897,7 @@ ReflectAnim:
 	db $FF
 
 FocusEnergyAnim:
+CalmMindAnim:
 	db SE_SPIRAL_BALLS_INWARD, $73
 	db $FF
 

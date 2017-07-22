@@ -189,6 +189,12 @@ PokedexEntryPointers:
 	dw BellsproutDexEntry
 	dw WeepinbellDexEntry
 	dw VictreebelDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw MissingNoDexEntry
+	dw PikabluDexEntry
+	dw RaibluDexEntry
 
 ; string: species name
 ; height in feet, inches
@@ -361,7 +367,7 @@ ArbokDexEntry:
 	db 11,6
 	dw 1430
 	TX_FAR _ArbokDexEntry
-	db "@"
+	db 
 
 PikachuDexEntry:
 	db "MOUSE@"
@@ -375,6 +381,20 @@ RaichuDexEntry:
 	db 2,7
 	dw 660
 	TX_FAR _RaichuDexEntry
+	db "@"
+
+PikabluDexEntry:
+	db "AQUA MOUSE@"
+	db 1,4
+	dw 180
+	TX_FAR _PikabluDexEntry
+	db "@"
+
+RaibluDexEntry:
+	db "AQUA RABBIT@"
+	db 2,7
+	dw 620
+	TX_FAR _RaibluDexEntry
 	db "@"
 
 SandshrewDexEntry:

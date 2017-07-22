@@ -1881,6 +1881,15 @@ wTrainerClass:: ; d030
 
 	ds 1
 
+wTrainerPicID::
+; Defaults to trainer class, can be changed with trainer type $FE
+	ds 1
+
+wTrainerAINumber::
+; Defaults to trainer class, can be changed with trainer type $FE
+	ds 1
+
+wTrainerPicBank:: ds 1
 wTrainerPicPointer:: ; d032
 	ds 2
 	ds 1
@@ -2341,6 +2350,8 @@ wMonHGrowthRate:: ; d0ca
 wMonHLearnset:: ; d0cb
 ; bit field
 	flag_array 50 + 5
+
+wMonHPicBank::
 	ds 1
 
 wSavedTilesetType:: ; d0d3

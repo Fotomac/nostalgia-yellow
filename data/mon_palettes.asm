@@ -26,6 +26,8 @@ MonsterPalettes:
 	db PAL_PURPLEMON ; ARBOK
 	db PAL_YELLOWMON ; PIKACHU
 	db PAL_YELLOWMON ; RAICHU
+	db PAL_BLUEMON   ; PIKABLU
+	db PAL_BLUEMON   ; RAIBLU
 	db PAL_BROWNMON  ; SANDSHREW
 	db PAL_BROWNMON  ; SANDSLASH
 	db PAL_BLUEMON   ; NIDORAN_F
@@ -151,3 +153,55 @@ MonsterPalettes:
 	db PAL_BROWNMON  ; DRAGONITE
 	db PAL_MEWMON    ; MEWTWO
 	db PAL_MEWMON    ; MEW
+ 	
+TrainerPalletes:
+	db PAL_GREYMON           ; UNUSED
+	db PAL_BLUE_TRAINER      ; Youngster
+	db PAL_GREEN_TRAINER     ; Bug Catcher
+	db PAL_CYAN_TRAINER      ; Lass
+	db PAL_BLUE_TRAINER      ; Sailor
+	db PAL_GREEN_TRAINER     ; Camper
+	db PAL_GREEN_TRAINER     ; Picnicker
+	db PAL_MEWMON            ; Pokemaniac
+	db PAL_PURPLE_TRAINER    ; Super Nerd
+	db PAL_BROWN_TRAINER     ; Hiker
+	db PAL_BROWN_TRAINER     ; Biker
+	db PAL_BLUE_TRAINER      ; Burglar
+	db PAL_YELLOW_TRAINER    ; Engineer
+	db PAL_CYAN_TRAINER      ; Swimmer (Female)
+	db PAL_CYAN_TRAINER      ; Fisher
+	db PAL_BLUE_TRAINER      ; Swimmer (Male)
+	db PAL_BROWN_TRAINER     ; Roughneck
+	db PAL_BROWNMON          ; Gambler
+	db PAL_CYAN_TRAINER      ; Beauty
+	db PAL_MEWMON            ; Psychic
+	db PAL_RED_TRAINER       ; Rocker
+	db PAL_PURPLE_TRAINER    ; Juggler
+	db PAL_BROWN_TRAINER     ; Tamer
+	db PAL_BLUE_TRAINER      ; Bird Keeper
+	db PAL_BROWN_TRAINER     ; Blackbelt
+	db PAL_BLUE_TRAINER      ; Gary 1
+	db PAL_MEWMON            ; Professor Oak
+	db PAL_BLUE_TRAINER      ; Chief
+	db PAL_BLUE_TRAINER      ; Scientist
+	db PAL_BROWN_TRAINER     ; Giovanni
+	db PAL_RED_TRAINER       ; Rocket
+	db PAL_RED_TRAINER       ; Ace Trainer (Male)
+	db PAL_RED_TRAINER       ; Ace Trainer (Female)
+	db PAL_BROWN_TRAINER     ; Bruno
+	db PAL_GREEN_TRAINER     ; Brock
+	db PAL_RED_TRAINER       ; Misty
+	db PAL_GREEN_TRAINER     ; Lt. Surge
+	db PAL_PURPLE_TRAINER    ; Erika
+	db PAL_PURPLE_TRAINER    ; Koga
+	db PAL_RED_TRAINER       ; Blaine
+	db PAL_RED_TRAINER       ; Sabrina
+	db PAL_MEWMON            ; Gentleman
+	db PAL_BLUE_TRAINER      ; Gary 2
+	db PAL_BLUE_TRAINER      ; Gary 3
+	db PAL_RED_TRAINER       ; Lorelei
+	db PAL_BLUE_TRAINER      ; Channeler
+	db PAL_PURPLE_TRAINER    ; Agatha
+	db PAL_RED_TRAINER       ; Lance
+	db PAL_PURPLE_TRAINER    ; Janine
+	db PAL_MEWMON            ; Jessie and James

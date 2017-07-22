@@ -166,21 +166,28 @@ const_value = 1
 	const SUBSTITUTE   ; a4
 	const METAL_CLAW   ; a5
 	const CRUNCH       ; a6
-	const FAINT_ATTACK ; a7
-	const OUTRAGE      ; a8
-	const TWISTER      ; a9
-	const ROLLOUT      ; aa
-	const ANCIENTPOWER ; ab
-	const ROCK_TOMB    ; ac
-	const SLUDGE_BOMB  ; ad
-	const CROSS_CHOP   ; ae
-	const POWDER_SNOW  ; af
-	const GIGA_DRAIN   ; b0
-	const ZAP_CANNON   ; b1
-	const FLAME_WHEEL  ; b2
-	const RAPID_SPIN   ; b3
-	const SCARY_FACE   ; b4
-	const RETURN       ; b5
+	const THIEF        ; a7
+	const FAINT_ATTACK ; a8
+	const OUTRAGE      ; a9
+	const TWISTER      ; aa
+	const ROLLOUT      ; ab
+	const ANCIENTPOWER ; ac
+	const ROCK_TOMB    ; ad
+	const CALM_MIND    ; ae
+	const SLUDGE_BOMB  ; af
+	const CROSS_CHOP   ; b0
+	const BRICK_BREAK  ; b1
+	const POWDER_SNOW  ; b2
+	const GIGA_DRAIN   ; b3
+	const BULLET_SEED  ; b4
+	const ZAP_CANNON   ; b5
+	const SHOCK_WAVE   ; b6
+	const WATER_PULSE  ; b7
+	const FLAME_WHEEL  ; b8
+	const RAPID_SPIN   ; b9
+	const SCARY_FACE   ; ba
+	const SECRET_POWER ; bb
+	const RETURN       ; bc
 
 NUM_ATTACKS EQU const_value + -1
 

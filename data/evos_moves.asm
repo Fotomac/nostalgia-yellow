@@ -189,6 +189,12 @@ EvosMovesPointerTable:
 	dw Mon069_EvosMoves
 	dw Mon070_EvosMoves
 	dw Mon071_EvosMoves
+	dw Mon191_EvosMoves ;MissingNo
+	dw Mon192_EvosMoves ;MissingNo
+	dw Mon193_EvosMoves ;MissingNo
+	dw Mon194_EvosMoves ;MissingNo
+	dw Mon195_EvosMoves
+	dw Mon196_EvosMoves
 
 Mon112_EvosMoves:
 ;RHYDON
@@ -2516,5 +2522,62 @@ Mon071_EvosMoves:
 	db 29,ACID
 	db 38,RAZOR_LEAF
 	db 49,SLAM
+	db 0
+
+Mon191_EvosMoves:
+;MISSINGNO_BF
+;Evolutions
+	db 0
+;Learnset
+	db 0
+
+Mon192_EvosMoves:
+;MISSINGNO_C0
+;Evolutions
+	db 0
+;Learnset
+	db 0
+
+Mon193_EvosMoves:
+;MISSINGNO_C1
+;Evolutions
+	db 0
+;Learnset
+	db 0
+
+Mon194_EvosMoves:
+;MISSINGNO_C2
+;Evolutions
+	db 0
+;Learnset
+	db 0
+
+Mon195_EvosMoves:
+;PIKABLU
+;Evolutions
+	db EV_LEVEL,18,RAIBLU
+	db 0
+;Learnset
+	db 3,DEFENSE_CURL
+	db 6,TAIL_WHIP
+	db 10,WATER_GUN
+	db 15,ROLLOUT
+	db 21,BUBBLEBEAM
+	db 28,DOUBLE_EDGE
+	db 36,HYDRO_PUMP
+	db 0
+
+Mon196_EvosMoves:
+;RAIBLU
+;Evolutions
+	db 0
+;Learnset
+	db 3,DEFENSE_CURL
+	db 6,TAIL_WHIP
+	db 10,WATER_GUN
+	db 15,ROLLOUT
+	db 25,BUBBLEBEAM
+	db 36,DOUBLE_EDGE
+	db 48,HYDRO_PUMP
 	db 0
 

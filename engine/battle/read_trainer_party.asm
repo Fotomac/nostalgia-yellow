@@ -49,6 +49,8 @@ ReadTrainer:
 	ld a,[hli]
 	cp $FF ; is the trainer special?
 	jr z,.SpecialTrainer ; if so, check for special moves
+	cp $FE ; is this an extra-special trainer?
+	jr z,.SpecialTrainer2 ; if so, read the Pic and AI numbers
 	ld [wCurEnemyLVL],a
 .LoopTrainerData
 	ld a,[hli]
@@ -61,6 +63,11 @@ ReadTrainer:
 	call AddPartyMon
 	pop hl
 	jr .LoopTrainerData
+.SpecialTrainer2
+	ld a, [hli] ; get pic ID
+	ld [wTrainerPicID], a
+	ld a, [hli] ; get AI ID
+	ld [wTrainerAINumber], a
 .SpecialTrainer
 ; if this code is being run:
 ; - each pokemon has a specific level
@@ -89,6 +96,8 @@ ReadTrainer:
 	ld a, [hli]
 	cp $ff
 	jr z, .FinishUp
+	ld b, a
+	ld a, [wTrainerClass]
 	cp b
 	jr nz, .asm_39c46
 	ld a, [hli]

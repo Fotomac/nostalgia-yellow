@@ -18,18 +18,18 @@ SpecialTrainerMoves:
 	db 0
 
 	db MISTY,$1
-	db 2,4,BUBBLEBEAM
+	db 2,4,WATER_PULSE
 	db 0
 
 	db LT_SURGE,$1
 	db 1,1,THUNDERBOLT
 	db 1,2,MEGA_PUNCH
 	db 1,3,MEGA_KICK
-	db 1,4,GROWL
+	db 1,4,SHOCK_WAVE
 	db 0
 
 	db ERIKA,$1
-	db 1,3,MEGA_DRAIN
+	db 1,3,GIGA_DRAIN
 	db 2,1,RAZOR_LEAF
 	db 3,1,PETAL_DANCE
 	db 0
@@ -56,10 +56,11 @@ SpecialTrainerMoves:
 	db 0
 
 	db SABRINA,$1
-	db 1,1,FLASH
+	db 1,2,FLASH
+	db 1,3,CALM_MIND
 	db 2,1,KINESIS
-	db 2,4,PSYWAVE
-	db 3,1,PSYWAVE
+	db 2,4,CALM_MIND
+	db 3,1,CALM_MIND
 	db 0
 
 	db GIOVANNI,$3

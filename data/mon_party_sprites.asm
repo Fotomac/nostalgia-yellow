@@ -23,6 +23,7 @@ MonPartyData:
 	dn SPRITE_BIRD_M, SPRITE_BIRD_M                    ;Spearow/Fearow
 	dn SPRITE_SNAKE, SPRITE_SNAKE                      ;Ekans/Arbok
 	dn SPRITE_PIKACHU_FAMILY, SPRITE_PIKACHU_FAMILY    ;Pikachu/Raichu
+	dn SPRITE_FAIRY, SPRITE_FAIRY                      ;Pikablu/Raiblu
 	dn SPRITE_MON, SPRITE_MON                          ;Sandshrew/Sandslash
 	dn SPRITE_MON, SPRITE_MON                          ;NidoranF/Nidorina
 	dn SPRITE_MON, SPRITE_MON                          ;Nidoqueen/NidoranM

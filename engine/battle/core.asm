@@ -6659,7 +6659,9 @@ LoadPlayerBackPic:
 .next
 	ld a, BANK(RedPicBack)
 	call UncompressSpriteFromDE
-	predef ScaleSpriteByTwo
+	call LoadBackSpriteUnzoomed
+	nop
+	nop
 	ld hl, wOAMBuffer
 	xor a
 	ld [hOAMTile], a ; initial tile number
@@ -6693,8 +6695,12 @@ LoadPlayerBackPic:
 	ld e, a
 	dec b
 	jr nz, .loop
-	ld de, vBackPic
-	call InterlaceMergeSpriteBuffers
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
 	ld a, $0
 	call SwitchSRAMBankAndLatchClockData
 	ld hl, vSprites
@@ -8922,19 +8928,27 @@ PhysicalSpecialSplit: ;Determines if a move is Physical or Special
 	db OTHER_M ;SUBSTITUTE   EQU $A4
 	db PHYSICAL;METAL_CLAW   EQU $A5
 	db PHYSICAL;CRUNCH       EQU $A6
-	db PHYSICAL;FAINT_ATTACK EQU $A7
-	db PHYSICAL;OUTRAGE      EQU $A8
-	db SPECIAL ;TWISTER      EQU $A9
-	db PHYSICAL;ROLLOUT      EQU $AA
-	db SPECIAL ;ANCIENTPOWER EQU $AB
-	db PHYSICAL;ROCK_TOMB    EQU $AC
-	db SPECIAL ;SLUDGE_BOMB  EQU $AD
-	db PHYSICAL;CROSS_CHOP   EQU $AE
-	db SPECIAL ;POWDER_SNOW  EQU $AF
-	db SPECIAL ;GIGA_DRAIN   EQU $B0
-	db SPECIAL ;ZAP_CANNON   EQU $B1
-	db PHYSICAL;FLAME_WHEEL  EQU $B2
-	db PHYSICAL;RAPID_SPIN   EQU $B3
-	db OTHER_M ;SCARY_FACE   EQU $B4
-	db PHYSICAL;RETURN       EQU $B5
+	db PHYSICAL;THIEF        EQU $A7
+	db PHYSICAL;FAINT_ATTACK EQU $A8
+	db PHYSICAL;OUTRAGE      EQU $A9
+	db SPECIAL ;TWISTER      EQU $AA
+	db PHYSICAL;ROLLOUT      EQU $AB
+	db SPECIAL ;ANCIENTPOWER EQU $AC
+	db PHYSICAL;ROCK_TOMB    EQU $AD
+	db OTHER_M ;CALM_MIND    EQU $AE
+	db SPECIAL ;SLUDGE_BOMB  EQU $AF
+	db PHYSICAL;CROSS_CHOP   EQU $B0
+	db PHYSICAL;BRICK_BREAK  EQU $B1
+	db SPECIAL ;POWDER_SNOW  EQU $B2
+	db SPECIAL ;GIGA_DRAIN   EQU $B3
+	db PHYSICAL;BULLET_SEED  EQU $B4
+	db SPECIAL ;ZAP_CANNON   EQU $B5
+	db SPECIAL ;SHOCK_WAVE   EQU $B6
+	db SPECIAL ;WATER_PULSE  EQU $B7
+	db PHYSICAL;FLAME_WHEEL  EQU $B8
+	db PHYSICAL;RAPID_SPIN   EQU $B9
+	db OTHER_M ;SCARY_FACE   EQU $BA
+	db PHYSICAL;SECRET_POWER EQU $BB
+	db OTHER_M ;ATTRACT      EQU $BC
+	db PHYSICAL;RETURN       EQU $BD
 	db PHYSICAL;STRUGGLE

@@ -4,8 +4,8 @@ db 70 ; base attack
 db 73 ; base defense
 db 60 ; base speed
 db 85 ; base special
-db NORMAL ; species type 1
-db NORMAL ; species type 2
+db FAIRY ; species type 1
+db FAIRY ; species type 2
 db 25 ; catch rate
 db 129 ; base exp yield
 INCBIN "pic/ymon/clefable.pic",0,1 ; 66, sprite dimensions
@@ -25,4 +25,4 @@ db 4 ; growth rate
 	tmlearn 33,34,35,38,40
 	tmlearn 44,45,46
 	tmlearn 49,50,54,55
-db 0 ; padding
+db BANK(ClefablePicFront)

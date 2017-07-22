@@ -1,18 +1,23 @@
 _CeruleanGymText_5c7be::
-	text "Hi, you're a new"
-	line "face!"
+	text "Hey, you! Only"
+	line "those trainers"
+	cont "who have a policy"
+	cont "about #MON can"
+	cont "turn pro!"
 
-	para "What's your policy"
-	line "on #MON? What"
-	cont "is your approach?"
+	para "What is your"
+	line "approach when you"
+	cont "catch and train"
+	cont "#MON?"
 
 	para "My policy is an"
 	line "all-out offensive"
 	cont "with water-type"
 	cont "#MON!"
 
-	para "MISTY, the world-"
-	line "famous beauty, is"
+	para "I, MISTY, the"
+	line "world-famous"
+	cont "beauty, shall be"
 	cont "your host!"
 
 	para "Are you ready,"
@@ -20,8 +25,8 @@ _CeruleanGymText_5c7be::
 	done
 
 _CeruleanGymText_5c7c3::
-	text "TM11 teaches"
-	line "BUBBLEBEAM!"
+	text "TM03 teaches"
+	line "WATER PULSE!"
 
 	para "Use it on an"
 	line "aquatic #MON!"
@@ -47,9 +52,9 @@ _CeruleanGymText_5c7c8::
 	line "my favorite TM!"
 	done
 
-_ReceivedTM11Text::
-	text $52, " received"
-	line "TM11!@@"
+_ReceivedTM03Text::
+	text "<PLAYER> received"
+	line "TM03!@@"
 
 _CeruleanGymText_5c7d3::
 	text "You better make"
@@ -57,19 +62,19 @@ _CeruleanGymText_5c7d3::
 	done
 
 _CeruleanGymText_5c7d8::
-	text "I can't"
-	line "believe I lost!"
+	text "Wow!"
+	line "You're too much!"
 
 	para "All right!"
 
 	para "You can have the"
 	line "CASCADEBADGE to"
-	cont "show you beat me!"
-	prompt
+	cont "show you beat me!@@"
 
 _CeruleanGymBattleText1::
-	text "I'm more than good"
-	line "enough for you!"
+	text "What? You? I'm"
+	line "more than good"
+	cont "enough for you!"
 
 	para "MISTY can wait!"
 	done

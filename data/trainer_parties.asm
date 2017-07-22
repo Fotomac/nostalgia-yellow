@@ -46,6 +46,7 @@ TrainerDataPointers:
 	dw ChannelerData
 	dw AgathaData
 	dw LanceData
+	dw JanineData
 
 ; if first byte != FF, then
 	; first byte is level (of all pokemon on this team)
@@ -107,6 +108,8 @@ LassData:
 	db 23,ODDISH,GLOOM,0
 	db 6,NIDORAN_F,NIDORAN_M,0
 	db 8,DIGLETT,NIDORAN_F,0
+	db 25,BULBASAUR,0
+	db 26,GLOOM,EKANS,GLOOM,0
 SailorData:
 	db 18,MACHOP,SHELLDER,0
 	db 17,MACHOP,TENTACOOL,0
@@ -127,6 +130,7 @@ JrTrainerMData:
 	db 19,RATTATA,DIGLETT,EKANS,SANDSHREW,0
 	db 29,NIDORAN_M,NIDORINO,0
 	db 16,WEEPINBELL,0
+	db 25,NIDORINO,0
 JrTrainerFData:
 	db 19,GOLDEEN,0
 	db 16,ODDISH,BELLSPROUT,0
@@ -154,6 +158,8 @@ JrTrainerFData:
 	db 30,TENTACOOL,HORSEA,SEEL,0
 	db 20,CUBONE,0
 	db 15,NIDORAN_M,NIDORAN_F,0
+	db 20,MAGNEMITE,EEVEE,PIKACHU,0
+	db 26,NIDORINA,0
 PokemaniacData:
 	db 30,RHYHORN,LICKITUNG,0
 	db 20,CUBONE,SLOWPOKE,0
@@ -504,3 +510,5 @@ AgathaData:
 	db $FF,56,GENGAR,56,GOLBAT,55,HAUNTER,58,ARBOK,60,GENGAR,0
 LanceData:
 	db $FF,58,GYARADOS,56,DRAGONAIR,56,DRAGONAIR,60,AERODACTYL,62,DRAGONITE,0
+JanineData:
+	db $FF,28,GOLBAT,30,KOFFING,32,WEEZING,0

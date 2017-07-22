@@ -258,6 +258,26 @@ _RaichuDexEntry::
 	next "the dark"
 	dex
 
+_PikabluDexEntry::
+	text "The tip of its"
+	next "tail is filled"
+	next "with oil that is"
+
+	page "lighter than"
+	next "water, so it acts"
+	next "as a float"
+	dex
+
+_RaibluDexEntry::
+	text "The bubble-like"
+	next "pattern on its"
+	next "stomach helps it"
+
+	page "camouflage itself"
+	next "when it's in the"
+	next "water"
+	dex
+
 _SandshrewDexEntry::
 	text "Its body is dry."
 	next "When it gets cold"
