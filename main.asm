@@ -2019,12 +2019,10 @@ Underground_Block: INCBIN "gfx/blocksets/underground.bst"
 
 SECTION "bank1C",ROMX,BANK[$1C]
 
-INCLUDE "engine/gamefreak.asm"
 INCLUDE "engine/hall_of_fame.asm"
 INCLUDE "engine/overworld/healing_machine.asm"
 INCLUDE "engine/overworld/player_animations.asm"
 INCLUDE "engine/battle/ghost_marowak_anim.asm"
-INCLUDE "engine/battle/battle_transitions.asm"
 INCLUDE "engine/town_map.asm"
 INCLUDE "engine/mon_party_sprites.asm"
 INCLUDE "engine/in_game_trades.asm"
@@ -2466,6 +2464,9 @@ BellossomPicBack:     INCBIN "pic/monback/bellossom.pic"
 SECTION "bank42",ROMX,BANK[$42]
 
 BaseStats: INCLUDE "data/base_stats.asm"
+
+INCLUDE "engine/gamefreak.asm"
+INCLUDE "engine/battle/battle_transitions.asm"
 
 
 SECTION "bank43",ROMX,BANK[$43]

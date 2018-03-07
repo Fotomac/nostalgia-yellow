@@ -72,3 +72,38 @@ CopyVideoDataDoubleAlternate::
 	pop af
 	pop hl
 	jp FarCopyDataDouble
+
+FarCopyDataDouble::
+; Expand bc bytes of 1bpp image data
+; from a:de to 2bpp data at hl.
+	ld [wFarCopyDataSavedROMBank],a
+	ld a,[H_LOADEDROMBANK]
+	push af
+	ld a,[wFarCopyDataSavedROMBank]
+	call BankswitchCommon
+	ld a,h ; swap hl and de
+	ld h,d
+	ld d,a
+	ld a,l
+	ld l,e
+	ld e,a
+	ld a,b
+	and a
+	jr z,.eightbitcopyamount
+	ld a,c
+	and a ; multiple of $100
+	jr z, .expandloop ; if so, do not increment b because the first instance of dec c results in underflow
+.eightbitcopyamount
+	inc b
+.expandloop
+	ld a,[de]
+	inc de
+	ld [hli],a
+	ld [hli],a
+	dec c
+	jr nz, .expandloop
+	dec b
+	jr nz, .expandloop
+	pop af
+	call BankswitchCommon
+	ret

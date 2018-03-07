@@ -142,7 +142,7 @@ PlaceEnemyHUDTiles:
 	call CopyData
 	coord hl, 1, 2
 	ld de, $1
-	jr EnemyHealthBarUpdated
+	call EnemyHealthBarUpdated
 	jr PlaceHUDTiles
 
 EnemyBattleHUDGraphicsTiles:
