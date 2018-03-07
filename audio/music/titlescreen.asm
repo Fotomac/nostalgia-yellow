@@ -2,7 +2,7 @@ Music_TitleScreen_Ch1::
 	tempo 144
 	volume 7, 7
 	vibrato 9, 3, 4
-	duty 3
+	dutycycle 3
 	notetype 12, 12, 1
 	octave 2
 	E_ 1
@@ -156,7 +156,7 @@ Music_TitleScreen_branch_7e55c::
 
 Music_TitleScreen_Ch2::
 	vibrato 16, 4, 6
-	duty 1
+	dutycycle 1
 	notetype 12, 14, 1
 	octave 2
 	G_ 1
@@ -236,12 +236,12 @@ Music_TitleScreen_branch_7e594::
 	A# 2
 	G_ 8
 	vibrato 16, 2, 6
-	duty 3
+	dutycycle 3
 	notetype 12, 0, 11
 	G_ 8
 	notetype 12, 14, 7
 	A_ 8
-	duty 1
+	dutycycle 1
 	notetype 12, 14, 7
 	A# 6
 	F_ 2

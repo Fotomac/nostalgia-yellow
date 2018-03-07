@@ -27,6 +27,6 @@
 .wave4
 	db $01,$23,$45,$67,$8A,$CD,$EE,$F7,$7F,$EE,$DC,$A8,$76,$54,$32,$10
 
-; duty 5 reads from sfx data
+; dutycycle 5 reads from sfx data
 .wave5
 

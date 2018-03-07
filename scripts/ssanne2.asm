@@ -25,7 +25,7 @@ SSAnne2Script0:
 	call ArePlayerCoordsInArray
 	ret nc
 	call StopAllMusic
-	ld c, BANK(Music_MeetRival)
+	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
 	ld a, [wCoordIndex]
@@ -99,6 +99,8 @@ SSAnne2Script1:
 	ld [wCurOpponent], a
 	ld a, $1
 	ld [wTrainerNo], a
+	ld a, 1
+	ld [wIsTrainerBattle], a
 	call SSAnne2Script_61416
 	ld a, $2
 	ld [wSSAnne2CurScript], a
@@ -108,6 +110,8 @@ SSAnne2Script2:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, SSAnne2Script_613ab
+	xor a
+	ld [wIsTrainerBattle], a
 	call SSAnne2Script_61416
 	ld a, $f0
 	ld [wJoyIgnore], a

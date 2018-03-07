@@ -1,7 +1,7 @@
 Music_GymLeaderBattle_Ch1::
 	tempo 104
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 3
@@ -548,7 +548,7 @@ Music_GymLeaderBattle_branch_223b0::
 
 
 Music_GymLeaderBattle_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 8, 2, 5
 	notetype 12, 12, 3
 	octave 4
@@ -624,7 +624,7 @@ Music_GymLeaderBattle_branch_225e0::
 	C# 2
 	D# 2
 	notetype 12, 11, 7
-	duty 2
+	dutycycle 2
 	octave 3
 	A_ 8
 	octave 4
@@ -632,7 +632,7 @@ Music_GymLeaderBattle_branch_225e0::
 	E_ 8
 	C# 8
 	notetype 12, 12, 5
-	duty 3
+	dutycycle 3
 	D# 4
 	C# 4
 	D# 4
@@ -647,7 +647,7 @@ Music_GymLeaderBattle_branch_225e0::
 	C# 2
 	D# 2
 	notetype 12, 11, 7
-	duty 2
+	dutycycle 2
 	C# 8
 	octave 3
 	B_ 8
@@ -658,7 +658,7 @@ Music_GymLeaderBattle_branch_225e0::
 	E_ 2
 	C# 2
 	notetype 12, 12, 5
-	duty 3
+	dutycycle 3
 	octave 1
 	B_ 1
 	rest 3
@@ -783,7 +783,7 @@ Music_GymLeaderBattle_branch_225e0::
 	octave 4
 	F# 16
 	notetype 12, 12, 3
-	duty 3
+	dutycycle 3
 	octave 1
 	A_ 1
 	rest 1

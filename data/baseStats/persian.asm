@@ -18,11 +18,11 @@ db BITE
 db SCREECH
 db 0 ; growth rate
 ; learnset
-	tmlearn 6,8
-	tmlearn 9,10,11,12,15,16
+	tmlearn 3,6,8
+	tmlearn 10,11,12,15,16
 	tmlearn 20,24
 	tmlearn 25,31,32
 	tmlearn 34,40
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50
 db BANK(PersianPicFront)

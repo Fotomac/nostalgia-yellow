@@ -1,7 +1,7 @@
 Music_Surfing_Ch1::
 	tempo 160
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 12, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 5
@@ -117,7 +117,7 @@ Music_Surfing_branch_7fa30::
 
 
 Music_Surfing_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 16, 2, 5
 	notetype 12, 12, 6
 	octave 3

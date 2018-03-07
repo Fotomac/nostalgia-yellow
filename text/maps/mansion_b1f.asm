@@ -18,8 +18,7 @@ _Mansion4BattleText2::
 	done
 
 _Mansion4EndBattleText2::
-	text "What"
-	line "was that for?"
+	text "What was that for?"
 	prompt
 
 _Mansion4AfterBattleText2::
@@ -33,7 +32,6 @@ _Mansion4Text7::
 	line "MEWTWO is far too"
 	cont "powerful."
 
-	para "We have failed to"
-	line "curb its vicious"
-	cont "tendencies..."
+	para "It's no use..."
+	line "I can't control it!"
 	done

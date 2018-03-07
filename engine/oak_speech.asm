@@ -69,7 +69,7 @@ OakSpeech:
 	set 2, [hl]      ; sets you as a girl
 .AfterSettingGirl: ; resume main intro, jumps here if you were a guy
 	call StopAllMusic ; stop music
-	ld a, BANK(Music_Routes2)
+	ld a, 0 ; BANK(Music_Routes2)
 	ld c,a
 	ld a, MUSIC_ROUTES2
 	call PlayMusic
@@ -164,7 +164,7 @@ OakSpeech:
 	call ResetPlayerSpriteData
 	ld a,[H_LOADEDROMBANK]
 	push af
-	ld a, BANK(Music_PalletTown)
+	ld a, 0 ; BANK(Music_PalletTown)
 	ld [wAudioROMBank],a
 	ld [wAudioSavedROMBank],a
 	ld a, 10
@@ -275,20 +275,17 @@ IntroDisplayPicCenteredOrUpperRight:
 	predef_jump CopyUncompressedPicToTilemap
 
 ; displays boy/girl choice
+; check result using wCurrentMenuItem (0 = boy, 1 = girl)
 BoyGirlChoice::
 	call SaveScreenTilesToBuffer1
-	call InitBoyGirlTextBoxParameters
-	jr DisplayBoyGirlChoice
-
-InitBoyGirlTextBoxParameters::
-	ld a, $1 ; loads the value for the unused North/West choice, that was changed to say Boy/Girl
+	; which menu to show
+	ld a, BOY_GIRL_MENU
 	ld [wTwoOptionMenuID], a
-	coord hl, 13, 7 
-	ld bc, $80e
-	ret
-
-DisplayBoyGirlChoice::
-	ld a, $14
+	; set the coords
+	coord hl, 13, 7
+	lb bc, 8, 14
+	; show the menu
+	ld a, TWO_OPTION_MENU
 	ld [wTextBoxID], a
 	call DisplayTextBoxID
 	jp LoadScreenTilesFromBuffer1

@@ -1,6 +1,6 @@
 _CeruleanCityText_19668::
-	text $53, ": Yo!"
-	line $52, "!"
+	text "<RIVAL>: Yo!"
+	line "<PLAYER>!"
 
 	para "You're still"
 	line "struggling along"
@@ -13,23 +13,23 @@ _CeruleanCityText_19668::
 
 	para "Here, let me see"
 	line "what you caught,"
-	cont $52, "!"
+	cont "<PLAYER>!"
 	done
 
 _CeruleanCityText_1966d::
-	text "Hey!"
+	text "<RIVAL>: Hey!"
 	line "Take it easy!"
 	cont "You won already!"
 	prompt
 
 _CeruleanCityText_19672::
-	text "Heh!"
+	text "<RIVAL>: Heh!"
 	line "You're no match"
 	cont "for my genius!"
 	prompt
 
 _CeruleanCityText_19677::
-	text $53, ": Hey,"
+	text "<RIVAL>: Hey,"
 	line "guess what?"
 
 	para "I went to BILL's"
@@ -69,7 +69,7 @@ _CeruleanCityText_196d9::
 	done
 
 _ReceivedTM28Text::
-	text $52, " recovered"
+	text "<PLAYER> recovered"
 	line "TM28!@@"
 
 _ReceivedTM28Text2::
@@ -86,9 +86,9 @@ _TM28NoRoomText::
 	done
 
 _CeruleanCityText_196ee::
-	text "Stop!"
-	line "I give up! I'll"
-	cont "leave quietly!"
+	text "Stop! I give up!"
+	line "I'll leave"
+	cont "quietly!"
 	prompt
 
 _CeruleanCityText_196f3::

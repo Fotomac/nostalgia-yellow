@@ -11,7 +11,7 @@ _JanineBeforeBattleText::
 	done
 
 _JanineEndBattleText::
-	text "You're a"
+	text "JANINE: You're a"
 	line "tough one. You"
 	cont "definitely won..."
 	done
@@ -24,26 +24,14 @@ _JanineAfterBattleText::
 	para "I'm training here"
 	line "with my friends"
 	cont "to use poison"
-	cont "#MON as well as"
-	cont "my father!"
+	cont "#MON as well"
+	cont "as my father!"
 	done
 
 _JanineGiveTM46Text::
 	text "You're so tough!"
 	line "I have a special"
 	cont "gift!"
-
-	para "I haven't mastered"
-	line "my father's super"
-	cont "cool poison"
-	cont "technique yet,"
-	cont "but it does take"
-	cont "a little patience!"
-
-	para "Speaking of which,"
-	line "this is what I"
-	cont "have to offer you"
-	cont "as my gift!"
 
 _ReceivedTM46Text::
 	text "<PLAYER> received"
@@ -71,9 +59,8 @@ _KogasHouseBattleText1::
 	done
 
 _KogasHouseEndBattleText1::
-	text "Ooh..."
-	line "I lost..."
-	cont "You're not weak!"
+	text "Ooh... I lost..."
+	line "You're not weak!"
 	done
 
 _KogasHouseAfterBattleText1::
@@ -90,9 +77,8 @@ _KogasHouseBattleText2::
 	done
 
 _KogasHouseEndBattleText2::
-	text "Darn"
-	line "it! I wanted to"
-	cont "win!"
+	text "Darn it! I wanted"
+	line "to win!"
 	done
 
 _KogasHouseAfterBattleText2::
@@ -108,9 +94,8 @@ _KogasHouseBattleText3::
 	done
 
 _KogasHouseEndBattleText3::
-	text "My"
-	line "disguise was"
-	cont "right on! Dang!"
+	text "My disguise was"
+	line "right on! Dang!"
 	done
 
 _KogasHouseAfterBattleText3::
@@ -128,8 +113,8 @@ _KogasHouseBattleText4::
 	done
 
 _KogasHouseEndBattleText4::
-	text "I had"
-	line "you fooled..."
+	text "I had you"
+	line "fooled..."
 	done
 
 _KogasHouseAfterBattleText4::

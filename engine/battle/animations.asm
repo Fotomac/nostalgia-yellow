@@ -227,7 +227,7 @@ PlayAnimation:
 	push hl
 	push de
 	call GetMoveSound
-	call PlaySound
+	call nc, AnimPlaySFX
 	pop de
 	pop hl
 .skipPlayingSound
@@ -283,6 +283,15 @@ PlayAnimation:
 	pop hl
 	jr .animationLoop
 .AnimationOver
+	ret
+
+AnimPlaySFX:
+	push de
+	ld e, a
+	xor a
+	ld d, a
+	call PlaySFX
+	pop de
 	ret
 
 LoadSubanimation:
@@ -599,7 +608,7 @@ PlaySubanimation:
 	cp a, $FF
 	jr z, .skipPlayingSound
 	call GetMoveSound
-	call PlaySound
+	call nc, AnimPlaySFX
 .skipPlayingSound
 	ld hl, wOAMBuffer ; base address of OAM buffer
 	ld a, l
@@ -2500,18 +2509,16 @@ GetMoveSound:
 .next
 	ld a, [wEnemyMonSpecies]
 .Continue
-	push hl
-	call GetCryData
-	ld b, a
-	pop hl
-	ld a, [wFrequencyModifier]
-	add [hl]
-	ld [wFrequencyModifier], a
-	inc hl
-	ld a, [wTempoModifier]
-	add [hl]
-	ld [wTempoModifier], a
-	jr .done
+	push af
+	ld a, 1
+	ld [wSFXDontWait], a
+	pop af
+	call PlayCry
+	xor a
+	ld [wSFXDontWait], a
+	ld a, b
+	scf
+	ret
 .NotCryMove
 	ld a, [hli]
 	ld [wFrequencyModifier], a
@@ -2701,27 +2708,36 @@ MoveSoundTable:
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; SLASH
 	db SFX_BATTLE_2C,          $d8, $04 ; SUBSTITUTE
 	db SFX_NOT_VERY_EFFECTIVE, $01, $ff ; METAL_CLAW
+	db SFX_NOT_VERY_EFFECTIVE, $08, $a0 ; IRON_TAIL
 	db SFX_BATTLE_1E,          $08, $80 ; CRUNCH
 	db SFX_BATTLE_0B,          $00, $80 ; THIEF
 	db SFX_BATTLE_25,          $18, $10 ; FAINT_ATTACK
 	db SFX_BATTLE_26,          $f8, $20 ; OUTRAGE
 	db SFX_BATTLE_27,          $0f, $80 ; TWISTER
+	db SFX_NOT_VERY_EFFECTIVE, $00, $ff ; SHADOW_BALL
+	db SFX_BATTLE_0B,          $00, $80 ; SHADOW_PUNCH
 	db SFX_BATTLE_0B,          $00, $80 ; ROLLOUT
 	db SFX_BATTLE_14,          $0f, $e0 ; ANCIENTPOWER
 	db SFX_BATTLE_36,          $e8, $20 ; ROCK_TOMB
+	db SFX_BATTLE_14,          $00, $e0 ; ROCK_BLAST
 	db SFX_BATTLE_25,          $00, $80 ; CALM_MIND
+	db SFX_BATTLE_1B,          $01, $80 ; MUD_SLAP
+	db SFX_BATTLE_1B,          $08, $80 ; SAND_TOMB
 	db SFX_BATTLE_2A,          $18, $20 ; SLUDGE_BOMB
 	db SFX_BATTLE_0C,          $08, $80 ; CROSS_CHOP
 	db SFX_BATTLE_0C,          $01, $80 ; BRICK_BREAK
+	db SFX_BATTLE_32,          $08, $c0 ; BULK_UP
 	db SFX_BATTLE_2C,          $18, $80 ; POWDER_SNOW
 	db SFX_BATTLE_24,          $80, $c0 ; GIGA_DRAIN
 	db SFX_BATTLE_1B,          $18, $80 ; BULLET_SEED
+	db SFX_BATTLE_13,          $08, $c0 ; MAGICAL_LEAF
 	db SFX_BATTLE_32,          $18, $e0 ; ZAP_CANNON
 	db SFX_BATTLE_2E,          $12, $60 ; SHOCK_WAVE
 	db SFX_BATTLE_2A,          $80, $60 ; WATER_PULSE
 	db SFX_BATTLE_19,          $08, $a0 ; FLAME_WHEEL
 	db SFX_BATTLE_25,          $01, $10 ; RAPID_SPIN
 	db SFX_NOT_VERY_EFFECTIVE, $20, $ff ; SCARY_FACE
+	db SFX_BATTLE_1C,          $10, $a0 ; SWEET_SCENT
 	db SFX_VINE_WHIP,          $01, $80 ; SECRET_POWER
 	db SFX_BATTLE_0B,          $00, $80 ; RETURN
 	db SFX_BATTLE_0B,          $00, $80 ; STRUGGLE
@@ -3247,15 +3263,15 @@ PlayApplyingAttackSound:
 	cp 10
 	ld a, $20
 	ld b, $30
-	ld c, SFX_DAMAGE
+	ld c, GSSFX_DAMAGE
 	jr z, .playSound
 	ld a, $e0
 	ld b, $ff
-	ld c, SFX_SUPER_EFFECTIVE
+	ld c, GSSFX_SUPER_EFFECTIVE
 	jr nc, .playSound
 	ld a, $50
 	ld b, $1
-	ld c, SFX_NOT_VERY_EFFECTIVE
+	ld c, GSSFX_NOT_VERY_EFFECTIVE
 .playSound
 	ld [wFrequencyModifier], a
 	ld a, b

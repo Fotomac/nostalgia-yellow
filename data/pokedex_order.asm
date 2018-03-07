@@ -195,3 +195,10 @@ PokedexOrder:
 	db 0 ; MISSINGNO.
 	db DEX_PIKABLU
 	db DEX_RAIBLU
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db 0 ; MISSINGNO.
+	db DEX_BELLOSSOM

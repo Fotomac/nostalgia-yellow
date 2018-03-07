@@ -13,8 +13,11 @@ HiddenItemCoords:
 	db SEAFOAM_ISLANDS_5, $11, $19
 	db VIRIDIAN_FOREST, $12, $01
 	db VIRIDIAN_FOREST, $2a, $10
+	db VIRIDIAN_FOREST, $2a, $20
 	db MT_MOON_3, $0c, $12
 	db MT_MOON_3, $09, $21
+	db MT_MOON_3, $06, $15
+	db MT_MOON_3, $08, $07
 	db SS_ANNE_10, $01, $03
 	db SS_ANNE_6, $09, $0d
 	db UNDERGROUND_PATH_NS, $04, $03
@@ -44,7 +47,7 @@ HiddenItemCoords:
 	db VICTORY_ROAD_2, $07, $1a
 	db ROUTE_25, $03, $26
 	db ROUTE_25, $01, $0a
-	db ROUTE_4, $03, $28
+	db ROUTE_4, $02, $24
 	db ROUTE_9, $07, $0e
 	db COPYCATS_HOUSE_2F, $01, $01
 	db VIRIDIAN_CITY, $04, $0e
@@ -55,4 +58,5 @@ HiddenItemCoords:
 	db CELADON_CITY, $0f, $30
 	db SAFARI_ZONE_ENTRANCE, $01, $0a
 	db MANSION_1, $10, $08
+	db PEWTER_CITY, $05, $07
 	db $ff

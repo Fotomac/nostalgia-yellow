@@ -1,12 +1,12 @@
 IslandMonsB1:
 	db $0A
-	db 27,ZUBAT
+	db 27,PIKABLU
 	db 26,KRABBY
-	db 36,ZUBAT
+	db 36,PIKABLU
 	db 28,KRABBY
-	db 27,GOLBAT
+	db 27,RAIBLU
 	db 29,SLOWPOKE
-	db 18,ZUBAT
+	db 18,PIKABLU
 	db 28,KINGLER
 	db 22,SEEL
 	db 26,SEEL

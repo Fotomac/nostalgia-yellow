@@ -12,7 +12,7 @@ SetDefaultNamesBeforeTitlescreen:
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
-	ld a, BANK(Music_TitleScreen)
+	ld a, 0 ; BANK(Music_TitleScreen)
 	ld [wAudioROMBank], a
 	ld [wAudioSavedROMBank], a
 
@@ -129,6 +129,9 @@ DisplayTitleScreen:
 	db $e0,$e1,$e2,$e3,$e1,$e2,$ee,$e5,$e6,$e7,$e8,$e9,$ea,$eb,$ec,$ed,$ff ; ©1995-1999 GAME FREAK inc.
 
 .finishedBouncingPokemonLogo
+	xor a
+	ld [hSCY], a
+
 	call LoadScreenTilesFromBuffer1
 	ld c, 36
 	call DelayFrames
@@ -146,7 +149,7 @@ DisplayTitleScreen:
 	call StopAllMusic
 	ld a, MUSIC_TITLE_SCREEN
 	ld [wNewSoundID], a
-	call PlaySound
+	call PlayMusic
 .loop
 	xor a
 	ld [wUnusedCC5B], a

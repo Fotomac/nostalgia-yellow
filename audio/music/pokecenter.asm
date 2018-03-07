@@ -1,7 +1,7 @@
 Music_Pokecenter_Ch1::
 	tempo 144
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 2
 	toggleperfectpitch
 
@@ -154,7 +154,7 @@ Music_Pokecenter_Ch2::
 
 Music_Pokecenter_branch_befc::
 	callchannel Music_Pokecenter_branch_bf4e
-	duty 3
+	dutycycle 3
 	notetype 12, 10, 5
 	octave 3
 	A_ 4
@@ -162,25 +162,25 @@ Music_Pokecenter_branch_befc::
 	callchannel Music_Pokecenter_branch_bf60
 	D_ 2
 	F# 6
-	duty 3
+	dutycycle 3
 	notetype 12, 10, 5
 	octave 3
 	A_ 4
 	E_ 4
 	callchannel Music_Pokecenter_branch_bf4e
-	duty 3
+	dutycycle 3
 	notetype 12, 10, 5
 	octave 3
 	A_ 4
 	E_ 4
 	callchannel Music_Pokecenter_branch_bf60
 	D_ 8
-	duty 3
+	dutycycle 3
 	notetype 12, 10, 5
 	octave 3
 	D_ 4
 	E_ 4
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 6
 	octave 4
 	F# 8
@@ -216,7 +216,7 @@ Music_Pokecenter_branch_befc::
 	loopchannel 0, Music_Pokecenter_branch_befc
 
 Music_Pokecenter_branch_bf4e::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 2
 	octave 4
 	D_ 2
@@ -233,7 +233,7 @@ Music_Pokecenter_branch_bf4e::
 	endchannel
 
 Music_Pokecenter_branch_bf60::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 2
 	octave 4
 	C# 2

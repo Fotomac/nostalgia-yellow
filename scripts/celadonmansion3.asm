@@ -22,7 +22,7 @@ CeladonMansion3TextPointers:
 ProgrammerText:
 	TX_ASM
 	call CeladonMansion3_PokedexCount
-	cp 150
+	cp NUM_POKEMON
 	ld hl, CeladonMansion3Text_486f5
 	jr nc, .print
 	ld hl, CeladonMansion3Text_486f0

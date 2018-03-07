@@ -98,7 +98,7 @@ _TM39NoRoomText::
 	done
 
 _PewterGymText_5c4bc::
-	text "I took"
+	text "BROCK: I took"
 	line "you for granted,"
 	cont "and so I lost."
 
@@ -159,9 +159,8 @@ _PewterGymBattleText2::
 	done
 
 _PewterGymEndBattleText2::
-	text "That"
-	line "was just the"
-	cont "start!"
+	text "That was just the"
+	line "start!"
 	prompt
 
 _PewterGymAfterBattleText2::

@@ -7,7 +7,9 @@ Func_f1ad2:
 	call GiveItem
 	jr nc, .BagFull
 	ld hl, Route1Text_f1aff
-	jr .asm_1cadd
+	call PrintText
+	call Delay3
+	jr .asm_1cada
 .BagFull
 	ld hl, Route1Text_f1b0a
 	jr .asm_1cadd

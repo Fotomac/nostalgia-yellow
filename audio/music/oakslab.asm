@@ -1,7 +1,7 @@
 Music_OaksLab_Ch1::
 	tempo 140
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 16, 1, 2
 	toggleperfectpitch
 	notetype 12, 11, 3
@@ -70,7 +70,7 @@ Music_OaksLab_branch_7eed0::
 
 
 Music_OaksLab_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 5
 	notetype 12, 12, 4
 	octave 3

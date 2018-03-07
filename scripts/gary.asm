@@ -72,6 +72,8 @@ GaryScript2:
 	ld a, [wRivalStarter]
 	add $0 ; Wow GameFreak
 	ld [wTrainerNo], a
+	ld a, 1
+	ld [wIsTrainerBattle], a
 
 	xor a
 	ld [hJoyHeld], a
@@ -83,6 +85,8 @@ GaryScript3:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, ResetGaryScript
+	xor a
+	ld [wIsTrainerBattle], a
 	call UpdateSprites
 	SetEvent EVENT_BEAT_CHAMPION_RIVAL
 	ld a, $f0

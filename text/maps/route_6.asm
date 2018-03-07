@@ -5,7 +5,7 @@ _Route6BattleText1::
 	done
 
 _Route6EndBattleText1::
-	text "No,"
+	text "JOE: No,"
 	line "this can't be..."
 	prompt
 
@@ -21,7 +21,7 @@ _Route6BattleText2::
 	done
 
 _Route6EndBattleText2::
-	text "My"
+	text "GISELLE: My"
 	line "textbook never..."
 	prompt
 
@@ -38,8 +38,8 @@ _Route6BattleText3::
 	done
 
 _Route6EndBattleText3::
-	text "No!"
-	line "You're kidding!"
+	text "No! You're"
+	line "kidding!"
 	prompt
 
 _Route6AfterBattleText3::
@@ -54,8 +54,7 @@ _Route6BattleText4::
 	done
 
 _Route6EndBattleText4::
-	text "I"
-	line "didn't start it!"
+	text "I didn't start it!"
 	prompt
 
 _Route6AfterBattleText4::
@@ -70,8 +69,7 @@ _Route6BattleText5::
 	done
 
 _Route6EndBattleText5::
-	text "Just"
-	line "didn't work!"
+	text "Just didn't work!"
 	prompt
 
 _Route6AfterBattleText5::
@@ -87,8 +85,7 @@ _Route6BattleText6::
 	done
 
 _Route6EndBattleText6::
-	text "You"
-	line "are too good!"
+	text "You are too good!"
 	prompt
 
 _Route6AfterBattleText6::

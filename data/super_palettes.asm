@@ -7,67 +7,67 @@ SuperPalettes:
 
 	; PAL_PALLET
 	RGB 31, 31, 30
-	RGB 28, 27, 31
+	RGB 29, 29, 28
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_VIRIDIAN
 	RGB 31, 31, 30
-	RGB 26, 31, 21
+	RGB  8, 16, 13
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_PEWTER
 	RGB 31, 31, 30
-	RGB 23, 23, 22
+	RGB 21, 21, 22
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_CERULEAN
 	RGB 31, 31, 30
-	RGB 22, 23, 31
+	RGB  0, 15, 20
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_LAVENDER
 	RGB 31, 31, 30
-	RGB 27, 23, 29
+	RGB 28, 28, 31
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_VERMILION
 	RGB 31, 31, 30
-	RGB 31, 25, 16
+	RGB 28,  8,  6
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_CELADON
 	RGB 31, 31, 30
-	RGB 22, 31, 22
+	RGB 21, 28, 21
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_FUCHSIA
 	RGB 31, 31, 30
-	RGB 31, 26, 26
+	RGB 31,  0, 31
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_CINNABAR
 	RGB 31, 31, 30
-	RGB 31, 15, 14
+	RGB 28,  9,  5
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_INDIGO
 	RGB 31, 31, 30
-	RGB 17, 17, 25
+	RGB  9,  0, 16
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
 	; PAL_SAFFRON
 	RGB 31, 31, 30
-	RGB 31, 31, 19
+	RGB 30, 24,  6
 	RGB 23, 27, 31
 	RGB  6,  6,  6
 
@@ -302,49 +302,49 @@ GBCBasePalettes:
 
 	; PAL_PALLET
 	RGB 31, 31, 31
-	RGB 23, 17, 31
+	RGB 23, 23, 21
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_VIRIDIAN
 	RGB 31, 31, 31
-	RGB 19, 31,  0
+	RGB  0, 31, 19
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_PEWTER
 	RGB 31, 31, 31
-	RGB 18, 18, 15
+	RGB 18, 18, 19
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_CERULEAN
 	RGB 31, 31, 31
-	RGB  5,  8, 31
+	RGB  0, 15, 31
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_LAVENDER
 	RGB 31, 31, 31
-	RGB 25,  4, 31
+	RGB 25, 25, 31
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_VERMILION
 	RGB 31, 31, 31
-	RGB 31, 19,  0
+	RGB 31, 16,  0
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_CELADON
 	RGB 31, 31, 31
-	RGB  5, 31,  5
+	RGB 23, 31, 23
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_FUCHSIA
 	RGB 31, 31, 31
-	RGB 31, 15, 15
+	RGB 31,  0, 31
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
@@ -356,13 +356,13 @@ GBCBasePalettes:
 
 	; PAL_INDIGO
 	RGB 31, 31, 31
-	RGB 11,  8, 31
+	RGB 11,  0, 31
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 
 	; PAL_SAFFRON
 	RGB 31, 31, 31
-	RGB 31, 31,  0
+	RGB 31, 23,  6
 	RGB 11, 23, 31
 	RGB  3,  3,  3
 

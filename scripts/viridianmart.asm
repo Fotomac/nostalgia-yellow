@@ -55,6 +55,10 @@ ViridianMartScript1:
 	call DisplayTextID
 	lb bc, OAKS_PARCEL, 1
 	call GiveItem
+	call Delay3
+	ld a, $1
+	ld [hSpriteIndexOrTextID], a
+	call DisplayTextID
 	SetEvent EVENT_GOT_OAKS_PARCEL
 	ld a, $2
 	ld [wViridianMarketCurScript], a
@@ -82,6 +86,8 @@ ViridianMartTextPointers:
 	dw ViridianCashierText
 	dw ViridianMartText2
 	dw ViridianMartText3
+
+INCLUDE "data/martInventories/viridian.asm"
 
 ViridianMartText1:
 	TX_FAR _ViridianMartText1

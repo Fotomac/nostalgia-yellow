@@ -142,7 +142,7 @@ Audio1_ApplyMusicAffects:
 	ret
 
 ; this routine executes all music commands that take up no time,
-; like tempo changes, duty changes etc. and doesn't return
+; like tempo changes, dutycycle changes etc. and doesn't return
 ; until the first note is reached
 Audio1_PlayNextNote:
 ; reload the vibrato delay counter
@@ -470,7 +470,7 @@ Audio1_pitchbend:
 	jp Audio1_notelength
 
 Audio1_duty:
-	cp $ec ; is this command a duty?
+	cp $ec ; is this command a dutycycle?
 	jr nz, Audio1_tempo ; no
 	call Audio1_GetNextMusicByte
 	rrca
@@ -479,7 +479,7 @@ Audio1_duty:
 	ld b, 0
 	ld hl, wChannelDuties
 	add hl, bc
-	ld [hl], a ; store duty
+	ld [hl], a ; store dutycycle
 	jp Audio1_endchannel
 
 Audio1_tempo:
@@ -548,7 +548,7 @@ Audio1_dutycycle:
 	and $c0
 	ld hl, wChannelDuties
 	add hl, bc
-	ld [hl], a ; store first duty
+	ld [hl], a ; store first dutycycle
 	ld hl, wChannelFlags1
 	add hl, bc
 	set BIT_ROTATE_DUTY, [hl]
@@ -886,7 +886,7 @@ Audio1_ApplyDutyAndSoundLength:
 	jr z, .skipDuty ; if music channel 3
 	cp CH6
 	jr z, .skipDuty ; if sfx channel 3
-; include duty (except on channel 3 which doesn't have it)
+; include dutycycle (except on channel 3 which doesn't have it)
 	ld a, d
 	and $3f
 	ld d, a

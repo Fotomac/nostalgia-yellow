@@ -2,7 +2,7 @@ Music_DefeatedWildMon_Ch1::
 	tempo 112
 	volume 7, 7
 	executemusic
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	tempo 112
@@ -69,7 +69,7 @@ Music_DefeatedWildMon_branch_23b8b::
 
 Music_DefeatedWildMon_Ch2::
 	executemusic
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 3
 	octave 4
 	E_ 1

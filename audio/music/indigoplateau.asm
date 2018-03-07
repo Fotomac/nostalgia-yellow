@@ -1,7 +1,7 @@
 Music_IndigoPlateau_Ch1::
 	tempo 132
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 2
@@ -87,7 +87,7 @@ Music_IndigoPlateau_branch_a659::
 
 
 Music_IndigoPlateau_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 8, 2, 5
 	notetype 12, 12, 2
 	octave 3

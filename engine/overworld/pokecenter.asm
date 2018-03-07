@@ -15,10 +15,8 @@ DisplayPokemonCenterDialogue_:
 	bit 2, [hl]
 	set 1, [hl]
 	set 2, [hl]
-	jr nz, .skipShallWeHealYourPokemon
 	ld hl, ShallWeHealYourPokemonText
 	call PrintText
-.skipShallWeHealYourPokemon
 	call YesNoChoicePokeCenter ; yes/no menu
 	call UpdateSprites
 	ld a, [wCurrentMenuItem]
@@ -57,7 +55,7 @@ DisplayPokemonCenterDialogue_:
 	ld a, [wMapMusicSoundID]
 	ld [wLastMusicSoundID], a
 	ld [wNewSoundID], a
-	call PlaySound
+	call PlayMusic
 	call CheckPikachuFollowingPlayer
 	jr nz, .doNotReturnPikachu
 	callab IsStarterPikachuInOurParty

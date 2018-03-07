@@ -26,8 +26,8 @@ SAFARI_BAIT           EQU $15 ; overload
 SAFARI_ROCK           EQU $16 ; overload
 	const THUNDERBADGE  ; $17
 	const RAINBOWBADGE  ; $18
-	const SOULBADGE     ; $19
-	const MARSHBADGE    ; $1A
+	const MARSHBADGE    ; $19
+	const SOULBADGE     ; $1A
 	const VOLCANOBADGE  ; $1B
 	const EARTHBADGE    ; $1C
 	const ESCAPE_ROPE   ; $1D
@@ -45,7 +45,7 @@ SAFARI_ROCK           EQU $16 ; overload
 	const DOME_FOSSIL   ; $29
 	const HELIX_FOSSIL  ; $2A
 	const SECRET_KEY    ; $2B
-	const UNUSED_ITEM   ; $2C "?????"
+	const SUN_STONE     ; $2C
 	const BIKE_VOUCHER  ; $2D
 	const X_ACCURACY    ; $2E
 	const LEAF_STONE    ; $2F
@@ -85,20 +85,21 @@ SAFARI_ROCK           EQU $16 ; overload
 	const MAX_ETHER     ; $51
 	const ELIXER        ; $52
 	const MAX_ELIXER    ; $53
-	const FLOOR_B2F     ; $54
-	const FLOOR_B1F     ; $55
-	const FLOOR_1F      ; $56
-	const FLOOR_2F      ; $57
-	const FLOOR_3F      ; $58
-	const FLOOR_4F      ; $59
-	const FLOOR_5F      ; $5A
-	const FLOOR_6F      ; $5B
-	const FLOOR_7F      ; $5C
-	const FLOOR_8F      ; $5D
-	const FLOOR_9F      ; $5E
-	const FLOOR_10F     ; $5F
-	const FLOOR_11F     ; $60
-	const FLOOR_B4F     ; $61
+	const STAR_PIECE    ; $54
+	const FLOOR_B2F     ; $55
+	const FLOOR_B1F     ; $56
+	const FLOOR_1F      ; $57
+	const FLOOR_2F      ; $58
+	const FLOOR_3F      ; $59
+	const FLOOR_4F      ; $5A
+	const FLOOR_5F      ; $5B
+	const FLOOR_6F      ; $5C
+	const FLOOR_7F      ; $5D
+	const FLOOR_8F      ; $5E
+	const FLOOR_9F      ; $5F
+	const FLOOR_10F     ; $60
+	const FLOOR_11F     ; $61
+	const FLOOR_B4F     ; $62
 
 const_value = $C4
 

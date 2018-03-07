@@ -29,9 +29,11 @@ asm_f601d:
 	push af
 	res 1, [hl]
 	call InitBattleVariables
+	ld a, [wIsTrainerBattle]
+	and a
+	jp z, InitWildBattle
 	ld a, [wEnemyMonSpecies2]
-	sub $c8
-	jp c, InitWildBattle
+	sub $cc
 	ld [wTrainerClass], a
 	ld [wTrainerPicID], a
 	ld [wTrainerAINumber], a
@@ -173,7 +175,7 @@ LoadMonBackPic:
 	coord hl, 1, 5
 	ld bc,$708
 	call ClearScreenArea
-	ld hl,  wMonHBackSprite - wMonHeader
+	ld hl, wMonHBackSprite - wMonHeader
 	call UncompressMonSprite
 	callba LoadBackSpriteUnzoomed
 	ld hl, vSprites

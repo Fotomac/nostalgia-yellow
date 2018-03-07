@@ -1,7 +1,7 @@
 Music_TrainerBattle_Ch1::
 	tempo 112
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 2
@@ -650,7 +650,7 @@ Music_TrainerBattle_branch_22962::
 
 
 Music_TrainerBattle_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 5
 	notetype 12, 12, 2
 	octave 4

@@ -1,7 +1,7 @@
 Music_Celadon_Ch1::
 	tempo 144
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	toggleperfectpitch
 	notetype 12, 2, 15
 	rest 8
@@ -9,7 +9,7 @@ Music_Celadon_Ch1::
 	D_ 8
 
 Music_Celadon_branch_b6d4::
-	duty 2
+	dutycycle 2
 	notetype 12, 11, 2
 	G_ 4
 	B_ 4
@@ -108,7 +108,7 @@ Music_Celadon_branch_b6d4::
 
 
 Music_Celadon_Ch2::
-	duty 3
+	dutycycle 3
 	notetype 12, 12, 2
 	octave 4
 	D_ 1
@@ -123,7 +123,7 @@ Music_Celadon_Ch2::
 	A_ 8
 
 Music_Celadon_branch_b74a::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 2
 	octave 4
 	B_ 4

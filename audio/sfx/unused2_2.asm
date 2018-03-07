@@ -3,7 +3,7 @@ SFX_08_unused2_Ch1:
 	tempo 256
 	volume 7, 7
 	vibrato 6, 2, 6
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 	notetype 6, 11, 1
 	octave 3
@@ -20,7 +20,7 @@ SFX_08_unused2_Ch1:
 SFX_08_unused2_Ch2:
 	executemusic
 	vibrato 8, 2, 7
-	duty 2
+	dutycycle 2
 	notetype 6, 12, 1
 	octave 4
 	E_ 2

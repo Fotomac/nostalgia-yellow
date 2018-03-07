@@ -1,7 +1,7 @@
 Music_Credits_Ch1::
 	tempo 140
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 5
@@ -285,7 +285,7 @@ Music_Credits_Ch1::
 
 
 Music_Credits_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 5
 	notetype 12, 12, 5
 	octave 4

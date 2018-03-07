@@ -1,7 +1,7 @@
 Music_Routes3_Ch1::
 	tempo 148
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 5
@@ -79,7 +79,7 @@ Music_Routes3_branch_9fc3::
 
 Music_Routes3_Ch2::
 	vibrato 8, 2, 3
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 7
 	octave 3
 	G_ 1
@@ -94,7 +94,7 @@ Music_Routes3_Ch2::
 
 Music_Routes3_branch_a01a::
 	notetype 12, 12, 7
-	duty 2
+	dutycycle 2
 	octave 4
 	C_ 6
 	octave 3
@@ -114,12 +114,12 @@ Music_Routes3_branch_a01a::
 	D_ 8
 	F_ 8
 	notetype 12, 12, 5
-	duty 3
+	dutycycle 3
 	octave 3
 	A# 8
 	A_ 8
 	notetype 12, 12, 7
-	duty 2
+	dutycycle 2
 	octave 4
 	C_ 6
 	octave 3
@@ -139,13 +139,13 @@ Music_Routes3_branch_a01a::
 	D_ 8
 	F_ 8
 	notetype 12, 12, 5
-	duty 3
+	dutycycle 3
 	octave 3
 	A# 8
 	octave 4
 	D_ 6
 	notetype 12, 12, 7
-	duty 2
+	dutycycle 2
 	C_ 1
 	D_ 1
 	E_ 2
@@ -171,7 +171,7 @@ Music_Routes3_branch_a01a::
 	notetype 8, 12, 5
 	C_ 12
 	notetype 12, 10, 0
-	duty 3
+	dutycycle 3
 	octave 3
 	A_ 8
 	B_ 8

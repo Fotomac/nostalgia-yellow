@@ -702,7 +702,16 @@ SwitchEnemyMon:
 	ld bc,4
 	call CopyData
 
+	ld hl, SpecialTrainerIDs
+	ld a, [wTrainerClass]
+	ld de, 1
+	call IsInArray
+	jr c, .specialTrainer1
 	ld hl, AIBattleWithdrawText
+	jr .next1
+.specialTrainer1
+	ld hl, AIBattleWithdrawText2
+.next1
 	call PrintText
 
 	; This wFirstMonsNotOutYet variable is abused to prevent the player from
@@ -721,6 +730,10 @@ SwitchEnemyMon:
 
 AIBattleWithdrawText:
 	TX_FAR _AIBattleWithdrawText
+	db "@"
+
+AIBattleWithdrawText2:
+	TX_FAR _AIBattleWithdrawText2
 	db "@"
 
 AIUseFullHeal:
@@ -841,9 +854,22 @@ AIPrintItemUse_:
 	ld a,[wAIItem]
 	ld [wd11e],a
 	call GetItemName
+	ld hl, SpecialTrainerIDs
+	ld a, [wTrainerClass]
+	ld de, 1
+	call IsInArray
+	jr c, .specialTrainer2
 	ld hl, AIBattleUseItemText
+	jr .next2
+.specialTrainer2
+	ld hl, AIBattleUseItemText2
+.next2
 	jp PrintText
 
 AIBattleUseItemText:
 	TX_FAR _AIBattleUseItemText
+	db "@"
+
+AIBattleUseItemText2:
+	TX_FAR _AIBattleUseItemText2
 	db "@"

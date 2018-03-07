@@ -468,6 +468,16 @@ _VileplumeDexEntry::
 	next "is very loud"
 	dex
 
+_BellossomDexEntry::
+	text "When these dance"
+	next "together, their"
+	next "petals rub against"
+
+	page "each other, making"
+	next "pretty, relaxing"
+	next "sounds"
+	dex
+
 _ParasDexEntry::
 	text "Burrows under the"
 	next "ground to gnaw on"

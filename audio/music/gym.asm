@@ -1,7 +1,7 @@
 Music_Gym_Ch1::
 	tempo 138
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 2, 2
 	toggleperfectpitch
 	notetype 12, 11, 5
@@ -166,7 +166,7 @@ Music_Gym_branch_bcd8::
 
 
 Music_Gym_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 5
 	notetype 12, 12, 7
 	octave 4

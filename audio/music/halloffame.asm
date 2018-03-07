@@ -1,7 +1,7 @@
 Music_HallOfFame_Ch1::
 	tempo 112
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 12, 2, 2
 	toggleperfectpitch
 	notetype 12, 11, 3
@@ -33,7 +33,7 @@ Music_HallOfFame_branch_7fbc5::
 
 Music_HallOfFame_Ch2::
 	vibrato 8, 2, 5
-	duty 3
+	dutycycle 3
 
 Music_HallOfFame_branch_7fbdf::
 	notetype 12, 12, 4

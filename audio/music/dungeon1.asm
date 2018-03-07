@@ -1,7 +1,7 @@
 Music_Dungeon1_Ch1::
 	tempo 144
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	toggleperfectpitch
 	vibrato 10, 1, 4
 	notetype 12, 4, 13
@@ -226,7 +226,7 @@ Music_Dungeon1_branch_7dfd5::
 
 Music_Dungeon1_Ch2::
 	vibrato 11, 1, 5
-	duty 3
+	dutycycle 3
 	notetype 12, 0, 15
 	octave 4
 	G# 8

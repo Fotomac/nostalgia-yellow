@@ -1,7 +1,7 @@
 Music_Vermilion_Ch1::
 	tempo 156
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 12, 3, 4
 	toggleperfectpitch
 
@@ -112,7 +112,7 @@ Music_Vermilion_branch_b9f6::
 
 
 Music_Vermilion_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 3
 
 Music_Vermilion_branch_ba66::

@@ -4,6 +4,8 @@ LoadSAV:
 	call ClearScreen
 	call LoadFontTilePatterns
 	call LoadTextBoxTilePatterns
+	ld a, 1
+	ld [wHaltAudio], a
 	call LoadSAV0
 	jr c, .badsum
 	call LoadSAV1
@@ -25,6 +27,8 @@ LoadSAV:
 	ld a, $1 ; bad checksum
 .goodsum
 	ld [wSaveFileStatus], a
+	ld a, 0
+	ld [wHaltAudio], a
 	ret
 
 FileDataDestroyedText:
@@ -265,9 +269,14 @@ SaveSAVtoSRAM2:
 SaveSAVtoSRAM:
 	ld a, $2
 	ld [wSaveFileStatus], a
+	ld a, 1
+	ld [wHaltAudio], a
 	call SaveSAVtoSRAM0
 	call SaveSAVtoSRAM1
-	jp SaveSAVtoSRAM2
+	call SaveSAVtoSRAM2
+	ld a, 0
+	ld [wHaltAudio], a
+	ret
 
 SAVCheckSum:
 ;Check Sum (result[1 byte] is complemented)
@@ -382,6 +391,8 @@ WhenYouChangeBoxText:
 
 CopyBoxToOrFromSRAM:
 ; copy an entire box from hl to de with b as the SRAM bank
+	ld a, 1
+	ld [wHaltAudio], a
 	push hl
 	call EnableSRAMAndLatchClockData
 	ld a, b
@@ -402,6 +413,8 @@ CopyBoxToOrFromSRAM:
 	ld [sBank2AllBoxesChecksum], a ; sBank3AllBoxesChecksum
 	call CalcIndividualBoxCheckSums
 	call DisableSRAMAndPrepareClockData
+	xor a
+	ld [wHaltAudio], a
 	ret
 
 DisplayChangeBoxMenu:
@@ -497,6 +510,8 @@ BoxNoText:
 EmptyAllSRAMBoxes:
 ; marks all boxes in SRAM as empty (initialisation for the first time the
 ; player changes the box)
+	ld a, 1
+	ld [wHaltAudio], a
 	call EnableSRAMAndLatchClockData
 	ld a, 2
 	ld [MBC1SRamBank], a
@@ -505,6 +520,8 @@ EmptyAllSRAMBoxes:
 	ld [MBC1SRamBank], a
 	call EmptySRAMBoxesInBank
 	call DisableSRAMAndPrepareClockData
+	xor a
+	ld [wHaltAudio], a
 	ret
 
 EmptySRAMBoxesInBank:
@@ -536,6 +553,8 @@ EmptySRAMBox:
 	ret
 
 GetMonCountsForAllBoxes:
+	ld a, 1
+	ld [wHaltAudio], a
 	ld hl, wBoxMonCounts
 	push hl
 	call EnableSRAMAndLatchClockData
@@ -557,6 +576,8 @@ GetMonCountsForAllBoxes:
 	ld a, [wNumInBox]
 	ld [hl], a
 
+	xor a
+	ld [wHaltAudio], a
 	ret
 
 GetMonCountsForBoxesInBank:
@@ -578,6 +599,8 @@ SAVCheckRandomID:
 ;checks if Sav file is the same by checking player's name 1st letter ($a598)
 ; and the two random numbers generated at game beginning
 ;(which are stored at wPlayerID)s
+	ld a, 1
+	ld [wHaltAudio], a
 	call EnableSRAMAndLatchClockData
 	ld a, $1
 	ld [MBC1SRamBank], a
@@ -604,6 +627,8 @@ SAVCheckRandomID:
 	ld a,$00
 	ld [MBC1SRamBankingMode],a
 	ld [MBC1SRamEnable],a
+	xor a
+	ld [wHaltAudio], a
 	ret
 
 SaveHallOfFameTeams:
@@ -642,14 +667,20 @@ LoadHallOfFameTeams:
 	; fallthrough
 
 HallOfFame_Copy:
+	ld a, 1
+	ld [wHaltAudio], a
 	call EnableSRAMAndLatchClockData
 	xor a
 	ld [MBC1SRamBank], a
 	call CopyData
 	call DisableSRAMAndPrepareClockData
+	xor a
+	ld [wHaltAudio], a
 	ret
 
 ClearSAV:
+	ld a, 1
+	ld [wHaltAudio], a
 	call EnableSRAMAndLatchClockData
 	ld a, $4
 .loop
@@ -659,6 +690,8 @@ ClearSAV:
 	pop af
 	jr nz, .loop
 	call DisableSRAMAndPrepareClockData
+	xor a
+	ld [wHaltAudio], a
 	ret
 
 PadSRAM_FF:

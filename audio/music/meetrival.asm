@@ -7,7 +7,7 @@ Music_MeetRival_Ch1::
 
 Music_MeetRival_branch_b123::
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 3
@@ -128,7 +128,7 @@ Music_MeetRival_branch_b1a2::
 
 Music_MeetRival_branch_b1a5::
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 3
@@ -144,7 +144,7 @@ Music_MeetRival_branch_b1a5::
 
 
 Music_MeetRival_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 6
 	notetype 12, 12, 7
 	octave 4
@@ -231,7 +231,7 @@ Music_MeetRival_branch_b1d8::
 	loopchannel 0, Music_MeetRival_branch_b1d8
 
 Music_MeetRival_branch_b21d::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 6
 	notetype 12, 12, 7
 	octave 3

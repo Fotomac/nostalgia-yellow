@@ -18,11 +18,11 @@ db 0
 db 0
 db 5 ; growth rate
 ; learnset
-	tmlearn 6,8
-	tmlearn 9,10
+	tmlearn 5,6,8
+	tmlearn 10
 	tmlearn 20,23
 	tmlearn 28,31,32
 	tmlearn 33,34,38,40
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50
 db BANK(GrowlithePicFront)

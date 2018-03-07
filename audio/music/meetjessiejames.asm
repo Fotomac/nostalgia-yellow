@@ -1,7 +1,7 @@
 Music_MeetJessieJames_Ch1::
 	tempo 144
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 1, 4
 	notetype 12, 11, 2
 	octave 3
@@ -78,7 +78,7 @@ Music_MeetJessieJames_branch_83187::
 
 
 Music_MeetJessieJames_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 6, 1, 5
 	notetype 12, 12, 2
 	octave 4

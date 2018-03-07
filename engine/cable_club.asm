@@ -289,7 +289,7 @@ CableClub_DoBattleOrTradeAgain:
 	predef HealParty
 	jp ReturnToCableClubRoom
 .trading
-	ld c, BANK(Music_GameCorner)
+	ld c, 0 ; BANK(Music_GameCorner)
 	ld a, MUSIC_GAME_CORNER
 	call PlayMusic
 	jr CallCurrentTradeCenterFunction
@@ -924,7 +924,7 @@ CableClub_Run:
 	ld [$ffb5], a
 	ld a, 10
 	ld [wAudioFadeOutControl], a
-	ld a, BANK(Music_Celadon)
+	ld a, 0 ; BANK(Music_Celadon)
 	ld [wAudioSavedROMBank], a
 	ld a, MUSIC_CELADON
 	ld [wNewSoundID], a

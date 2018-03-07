@@ -1,7 +1,7 @@
 Music_Cinnabar_Ch1::
 	tempo 144
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 12, 3, 4
 	toggleperfectpitch
 
@@ -86,7 +86,7 @@ Music_Cinnabar_branch_b878::
 
 
 Music_Cinnabar_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 10, 2, 3
 
 Music_Cinnabar_branch_b8d9::

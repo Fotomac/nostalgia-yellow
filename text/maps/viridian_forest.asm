@@ -13,14 +13,15 @@ _ViridianForestBattleText1::
 	done
 
 _ViridianForestEndBattleText1::
-	text "No!"
-	line "CATERPIE can't"
+	text "No! CATERPIE can't"
 	cont "hack it!"
 	prompt
 
 _ViridianFrstAfterBattleText1::
 	text "Ssh! You'll scare"
 	line "the bugs away!"
+
+	para "Another time, OK?"
 	done
 
 _ViridianForestBattleText2::
@@ -30,8 +31,7 @@ _ViridianForestBattleText2::
 	done
 
 _ViridianForestEndBattleText2::
-	text "Huh?"
-	line "I ran out of"
+	text "Huh? I ran out of"
 	cont "#MON!"
 	prompt
 
@@ -44,11 +44,11 @@ _ViridianFrstAfterBattleText2::
 _ViridianForestBattleText3::
 	text "Hey, wait up!"
 	line "What's the hurry?"
+	cont "Why the rush?"
 	done
 
 _ViridianForestEndBattleText3::
-	text "I"
-	line "give! You're good"
+	text "I give! You're good"
 	cont "at this!"
 	prompt
 
@@ -68,8 +68,7 @@ _ViridianForestBattleTextPikaGirl::
 	done
 
 _ViridianForestEndBattleTextPikaGirl::
-	text "Oh no,"
-	line "really?"
+	text "Oh no, really?"
 	prompt
 
 _ViridianForestAfterBattleTextPikaGirl::
@@ -85,8 +84,7 @@ _ViridianForestBattleTextSamurai::
 	done
 
 _ViridianForestEndBattleTextSamurai::
-	text "After"
-	line "all I did..."
+	text "After all I did..."
 	prompt
 
 _ViridianForestAfterBattleTextSamurai::
@@ -94,6 +92,38 @@ _ViridianForestAfterBattleTextSamurai::
 	line "because its"
 	cont "attack is its"
 	cont "defense!"
+	done
+
+_ViridianForestBattleText4::
+	text "I might be little,"
+	line "but I don't want"
+	cont "you to go easy"
+	cont "on me!"
+	done
+
+_ViridianForestEndBattleText4::
+	text "Oh, hell! Nothing"
+	line "went right!"
+	prompt
+
+_ViridianFrstAfterBattleText4::
+	text "I lost some of my"
+	line "allowance..."
+	done
+
+_ViridianForestBattleText5::
+	text "Did you know that"
+	line "#MON evolve?"
+	done
+
+_ViridianForestEndBattleText5::
+	text "Oh! I lost!"
+	prompt
+
+_ViridianFrstAfterBattleText5::
+	text "BUG #MON evolve"
+	line "quickly! They're"
+	cont "a lot of fun!"
 	done
 
 _ViridianForestText8::

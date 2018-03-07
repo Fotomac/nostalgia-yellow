@@ -409,9 +409,9 @@ MapHS58:
 	db BILLS_HOUSE, $02, Hide
 	db BILLS_HOUSE, $03, Hide
 MapHS33:
-	db VIRIDIAN_FOREST, $07, Show
-	db VIRIDIAN_FOREST, $08, Show
 	db VIRIDIAN_FOREST, $09, Show
+	db VIRIDIAN_FOREST, $0a, Show
+	db VIRIDIAN_FOREST, $0b, Show
 MapHS3B:
 	db MT_MOON_1, $08, Show
 	db MT_MOON_1, $09, Show

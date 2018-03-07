@@ -10,24 +10,26 @@ ViridianForestObject:
 	db $2f, $12, $1, VIRIDIAN_FOREST_ENTRANCE
 
 	db $6 ; signs
-	db $28, $18, $b ; ViridianForestText9
-	db $20, $10, $c ; ViridianForestText10
-	db $11, $1a, $d ; ViridianForestText11
-	db $18, $4, $e ; ViridianForestText12
-	db $2d, $12, $f ; ViridianForestText13
-	db $1, $2, $10 ; ViridianForestText14
+	db $28, $18, $d ; ViridianForestText9
+	db $20, $10, $e ; ViridianForestText10
+	db $11, $1a, $f ; ViridianForestText11
+	db $18, $4, $10 ; ViridianForestText12
+	db $2d, $12, $11 ; ViridianForestText13
+	db $1, $2, $12 ; ViridianForestText14
 
-	db $a ; objects
+	db $c ; objects
 	object SPRITE_BUG_CATCHER, $10, $2b, STAY, NONE, $1 ; person
 	object SPRITE_BUG_CATCHER, $1e, $21, STAY, LEFT, $2, OPP_BUG_CATCHER, $1
 	object SPRITE_BUG_CATCHER, $1e, $13, STAY, LEFT, $3, OPP_BUG_CATCHER, $2
 	object SPRITE_BUG_CATCHER, $2, $12, STAY, LEFT, $4, OPP_BUG_CATCHER, $3
 	object SPRITE_LASS, $2, $29, STAY, NONE, $5, OPP_LASS, $12
 	object SPRITE_BUG_CATCHER, $d, $11, STAY, RIGHT, $6, OPP_BUG_CATCHER, $f
-	object SPRITE_BALL, $19, $b, STAY, NONE, $7, POTION
-	object SPRITE_BALL, $c, $1d, STAY, NONE, $8, POTION
-	object SPRITE_BALL, $1, $1f, STAY, NONE, $9, POKE_BALL
-	object SPRITE_BUG_CATCHER, $1b, $28, STAY, NONE, $a ; person
+	object SPRITE_BUG_CATCHER, $1b, $2, STAY, UP, $7, OPP_BUG_CATCHER, $10
+	object SPRITE_BUG_CATCHER, $1b, $2, STAY, UP, $8, OPP_BUG_CATCHER, $11
+	object SPRITE_BALL, $19, $b, STAY, NONE, $9, POTION
+	object SPRITE_BALL, $c, $1d, STAY, NONE, $a, POTION
+	object SPRITE_BALL, $1, $1f, STAY, NONE, $b, POKE_BALL
+	object SPRITE_BUG_CATCHER, $1b, $28, STAY, NONE, $c ; person
 
 	; warp-to
 	EVENT_DISP VIRIDIAN_FOREST_WIDTH, $0, $1 ; VIRIDIAN_FOREST_EXIT

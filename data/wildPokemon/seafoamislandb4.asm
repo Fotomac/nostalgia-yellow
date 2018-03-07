@@ -1,12 +1,12 @@
 IslandMonsB4:
 	db $0A
-	db 36,GOLBAT
-	db 36,ZUBAT
+	db 36,RAIBLU
+	db 36,PIKABLU
 	db 30,KRABBY
 	db 32,KINGLER
 	db 28,SEEL
 	db 32,SEEL
-	db 27,GOLBAT
+	db 27,RAIBLU
 	db 45,JYNX
 	db 30,DEWGONG
 	db 34,DEWGONG

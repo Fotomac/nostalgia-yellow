@@ -18,11 +18,11 @@ db 0
 db 0
 db 5 ; growth rate
 ; learnset
-	tmlearn 3,6,8
-	tmlearn 9,10,15
+	tmlearn 6,8
+	tmlearn 10,15
 	tmlearn 17,19,20
 	tmlearn 31,32
 	tmlearn 34,39
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50,51,54
 db BANK(PinsirPicFront)

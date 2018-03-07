@@ -27,7 +27,7 @@ PewterJigglypuff:
 	jr nz, .asm_f1dc9
 	dec hl
 	push hl
-	ld c, BANK(Music_JigglypuffSong)
+	ld c, 0 ; BANK(Music_JigglypuffSong)
 	ld a, MUSIC_JIGGLYPUFF_SONG
 	call PlayMusic
 	pop hl
@@ -44,11 +44,10 @@ PewterJigglypuff:
 	pop hl
 	ld c, 24
 	call DelayFrames
-	ld a, [wChannelSoundIDs]
-	ld b, a
-	ld a, [wChannelSoundIDs + 1]
-	or b
-	jr nz, .asm_f1dd7
+	push hl
+	call IsSongPlaying
+	pop hl
+	jr c, .asm_f1dd7
 	ld c, 48
 	call DelayFrames
 	call PlayDefaultMusic

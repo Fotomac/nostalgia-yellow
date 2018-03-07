@@ -8,7 +8,7 @@ Music_Cities1_Ch1::
 Music_Cities1_branch_aa79::
 	volume 7, 7
 	vibrato 8, 2, 4
-	duty 3
+	dutycycle 3
 
 Music_Cities1_branch_aa80::
 	notetype 12, 12, 5
@@ -276,7 +276,7 @@ Music_Cities1_Ch2::
 	notetype 12, 12, 4
 	E_ 6
 	notetype 12, 12, 5
-	duty 3
+	dutycycle 3
 	octave 3
 	C# 4
 	D# 4
@@ -288,13 +288,13 @@ Music_Cities1_Ch2::
 	G# 2
 	notetype 12, 12, 4
 	E_ 14
-	duty 3
+	dutycycle 3
 	octave 3
 	E_ 6
 	F# 6
 	G# 4
 	notetype 12, 11, 7
-	duty 2
+	dutycycle 2
 	vibrato 8, 1, 7
 	octave 5
 	C# 12
@@ -360,7 +360,7 @@ Music_Cities1_Ch2::
 	loopchannel 0, Music_Cities1_Ch2
 
 Music_Cities1_branch_ac00::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 3
 	octave 4
 	B_ 4
@@ -378,14 +378,14 @@ Music_Cities1_branch_ac00::
 	notetype 12, 12, 4
 	F# 10
 	notetype 12, 12, 5
-	duty 3
+	dutycycle 3
 	octave 3
 	E_ 4
 	D# 8
 	E_ 4
 	F# 4
 	notetype 12, 12, 3
-	duty 2
+	dutycycle 2
 	octave 4
 	A_ 4
 	G# 4

@@ -18,11 +18,11 @@ db 0
 db 0
 db 0 ; growth rate
 ; learnset
-	tmlearn 6,8
-	tmlearn 9,10,11,12,13,14
+	tmlearn 3,6,8
+	tmlearn 10,11,12,13,14
 	tmlearn 20
 	tmlearn 31,32
 	tmlearn 33,34,39
-	tmlearn 44
+	tmlearn 44,46
 	tmlearn 50,53
 db BANK(KabutoPicFront)

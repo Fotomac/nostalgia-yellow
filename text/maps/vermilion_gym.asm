@@ -8,7 +8,7 @@ _VermilionGymText_5cb6d::
 
 	para "Hahaha! You've got"
 	line "big and brassy"
-	cont "nerves to take me"
+	cont "balls to take me"
 	cont "on with your puny"
 	cont "power!"
 
@@ -40,7 +40,7 @@ _VermilionGymText_5cb77::
 	para "It also lets your"
 	line "#MON FLY"
 	cont "lightning-quick"
-	cont "time, kid!"
+	cont "any time, kid!"
 
 	para "You're special,"
 	line "kid! Take this!"
@@ -67,7 +67,7 @@ _TM34NoRoomText::
 	done
 
 _ReceivedThunderbadgeText::
-	text "Whoa!"
+	text "LT. SURGE: Whoa!"
 	line "Now that's a"
 	cont "shocker!"
 
@@ -85,8 +85,8 @@ _VermilionGymBattleText1::
 	done
 
 _VermilionGymEndBattleText1::
-	text "Stop!"
-	line "You're very good!"
+	text "Stop! You're"
+	line "very good!"
 	prompt
 
 _VermilionGymAfterBattleText1::
@@ -121,8 +121,7 @@ _VermilionGymBattleText3::
 	done
 
 _VermilionGymEndBattleText3::
-	text "Wow!"
-	line "Surprised me!"
+	text "Wow!Surprised me!"
 	prompt
 
 _VermilionGymAfterBattleText3::
@@ -144,9 +143,8 @@ _VermilionGymBattleText4::
 	done
 
 _VermilionGymEndBattleText4::
-	text "God"
-	line "bless America and"
-	cont "democracy!"
+	text "God bless America"
+	line "and democracy!"
 	prompt
 
 _VermilionGymAfterBattleText4::

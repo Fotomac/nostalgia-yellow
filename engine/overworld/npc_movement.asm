@@ -153,7 +153,7 @@ PalletMovementScript_Done:
 	ld a, [wSimulatedJoypadStatesIndex]
 	and a
 	ret nz
-	ld a, $0
+	ld a, HS_PALLET_TOWN_OAK
 	ld [wMissableObjectIndex], a
 	predef HideObject
 	ld hl, wd730
@@ -167,7 +167,7 @@ PewterMuseumGuyMovementScriptPointerTable:
 	dw PewterMovementScript_Done
 
 PewterMovementScript_WalkToMuseum:
-	ld a, BANK(Music_MuseumGuy)
+	ld a, 0 ; BANK(Music_MuseumGuy)
 	ld c, a
 	ld a, MUSIC_MUSEUM_GUY
 	call PlayMusic
@@ -221,7 +221,7 @@ PewterGymGuyMovementScriptPointerTable:
 	dw PewterMovementScript_Done
 
 PewterMovementScript_WalkToGym:
-	ld a, BANK(Music_MuseumGuy)
+	ld a, 0 ; BANK(Music_MuseumGuy)
 	ld c, a
 	ld a, MUSIC_MUSEUM_GUY
 	call PlayMusic

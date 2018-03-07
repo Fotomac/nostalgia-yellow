@@ -1,5 +1,5 @@
 SFX_Battle_31_Ch1:
-	duty 2
+	dutycycle 2
 	unknownsfx0x20 15, 255, 224, 7
 	unknownsfx0x20 15, 255, 224, 7
 	unknownsfx0x20 15, 255, 224, 7
@@ -9,7 +9,7 @@ SFX_Battle_31_Ch1:
 
 
 SFX_Battle_31_Ch2:
-	duty 3
+	dutycycle 3
 	unknownsfx0x20 15, 255, 226, 7
 	unknownsfx0x20 15, 255, 225, 7
 	unknownsfx0x20 15, 255, 226, 7

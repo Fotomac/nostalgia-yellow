@@ -1,7 +1,7 @@
 Music_MeetMaleTrainer_Ch1::
 	tempo 112
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 20, 3, 3
 	toggleperfectpitch
 	notetype 12, 11, 4
@@ -33,7 +33,7 @@ Music_MeetMaleTrainer_branch_7f78f::
 
 
 Music_MeetMaleTrainer_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 24, 2, 2
 	notetype 12, 12, 4
 	octave 4

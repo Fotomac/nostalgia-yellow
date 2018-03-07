@@ -1,7 +1,7 @@
 Music_MeetFemaleTrainer_Ch1::
 	tempo 124
 	volume 7, 7
-	duty 1
+	dutycycle 1
 	toggleperfectpitch
 	notetype 12, 11, 2
 	octave 3
@@ -27,7 +27,7 @@ Music_MeetFemaleTrainer_branch_7f70c::
 
 
 Music_MeetFemaleTrainer_Ch2::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 2
 	octave 3
 	B_ 2

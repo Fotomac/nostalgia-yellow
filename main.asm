@@ -11,6 +11,8 @@ PICS_2 EQU $A
 PICS_3 EQU $B
 PICS_4 EQU $C
 PICS_5 EQU $D
+PICS_6 EQU $40
+PICS_7 EQU $41
 
 TRAINER_PICS_1 EQU $13
 TRAINER_PICS_2 EQU $3B
@@ -170,12 +172,16 @@ SsCaptainSprite:       INCBIN "gfx/sprites/ss_captain.2bpp"
 Fisher2Sprite:         INCBIN "gfx/sprites/fisher2.2bpp"
 BlackbeltSprite:       INCBIN "gfx/sprites/blackbelt.2bpp"
 GuardSprite:           INCBIN "gfx/sprites/guard.2bpp"
+RocketSprite:          INCBIN "gfx/sprites/rocket.2bpp"
 
 INCLUDE "engine/battle/end_of_battle.asm"
 INCLUDE "engine/battle/wild_encounters.asm"
 INCLUDE "engine/battle/moveEffects/recoil_effect.asm"
 INCLUDE "engine/battle/moveEffects/conversion_effect.asm"
 INCLUDE "engine/battle/moveEffects/haze_effect.asm"
+
+EXPBarGraphics: INCBIN "gfx/exp_bar.h8.2bpp"
+EXPBarGraphicsEnd:
 
 
 SECTION "NPC Sprites 2", ROMX, BANK[NPC_SPRITES_2]
@@ -190,11 +196,9 @@ LeafCyclingSprite:    INCBIN "gfx/sprites/leafcycling.2bpp"
 BlueSprite:           INCBIN "gfx/sprites/blue.2bpp"
 OakSprite:            INCBIN "gfx/sprites/oak.2bpp"
 BugCatcherSprite:     INCBIN "gfx/sprites/bug_catcher.2bpp"
-SlowbroSprite:        INCBIN "gfx/sprites/slowbro.2bpp"
 LassSprite:           INCBIN "gfx/sprites/lass.2bpp"
 BlackHairBoy1Sprite:  INCBIN "gfx/sprites/black_hair_boy_1.2bpp"
 LittleGirlSprite:     INCBIN "gfx/sprites/little_girl.2bpp"
-BirdSprite:           INCBIN "gfx/sprites/bird.2bpp"
 FatBaldGuySprite:     INCBIN "gfx/sprites/fat_bald_guy.2bpp"
 GamblerSprite:        INCBIN "gfx/sprites/gambler.2bpp"
 BlackHairBoy2Sprite:  INCBIN "gfx/sprites/black_hair_boy_2.2bpp"
@@ -208,7 +212,6 @@ SailorSprite:         INCBIN "gfx/sprites/sailor.2bpp"
 CookSprite:           INCBIN "gfx/sprites/cook.2bpp"
 BikeShopGuySprite:    INCBIN "gfx/sprites/bike_shop_guy.2bpp"
 MrFujiSprite:         INCBIN "gfx/sprites/mr_fuji.2bpp"
-RocketSprite:         INCBIN "gfx/sprites/rocket.2bpp"
 MediumSprite:         INCBIN "gfx/sprites/medium.2bpp"
 WaiterSprite:         INCBIN "gfx/sprites/waiter.2bpp"
 MomGeishaSprite:      INCBIN "gfx/sprites/mom_geisha.2bpp"
@@ -218,7 +221,6 @@ MomSprite:            INCBIN "gfx/sprites/mom.2bpp"
 BaldingGuySprite:     INCBIN "gfx/sprites/balding_guy.2bpp"
 YoungBoySprite:       INCBIN "gfx/sprites/young_boy.2bpp"
 GameboyKidSprite:     INCBIN "gfx/sprites/gameboy_kid.2bpp"
-ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
 AgathaSprite:         INCBIN "gfx/sprites/agatha.2bpp"
 BrunoSprite:          INCBIN "gfx/sprites/bruno.2bpp"
 LoreleiSprite:        INCBIN "gfx/sprites/lorelei.2bpp"
@@ -753,27 +755,217 @@ INCLUDE "engine/game_corner_slots.asm"
 
 SECTION "bank0E",ROMX,BANK[$0E]
 
-INCLUDE "data/moves.asm"
-BaseStats: INCLUDE "data/base_stats.asm"
-INCLUDE "data/cries.asm"
 INCLUDE "engine/battle/trainer_ai.asm"
 INCLUDE "engine/battle/draw_hud_pokeball_gfx.asm"
 
-TradingAnimationGraphics: INCBIN "gfx/game_boy.norepeat.2bpp"
-	INCBIN "gfx/link_cable.2bpp"
-TradingAnimationGraphicsEnd:
-
-TradingAnimationGraphics2:
-; Pokeball traveling through the link cable.
-	INCBIN "gfx/trade2.2bpp"
-TradingAnimationGraphics2End:
-
 INCLUDE "engine/evos_moves.asm"
+
+EnemyHealthBarUpdated:
+	ld [hl], $72
+	ld a, [wIsInBattle]
+	dec a
+	jr nz, .noBattle
+	push hl
+	ld a, [wEnemyMon]
+	ld [wd11e], a
+	ld hl, IndexToPokedex
+	ld b, BANK(IndexToPokedex)
+	call Bankswitch
+	ld a, [wd11e]
+	dec a
+	ld c, a
+	ld b, $2
+	ld hl, wPokedexOwned
+	predef FlagActionPredef
+	ld a, c
+	and a
+	jr z, .notOwned
+	coord hl, 1, 1
+	ld [hl], $E9
+.notOwned
+	pop hl
+.noBattle
+	ld de, $0001
+	jp HealthBarUpdateDone
 
 
 SECTION "bank0F",ROMX,BANK[$0F]
 
 INCLUDE "engine/battle/core.asm"
+
+PrintEXPBar:
+	call CalcEXPBarPixelLength
+	ld a, [H_QUOTIENT + 3] ; pixel length
+	ld [wEXPBarPixelLength], a
+	ld b, a
+	ld c, $08
+	ld d, $08
+	coord hl, 17, 11
+.loop
+	ld a, b
+	sub c
+	jr nc, .skip
+	ld c, b
+	jr .loop
+.skip
+	ld b, a
+	ld a, $c0
+	add c
+.loop2
+	ld [hld], a
+	dec d
+	ret z
+	ld a, b
+	and a
+	jr nz, .loop
+	ld a, $c0
+	jr .loop2
+
+CalcEXPBarPixelLength:
+	ld hl, wEXPBarKeepFullFlag
+	bit 0, [hl]
+	jr z, .start
+	res 0, [hl]
+	ld a, $40
+	ld [H_QUOTIENT + 3], a
+	ret
+.start
+	; get the base exp needed for the current level
+	ld a, [wPlayerBattleStatus3]
+	ld hl, wBattleMonSpecies
+	bit 3, a
+	jr z, .skip
+	ld hl, wPartyMon1
+	call BattleMonPartyAttr
+.skip
+	ld a, [hl]
+	ld [wd0b5], a
+	call GetMonHeader
+	ld a, [wBattleMonLevel]
+	ld d, a
+	ld hl, CalcExperience
+	ld b, BANK(CalcExperience)
+	call Bankswitch
+	ld hl, H_MULTIPLICAND
+	ld de, wEXPBarBaseEXP
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hl]
+	ld [de], a
+	; get the exp needed to gain a level
+	ld a, [wBattleMonLevel]
+	ld d, a
+	inc d
+	ld hl, CalcExperience
+	ld b, BANK(CalcExperience)
+	call Bankswitch
+	; get the address of the active Pokemon's current experience
+	ld hl, wPartyMon1Exp
+	call BattleMonPartyAttr
+	; current exp - base exp
+	ld b, h
+	ld c, l
+	ld hl, wEXPBarBaseEXP
+	ld de, wEXPBarCurEXP
+	call SubThreeByteNum
+	; exp needed - base exp
+	ld bc, H_MULTIPLICAND
+	ld hl, wEXPBarBaseEXP
+	ld de, wEXPBarNeededEXP
+	call SubThreeByteNum
+	; make the divisor an 8-bit number
+	ld hl, wEXPBarNeededEXP
+	ld de, wEXPBarCurEXP + 1
+	ld a, [hli]
+	and a
+	jr z, .twoBytes
+	ld a, [hli]
+	ld [hld], a
+	dec hl
+	ld a, [hli]
+	ld [hld], a
+	ld a, [de]
+	inc de
+	ld [de], a
+	dec de
+	dec de
+	ld a, [de]
+	inc de
+	ld [de], a
+	dec de
+	xor a
+	ld [hli], a
+	ld [de], a
+	inc de
+.twoBytes
+	ld a, [hl]
+	and a
+	jr z, .oneByte
+	srl a
+	ld [hli], a
+	ld a, [hl]
+	rr a
+	ld [hld], a
+	ld a, [de]
+	srl a
+	ld [de], a
+	inc de
+	ld a, [de]
+	rr a
+	ld [de], a
+	dec de
+	jr .twoBytes
+.oneByte
+	; current exp * (8 tiles * 8 pixels)
+	ld hl, H_MULTIPLICAND
+	ld de, wEXPBarCurEXP
+	ld a, [de]
+	inc de
+	ld [hli], a
+	ld a, [de]
+	inc de
+	ld [hli], a
+	ld a, [de]
+	ld [hl], a
+	ld a, $40
+	ld [H_MULTIPLIER], a
+	call Multiply
+	; product / needed exp = pixel length
+	ld a, [wEXPBarNeededEXP + 2]
+	ld [H_DIVISOR], a
+	ld b, $04
+	jp Divide
+; calculates the three byte number starting at [bc]
+; minus the three byte number starting at [hl]
+; and stores it into the three bytes starting at [de]
+; assumes that [hl] is smaller than [bc]
+SubThreeByteNum:
+	call .subByte
+	call .subByte
+.subByte
+	ld a, [bc]
+	inc bc
+	sub [hl]
+	inc hl
+	ld [de], a
+	jr nc, .noCarry
+	dec de
+	ld a, [de]
+	dec a
+	ld [de], a
+	inc de
+.noCarry
+	inc de
+	ret
+; return the address of the BattleMon's party struct attribute in hl
+BattleMonPartyAttr:
+	ld a, [wPlayerMonNumber]
+	ld bc, wPartyMon2 - wPartyMon1
+	jp AddNTimes
 
 
 SECTION "bank10",ROMX,BANK[$10]
@@ -784,6 +976,8 @@ INCLUDE "engine/trade.asm"
 INCLUDE "engine/intro.asm"
 INCLUDE "engine/trade2.asm"
 INCLUDE "engine/menu/options.asm"
+INCLUDE "data/moves.asm"
+INCLUDE "data/cries.asm"
 
 
 SECTION "bank11",ROMX,BANK[$11]
@@ -1336,6 +1530,75 @@ SilphCo8Blocks: INCBIN "maps/silphco8.blk"
 INCLUDE "engine/menu/diploma_1.asm"
 
 INCLUDE "engine/overworld/trainers.asm"
+
+AnimateEXPBarAgain:
+	call LoadMonData
+	call IsCurrentMonBattleMon
+	ret nz
+	xor a
+	ld [wEXPBarPixelLength], a
+	coord hl, 17, 11
+	ld a, $c0
+	ld c, $08
+.loop
+	ld [hld], a
+	dec c
+	jr nz, .loop
+AnimateEXPBar:
+	call LoadMonData
+	call IsCurrentMonBattleMon
+	ret nz
+	ld a, SFX_HEAL_HP
+	call PlaySoundWaitForCurrent
+	ld hl, CalcEXPBarPixelLength
+	ld b, BANK(CalcEXPBarPixelLength)
+	call Bankswitch
+	ld a, [wEXPBarPixelLength]
+	ld b, a
+	ld a, [H_QUOTIENT + 3]
+	sub b
+	jr z, .done
+	ld b, a
+	ld c, $08
+	coord hl, 17, 11
+.loop1
+	ld a, [hl]
+	cp $c8
+	jr nz, .loop2
+	dec hl
+	dec c
+	jr z, .done
+	jr .loop1
+.loop2
+	inc a
+	ld [hl], a
+	call DelayFrame
+	dec b
+	jr z, .done
+	jr .loop1
+.done
+	ld bc, $08
+	coord hl, 10, 11
+	ld de, wTileMapBackup + 10 + 11 * 20
+	call CopyData
+	ld c, $20
+	jp DelayFrames
+
+KeepEXPBarFull:
+	call IsCurrentMonBattleMon
+	ret nz
+	ld a, [wEXPBarKeepFullFlag]
+	set 0, a
+	ld [wEXPBarKeepFullFlag], a
+	ld a, [wCurEnemyLVL]
+	ret
+
+IsCurrentMonBattleMon:
+	ld a, [wPlayerMonNumber]
+	ld b, a
+	ld a, [wWhichPokemon]
+	cp b
+	ret
 
 
 SECTION "bank16",ROMX,BANK[$16]
@@ -2060,8 +2323,21 @@ JessieJamesPic:   INCBIN "pic/ytrainer/jessiejames.pic"
 
 SECTION "bank3B",ROMX,BANK[$3B]
 
+TradingAnimationGraphics: INCBIN "gfx/game_boy.norepeat.2bpp"
+	INCBIN "gfx/link_cable.2bpp"
+TradingAnimationGraphicsEnd:
+
+TradingAnimationGraphics2:
+; Pokeball traveling through the link cable.
+	INCBIN "gfx/trade2.2bpp"
+TradingAnimationGraphics2End:
+
 SeelSprite:            INCBIN "gfx/sprites/seel.2bpp"
 LaprasSprite:          INCBIN "gfx/sprites/lapras.2bpp"
+
+SlowbroSprite:        INCBIN "gfx/sprites/slowbro.2bpp"
+BirdSprite:           INCBIN "gfx/sprites/bird.2bpp"
+ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
 
 BrockOverworld:        INCBIN "gfx/sprites/brock.2bpp"
 MistyOverworld:        INCBIN "gfx/sprites/misty.2bpp"
@@ -2082,9 +2358,6 @@ SnorlaxSprite:         INCBIN "gfx/sprites/snorlax.2bpp"
 OldAmberSprite:        INCBIN "gfx/sprites/old_amber.2bpp"
 LyingOldManSprite:     INCBIN "gfx/sprites/lying_old_man.2bpp"
 QuestionMarkSprite:    INCBIN "gfx/sprites/question_mark.2bpp"
-
-Overworld_GFX:         INCBIN "gfx/tilesets/overworld.2bpp"
-Overworld_Block:       INCBIN "gfx/blocksets/overworld.bst"
 
 
 SECTION "bank3C",ROMX,BANK[$3C]
@@ -2107,7 +2380,7 @@ SECTION "bank3F",ROMX,BANK[$3F]
 INCLUDE "engine/bank3f.asm"
 
 
-SECTION "bank40",ROMX,BANK[$40]
+SECTION "Pics 6",ROMX,BANK[PICS_6]
 
 MarowakPicFront:      INCBIN "pic/ymon/marowak.pic"
 MarowakPicBack:       INCBIN "pic/monback/marowakb.pic"
@@ -2155,7 +2428,7 @@ MagnemitePicFront:    INCBIN "pic/ymon/magnemite.pic"
 MagnemitePicBack:     INCBIN "pic/monback/magnemiteb.pic"
 
 
-SECTION "bank41",ROMX,BANK[$41]
+SECTION "Pics 7",ROMX,BANK[PICS_7]
 
 CharmanderPicFront:   INCBIN "pic/ymon/charmander.pic"
 CharmanderPicBack:    INCBIN "pic/monback/charmanderb.pic"
@@ -2186,4 +2459,17 @@ PikabluPicFront:      INCBIN "pic/ymon/pikablu.pic"
 PikabluPicBack:       INCBIN "pic/monback/pikablub.pic"
 RaibluPicFront:       INCBIN "pic/ymon/raiblu.pic"
 RaibluPicBack:        INCBIN "pic/monback/raiblub.pic"
+BellossomPicFront:    INCBIN "pic/ymon/bellossom.pic"
+BellossomPicBack:     INCBIN "pic/monback/bellossom.pic"
+
+
+SECTION "bank42",ROMX,BANK[$42]
+
+BaseStats: INCLUDE "data/base_stats.asm"
+
+
+SECTION "bank43",ROMX,BANK[$43]
+
+Overworld_GFX:         INCBIN "gfx/tilesets/overworld.2bpp"
+Overworld_Block:       INCBIN "gfx/blocksets/overworld.bst"
 

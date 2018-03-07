@@ -1,7 +1,7 @@
 Music_DefeatedTrainer_Ch1::
 	tempo 224
 	volume 7, 7
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 	tempo 224
 	notetype 4, 10, 2
@@ -18,7 +18,7 @@ Music_DefeatedTrainer_Ch1::
 	D_ 2
 	notetype 4, 11, 3
 	F# 12
-	duty 1
+	dutycycle 1
 	tempo 224
 
 Music_DefeatedTrainer_branch_23a76::
@@ -96,7 +96,7 @@ Music_DefeatedTrainer_branch_23a76::
 
 
 Music_DefeatedTrainer_Ch2::
-	duty 2
+	dutycycle 2
 	notetype 4, 12, 3
 	octave 4
 	A_ 2

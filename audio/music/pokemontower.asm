@@ -1,7 +1,7 @@
 Music_PokemonTower_Ch1::
 	tempo 152
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	toggleperfectpitch
 	vibrato 12, 2, 3
 	notetype 12, 8, 0
@@ -142,7 +142,7 @@ Music_PokemonTower_branch_7f05a::
 
 Music_PokemonTower_Ch2::
 	vibrato 20, 3, 4
-	duty 3
+	dutycycle 3
 	notetype 12, 10, 0
 	octave 5
 	C_ 12

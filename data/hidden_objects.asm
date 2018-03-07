@@ -80,6 +80,7 @@ HiddenObjectMaps:
 	dbw CINNABAR_GYM,           CinnabarGymHiddenObjects
 	dbw CINNABAR_LAB_4,         CinnabarLab4HiddenObjects
 	dbw CINNABAR_POKECENTER,    CinnabarPokecenterHiddenObjects
+	dbw PEWTER_CITY,            PewterCityHiddenObjects
 	db $ff
 
 ; format: y-coord, x-coord, text id/item id, object routine
@@ -146,11 +147,14 @@ SeafoamIslands5HiddenObjects:
 ViridianForestHiddenObjects:
 	hidden_object  18,   1, POTION, HiddenItems
 	hidden_object  42,  16, ANTIDOTE, HiddenItems
+	hidden_object  42,  32, POTION, HiddenItems
 	db $ff
 
 MtMoon3HiddenObjects:
 	hidden_object  12,  18, MOON_STONE, HiddenItems
 	hidden_object   9,  33, ETHER, HiddenItems
+	hidden_object   6,  21, REVIVE, HiddenItems
+	hidden_object   8,   7, ANTIDOTE, HiddenItems
 	db $ff
 
 SSAnne10HiddenObjects:
@@ -246,7 +250,7 @@ BillsHouseHiddenObjects:
 	db $ff
 
 Route4HiddenObjects:
-	hidden_object   3,  40, GREAT_BALL, HiddenItems
+	hidden_object   2,  36, GREAT_BALL, HiddenItems
 	db $ff
 
 MtMoonPokecenterHiddenObjects:
@@ -542,4 +546,8 @@ CinnabarLab4HiddenObjects:
 CinnabarPokecenterHiddenObjects:
 	hidden_object   4,   0, SPRITE_FACING_UP, PrintBenchGuyText
 	hidden_object   3,  13, SPRITE_FACING_UP, OpenPokemonCenterPC
+	db $ff
+
+PewterCityHiddenObjects:
+	hidden_object   5,   7, POKE_BALL, HiddenItems
 	db $ff

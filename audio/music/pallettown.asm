@@ -1,7 +1,7 @@
 Music_PalletTown_Ch1::
 	tempo 160
 	volume 7, 7
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 3
 
 Music_PalletTown_branch_a7ce::
@@ -149,7 +149,7 @@ Music_PalletTown_branch_a7ce::
 
 
 Music_PalletTown_Ch2::
-	duty 2
+	dutycycle 2
 
 Music_PalletTown_branch_a861::
 	notetype 12, 13, 3

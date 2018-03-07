@@ -2,7 +2,7 @@ Music_CinnabarMansion_Ch1::
 	tempo 144
 	volume 7, 7
 	vibrato 11, 2, 5
-	duty 2
+	dutycycle 2
 
 Music_CinnabarMansion_branch_7ed19::
 	notetype 12, 6, 2
@@ -39,7 +39,7 @@ Music_CinnabarMansion_branch_7ed19::
 
 
 Music_CinnabarMansion_Ch2::
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 	vibrato 10, 2, 4
 	notetype 12, 12, 2

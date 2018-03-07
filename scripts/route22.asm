@@ -26,6 +26,8 @@ Route22Script_50ed6:
 	ld [wCurOpponent], a
 	ld a, $2
 	ld [wTrainerNo], a
+	ld a, 1
+	ld [wIsTrainerBattle], a
 	ret
 
 Route22Script_50ee1:
@@ -91,7 +93,7 @@ Route22Script0:
 	jr z, .asm_50f4e
 	call StopAllMusic
 .asm_50f4e
-	ld c, BANK(Music_MeetRival)
+	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
 	ld a, $1
@@ -147,6 +149,8 @@ Route22Script2:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, Route22Script_50ece
+	xor a
+	ld [wIsTrainerBattle], a
 	ld a, [wRivalStarter]
 	cp 2
 	jr nz, .asm_50fc9
@@ -302,6 +306,8 @@ Route22Script5:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, Route22Script_50ece
+	xor a
+	ld [wIsTrainerBattle], a
 	ld a, $2
 	ld [H_SPRITEINDEX], a
 	ld a, [wcf0d]

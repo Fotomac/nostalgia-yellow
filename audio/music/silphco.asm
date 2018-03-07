@@ -1,7 +1,7 @@
 Music_SilphCo_Ch1::
 	tempo 160
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	toggleperfectpitch
 	vibrato 8, 2, 2
 	notetype 6, 11, 3
@@ -397,7 +397,7 @@ Music_SilphCo_branch_7f3f0::
 
 Music_SilphCo_Ch2::
 	vibrato 10, 3, 2
-	duty 3
+	dutycycle 3
 	notetype 6, 12, 3
 	octave 3
 	E_ 1
@@ -458,7 +458,7 @@ Music_SilphCo_branch_7f42e::
 	G# 2
 	rest 2
 	notetype 6, 11, 7
-	duty 2
+	dutycycle 2
 	octave 4
 	E_ 8
 	D# 8
@@ -476,7 +476,7 @@ Music_SilphCo_branch_7f42e::
 	D# 8
 	D_ 8
 	D# 8
-	duty 3
+	dutycycle 3
 	notetype 6, 6, 15
 	E_ 16
 	notetype 6, 12, 0
@@ -500,7 +500,7 @@ Music_SilphCo_branch_7f42e::
 	D_ 4
 	D# 4
 	notetype 6, 12, 2
-	duty 1
+	dutycycle 1
 	octave 4
 	E_ 4
 	D# 4
@@ -512,7 +512,7 @@ Music_SilphCo_branch_7f42e::
 	D# 4
 	E_ 4
 	notetype 6, 12, 4
-	duty 3
+	dutycycle 3
 	octave 3
 	F_ 4
 	F# 4
@@ -531,7 +531,7 @@ Music_SilphCo_branch_7f42e::
 	notetype 6, 8, 10
 	F_ 4
 	notetype 6, 12, 4
-	duty 3
+	dutycycle 3
 	F_ 4
 	E_ 4
 	F_ 4
@@ -567,43 +567,43 @@ Music_SilphCo_branch_7f42e::
 	D# 4
 	D_ 4
 	notetype 6, 12, 2
-	duty 1
+	dutycycle 1
 	F_ 4
 	F# 4
 	G_ 4
 	G# 4
 	A_ 4
 	notetype 6, 11, 4
-	duty 3
+	dutycycle 3
 	D# 4
 	D_ 4
 	D# 4
 	notetype 6, 12, 2
-	duty 1
+	dutycycle 1
 	F_ 4
 	F# 4
 	G_ 4
 	G# 4
 	A# 4
 	notetype 6, 11, 4
-	duty 3
+	dutycycle 3
 	D# 4
 	D_ 4
 	D# 4
 	notetype 6, 12, 2
-	duty 1
+	dutycycle 1
 	F_ 4
 	F# 4
 	G_ 4
 	G# 4
 	B_ 4
 	notetype 6, 11, 4
-	duty 3
+	dutycycle 3
 	D# 4
 	D_ 4
 	D# 4
 	notetype 6, 12, 2
-	duty 1
+	dutycycle 1
 	F_ 4
 	F# 4
 	G_ 4
@@ -611,7 +611,7 @@ Music_SilphCo_branch_7f42e::
 	octave 4
 	C_ 4
 	notetype 6, 11, 4
-	duty 3
+	dutycycle 3
 	octave 3
 	D# 4
 	D_ 4
@@ -625,7 +625,7 @@ Music_SilphCo_branch_7f42e::
 	rest 6
 	G_ 2
 	rest 2
-	duty 0
+	dutycycle 0
 	octave 4
 	E_ 2
 	rest 2
@@ -637,7 +637,7 @@ Music_SilphCo_branch_7f42e::
 	rest 6
 	G# 2
 	rest 6
-	duty 3
+	dutycycle 3
 	octave 3
 	G_ 2
 	rest 6
@@ -647,7 +647,7 @@ Music_SilphCo_branch_7f42e::
 	rest 6
 	G_ 2
 	rest 2
-	duty 0
+	dutycycle 0
 	octave 4
 	E_ 2
 	rest 2
@@ -659,7 +659,7 @@ Music_SilphCo_branch_7f42e::
 	rest 6
 	B_ 2
 	rest 2
-	duty 3
+	dutycycle 3
 	octave 3
 	G_ 2
 	rest 2

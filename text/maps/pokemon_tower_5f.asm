@@ -26,8 +26,7 @@ _PokemonTower5BattleText2::
 	done
 
 _PokemonTower5EndBattleText2::
-	text "What"
-	line "a nightmare!"
+	text "What a nightmare!"
 	prompt
 
 _PokemonTower5AfterBattleText2::
@@ -66,6 +65,6 @@ _PokemonTower5Text7::
 	text "Entered purified,"
 	line "protected zone!"
 
-	para $52, "'s #MON"
+	para "<PLAYER>'s #MON"
 	line "are fully healed!"
 	done

@@ -1,7 +1,7 @@
 Music_PkmnHealed_Ch1::
 	tempo 144
 	volume 7, 7
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 	notetype 12, 8, 1
 	rest 2
@@ -20,7 +20,7 @@ Music_PkmnHealed_Ch1::
 
 
 Music_PkmnHealed_Ch2::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 3
 	octave 4
 	B_ 4

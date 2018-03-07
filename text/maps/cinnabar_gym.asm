@@ -1,21 +1,27 @@
 _BlaineBattleText::
 	text "Hah!"
 
-	para "I am BLAINE! I"
-	line "am the LEADER of"
+	para "I am BLAINE, the"
+	line "red-hot LEADER of"
 	cont "CINNABAR GYM!"
 
 	para "My fiery #MON"
-	line "will incinerate"
-	cont "all challengers!"
+	line "are all ready"
+	cont "with intense"
+	cont "heat!"
+
+	para "They incinerate"
+	line "all challengers!"
 
 	para "Hah! You better"
 	line "have BURN HEAL!"
 	done
 
 _BlaineEndBattleText::
-	text "I have"
-	line "burnt out!"
+	text "BLAINE: I have"
+	line "burned down to"
+	cont "nothing! Not even"
+	cont "ashes remain!"
 
 	para "You have earned"
 	line "the VOLCANOBADGE!@@"
@@ -42,7 +48,7 @@ _BlaineBadgeText::
 	done
 
 _ReceivedTM38Text::
-	text $52, " received"
+	text "<PLAYER> received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -55,9 +61,10 @@ _TM38ExplanationText::
 	para "Teach it to fire-"
 	line "type #MON!"
 
-	para "CHARMELEON or"
-	line "PONYTA would be"
-	cont "good bets!"
+	para "VULPIX or"
+	line "CHARMELEON would"
+	cont "be ideal for that"
+	cont "move!"
 	done
 
 _TM38NoRoomText::
@@ -92,8 +99,7 @@ _CinnabarGymText_75994::
 	done
 
 _CinnabarGymText_75999::
-	text "I"
-	line "surrender!"
+	text "I surrender!"
 	prompt
 
 _CinnabarGymText_7599e::
@@ -109,8 +115,7 @@ _CinnabarGymText_759c9::
 	done
 
 _CinnabarGymText_759ce::
-	text "Waah!"
-	line "My studies!"
+	text "Waah! My studies!"
 	prompt
 
 _CinnabarGymText_759d3::
@@ -125,8 +130,7 @@ _CinnabarGymText_759fe::
 	done
 
 _CinnabarGymText_75a03::
-	text "Too hot"
-	line "to handle!"
+	text "Too hot to handle!"
 	prompt
 
 _CinnabarGymText_75a08::
@@ -162,8 +166,7 @@ _CinnabarGymText_75a68::
 	done
 
 _CinnabarGymText_75a6d::
-	text "Yowza!"
-	line "Too hot!"
+	text "Yowza! Too hot!"
 	prompt
 
 _CinnabarGymText_75a72::
@@ -178,8 +181,7 @@ _CinnabarGymText_75a9d::
 	done
 
 _CinnabarGymText_75aa2::
-	text "Oh!"
-	line "Snuffed out!"
+	text "Oh! Snuffed out!"
 	prompt
 
 _CinnabarGymText_75aa7::
@@ -204,7 +206,7 @@ _CinnabarGymText_75ac2::
 	done
 
 _CinnabarGymText_75ac7::
-	text $52, "! You beat"
+	text "<PLAYER>! You beat"
 	line "that fire brand!"
 	done
 

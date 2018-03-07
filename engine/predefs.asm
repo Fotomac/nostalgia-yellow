@@ -59,7 +59,7 @@ PredefPointers::
 	add_predef ScaleSpriteByTwo
 	add_predef LoadMonBackPic
 	add_predef CopyDownscaledMonTiles
-	add_predef Func_f0a7
+	add_predef LoadMissableObjects ; dbw $03,JumpMoveEffect ; wrong bank XXXXX
 	add_predef HealParty
 	add_predef MoveAnimation
 	add_predef DivideBCDPredef

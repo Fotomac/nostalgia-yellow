@@ -1,7 +1,7 @@
 Music_DefeatedGymLeader_Ch1::
 	tempo 112
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 18, 3, 1
 	toggleperfectpitch
 	tempo 112
@@ -163,7 +163,7 @@ Music_DefeatedGymLeader_branch_23ccc::
 
 
 Music_DefeatedGymLeader_Ch2::
-	duty 2
+	dutycycle 2
 	vibrato 24, 2, 4
 	notetype 12, 12, 4
 	octave 4

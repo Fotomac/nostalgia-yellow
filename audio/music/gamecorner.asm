@@ -1,7 +1,7 @@
 Music_GameCorner_Ch1::
 	tempo 120
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 12, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 5
@@ -184,7 +184,7 @@ Music_GameCorner_branch_7e222::
 
 
 Music_GameCorner_Ch2::
-	duty 2
+	dutycycle 2
 	vibrato 10, 2, 3
 	notetype 12, 12, 6
 	octave 4
@@ -197,7 +197,7 @@ Music_GameCorner_Ch2::
 	F# 2
 	E_ 2
 	F# 2
-	duty 3
+	dutycycle 3
 	B_ 1
 	A# 1
 	B_ 1
@@ -207,7 +207,7 @@ Music_GameCorner_Ch2::
 	B_ 8
 
 Music_GameCorner_branch_7e2fa::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 7
 	octave 3
 	E_ 4

@@ -2,7 +2,7 @@ Music_Routes2_Ch1::
 	tempo 152
 	volume 7, 7
 	vibrato 9, 2, 5
-	duty 1
+	dutycycle 1
 
 Music_Routes2_branch_9dc3::
 	notetype 12, 11, 2
@@ -144,7 +144,7 @@ Music_Routes2_branch_9dc3::
 
 Music_Routes2_Ch2::
 	vibrato 8, 2, 6
-	duty 3
+	dutycycle 3
 
 Music_Routes2_branch_9e54::
 	notetype 12, 13, 4

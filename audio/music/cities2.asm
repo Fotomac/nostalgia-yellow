@@ -1,7 +1,7 @@
 Music_Cities2_Ch1::
 	tempo 148
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 3, 2
 	toggleperfectpitch
 	notetype 12, 11, 6
@@ -95,7 +95,7 @@ Music_Cities2_branch_b51a::
 
 
 Music_Cities2_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 8, 2, 3
 	notetype 12, 12, 2
 	octave 4
@@ -111,7 +111,7 @@ Music_Cities2_Ch2::
 	D# 2
 	E_ 6
 	notetype 12, 12, 2
-	duty 2
+	dutycycle 2
 	octave 4
 	E_ 1
 	octave 3
@@ -169,7 +169,7 @@ Music_Cities2_branch_b58b::
 	notetype 12, 12, 4
 	F# 8
 	notetype 12, 10, 1
-	duty 1
+	dutycycle 1
 	octave 3
 	G# 1
 	G# 1
@@ -178,7 +178,7 @@ Music_Cities2_branch_b58b::
 	G# 1
 	rest 1
 	notetype 12, 12, 2
-	duty 2
+	dutycycle 2
 	octave 4
 	E_ 1
 	octave 3

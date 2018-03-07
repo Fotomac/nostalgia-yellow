@@ -3,7 +3,7 @@ Music_SafariZone_Ch1::
 	volume 7, 7
 	vibrato 6, 3, 4
 	toggleperfectpitch
-	duty 2
+	dutycycle 2
 	notetype 12, 9, 2
 	octave 3
 	pitchbend 0, 73
@@ -15,7 +15,7 @@ Music_SafariZone_Ch1::
 	pitchbend 0, 73
 	G_ 1
 	rest 4
-	duty 3
+	dutycycle 3
 
 Music_SafariZone_branch_bc4f::
 	callchannel Music_SafariZone_branch_bc5f
@@ -40,7 +40,7 @@ Music_SafariZone_branch_bc5f::
 
 
 Music_SafariZone_Ch2::
-	duty 2
+	dutycycle 2
 	vibrato 8, 2, 5
 	notetype 12, 10, 2
 	octave 4
@@ -49,7 +49,7 @@ Music_SafariZone_Ch2::
 	G_ 1
 	D_ 1
 	rest 4
-	duty 3
+	dutycycle 3
 
 Music_SafariZone_branch_bc79::
 	callchannel Music_SafariZone_branch_bc89

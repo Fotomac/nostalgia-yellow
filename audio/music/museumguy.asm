@@ -1,7 +1,7 @@
 Music_MuseumGuy_Ch1::
 	tempo 128
 	volume 7, 7
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 	notetype 12, 11, 1
 	octave 3
@@ -55,7 +55,7 @@ Music_MuseumGuy_branch_adec::
 
 
 Music_MuseumGuy_Ch2::
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 1
 	octave 4
 	E_ 2

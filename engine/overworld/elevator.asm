@@ -16,9 +16,9 @@ ShakeElevator:
 	add d
 	ld [hSCY], a
 	push bc
-	ld c, BANK(SFX_Collision_1)
+	ld c, 0 ; BANK(SFX_Collision_1)
 	ld a, SFX_COLLISION
-	call PlayMusic
+	call PlaySound
 	pop bc
 	ld c, 2
 	call DelayFrames
@@ -27,9 +27,9 @@ ShakeElevator:
 	ld a, d
 	ld [hSCY], a
 	call StopAllMusic
-	ld c, BANK(SFX_Safari_Zone_PA)
+	ld c, 0 ; BANK(SFX_Safari_Zone_PA)
 	ld a, SFX_SAFARI_ZONE_PA
-	call PlayMusic
+	call PlaySound
 .musicLoop
 	ld a, [wChannelSoundIDs + CH4]
 	cp SFX_SAFARI_ZONE_PA

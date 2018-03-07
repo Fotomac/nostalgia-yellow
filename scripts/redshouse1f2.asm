@@ -29,14 +29,11 @@ MomHealPokemon:
 	predef HealParty
 	ld a, MUSIC_PKMN_HEALED
 	ld [wNewSoundID], a
-	call PlaySound
-.loop
-	ld a, [wChannelSoundIDs]
-	cp MUSIC_PKMN_HEALED
-	jr z, .loop
+	call PlayMusic
+	call WaitForMusicToFinish
 	ld a, [wMapMusicSoundID]
 	ld [wNewSoundID], a
-	call PlaySound
+	call PlayMusic
 	call GBFadeInFromWhite
 	ld hl, MomHealText2
 	call PrintText

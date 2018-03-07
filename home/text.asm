@@ -198,8 +198,16 @@ MonsterNameCharsCommon::
 	jr FinishDTE
 
 .Enemy
+	ld a, [wIsInBattle]
+	dec a
+	jr z, .wild
 	; print “Enemy ”
-	ld de, Char5AText
+	ld de, Char5AText_Trainer
+	jr .next
+.wild
+	; print “Wild ”
+	ld de,Char5AText_Wild
+.next
 	call PlaceString
 	ld h, b
 	ld l, c
@@ -225,8 +233,10 @@ Char54Text::
 	db "POKé@"
 Char56Text::
 	db "……@"
-Char5AText::
+Char5AText_Trainer::
 	db "Enemy @"
+Char5AText_Wild::
+	db "Wild @"
 Char4AText::
 	db $E1, $E2, "@" ; PKMN
 
@@ -625,7 +635,6 @@ TextCommandSounds::
 	db $0B, SFX_GET_ITEM_1
 	db $12, SFX_TURN_OFF_PC
 	db $0E, SFX_POKEDEX_RATING
-	db $0F, SFX_GET_ITEM_1
 	db $10, SFX_GET_ITEM_2
 	db $11, SFX_GET_KEY_ITEM
 	db $13, SFX_TRADE_MACHINE

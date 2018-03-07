@@ -66,7 +66,7 @@ CeruleanCityScript0:
 	jr z, .asm_19512
 	call StopAllMusic
 .asm_19512
-	ld c, BANK(Music_MeetRival)
+	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
 	xor a
@@ -136,6 +136,8 @@ CeruleanCityScript1:
 	ld [wCurOpponent], a
 	ld a, 3
 	ld [wTrainerNo], a
+	ld a, 1
+	ld [wIsTrainerBattle], a
 	xor a
 	ld [hJoyHeld], a
 	call CeruleanCityScript_1955d
@@ -147,6 +149,8 @@ CeruleanCityScript2:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, CeruleanCityScript_1948c
+	xor a
+	ld [wIsTrainerBattle], a
 	call CeruleanCityScript_1955d
 	ld a, $f0
 	ld [wJoyIgnore], a

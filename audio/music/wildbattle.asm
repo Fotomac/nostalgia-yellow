@@ -1,7 +1,7 @@
 Music_WildBattle_Ch1::
 	tempo 104
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 3
@@ -301,7 +301,7 @@ Music_WildBattle_branch_230e0::
 
 
 Music_WildBattle_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 8, 2, 5
 	notetype 12, 12, 3
 	octave 4

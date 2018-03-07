@@ -852,7 +852,7 @@ InitYellowIntroGFXAndMusic:
 	ld [hli], a
 	ld [hl], a
 	ld a, MUSIC_INTRO_BATTLE
-	ld c, BANK(Music_IntroBattle)
+	ld c, 0 ; BANK(Music_IntroBattle)
 	call PlayMusic
 	ret
 

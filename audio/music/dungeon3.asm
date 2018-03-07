@@ -1,7 +1,7 @@
 Music_Dungeon3_Ch1::
 	tempo 160
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	toggleperfectpitch
 	vibrato 8, 1, 4
 
@@ -337,7 +337,7 @@ Music_Dungeon3_branch_7eafc::
 
 Music_Dungeon3_Ch2::
 	vibrato 11, 1, 5
-	duty 3
+	dutycycle 3
 
 Music_Dungeon3_branch_7eb6d::
 	notetype 12, 13, 3

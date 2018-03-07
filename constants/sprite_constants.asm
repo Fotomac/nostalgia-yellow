@@ -91,24 +91,27 @@ const_value = 1
 	const SPRITE_KOGA                      ; $4a
 	const SPRITE_SABRINA                   ; $4b
 	const SPRITE_BLAINE                    ; $4c
+	const SPRITE_BILL                      ; $4d
 
 	; 4-tile sprites
-	const SPRITE_BALL                      ; $4d
-	const SPRITE_OMANYTE                   ; $4e
-	const SPRITE_BOULDER                   ; $4f
-	const SPRITE_PAPER_SHEET               ; $50
-	const SPRITE_BOOK_MAP_DEX              ; $51
-	const SPRITE_CLIPBOARD                 ; $52
-	const SPRITE_SNORLAX                   ; $53
-	const SPRITE_OLD_AMBER_COPY            ; $54
-	const SPRITE_OLD_AMBER                 ; $55
-	const SPRITE_LYING_OLD_MAN_UNUSED_1    ; $56
-	const SPRITE_LYING_OLD_MAN_UNUSED_2    ; $57
-	const SPRITE_LYING_OLD_MAN             ; $58
+	const SPRITE_BALL                      ; $4e
+	const SPRITE_OMANYTE                   ; $4f
+	const SPRITE_BOULDER                   ; $50
+	const SPRITE_PAPER_SHEET               ; $51
+	const SPRITE_BOOK_MAP_DEX              ; $52
+	const SPRITE_CLIPBOARD                 ; $53
+	const SPRITE_SNORLAX                   ; $54
+	const SPRITE_OLD_AMBER_COPY            ; $55
+	const SPRITE_OLD_AMBER                 ; $56
+	const SPRITE_LYING_OLD_MAN_UNUSED_1    ; $57
+	const SPRITE_LYING_OLD_MAN_UNUSED_2    ; $58
+	const SPRITE_LYING_OLD_MAN             ; $59
 
 ; different kinds of people events
 ITEM    EQU $80
 TRAINER EQU $40
+
+OW_POKEMON EQU $80
 
 BOULDER_MOVEMENT_BYTE_2 EQU $10
 

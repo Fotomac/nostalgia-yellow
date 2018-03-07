@@ -5,32 +5,46 @@ _KogaBeforeBattleText::
 	line "you dares to"
 	cont "challenge me?"
 
+	para "The very idea"
+	line "makes me shiver"
+	cont "with mirth!"
+
 	para "Very well, I"
 	line "shall show you"
 	cont "true terror as a"
 	cont "ninja master!"
 
-	para "You shall feel"
-	line "the despair of"
-	cont "poison and sleep"
-	cont "techniques!"
+	para "Poison brings"
+	line "steady doom!"
+
+	para "Sleep renders"
+	line "foes helpless!"
+
+	para "Despair to the"
+	line "creeping horror"
+	cont "of POISON-TYPE"
+	cont "#MON!"
 	done
 
 _KogaAfterBattleText::
-	text "Humph!"
+	text "KOGA: Humph!"
 	line "You have proven"
 	cont "your worth!"
 
 	para "Here! Take the"
-	line "SOULBADGE!"
+	line "MARSHBADGE!"
 	prompt
 
 _KogaExplainToxicText::
 	text "When afflicted by"
-	line "TOXIC, #MON"
-	cont "suffer more and"
-	cont "more as battle"
-	cont "progresses!"
+	line "TOXIC, a #MON"
+	cont "suffers more and"
+	cont "more!"
+
+	para "It suffers"
+	line "worsening damage"
+	cont "as the battle"
+	cont "wears on!"
 
 	para "It will surely"
 	line "terrorize foes!"
@@ -38,7 +52,7 @@ _KogaExplainToxicText::
 
 _FuchsiaGymText9::
 	text "Now that you have"
-	line "the SOULBADGE,"
+	line "the MARSHBADGE,"
 	cont "the DEFENSE of"
 	cont "your #MON"
 	cont "increases!"
@@ -52,19 +66,20 @@ _FuchsiaGymText9::
 	done
 
 _ReceivedTM06Text::
-	text $52, " received"
+	text "<PLAYER> received"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
 
 _TM06ExplanationText::
 	db $0
-	para "TM06 contains"
-	line "TOXIC!"
+	para "Sealed within that"
+	line "TM lies TOXIC!"
 
 	para "It is a secret"
-	line "technique over"
-	cont "400 years old!"
+	line "technique dating"
+	cont "back some four"
+	cont "hundred years!"
 	done
 
 _TM06NoRoomText::
@@ -101,8 +116,7 @@ _FuchsiaGymBattleText2::
 	done
 
 _FuchsiaGymEndBattleText2::
-	text "I'm done"
-	line "for!"
+	text "I'm done for!"
 	prompt
 _FuchsiaGymAfterBattleText2::
 	text "I will keep on"
@@ -117,8 +131,7 @@ _FuchsiaGymBattleText3::
 	done
 
 _FuchsiaGymEndBattleText3::
-	text "You"
-	line "had me fooled!"
+	text "You had me fooled!"
 	prompt
 
 _FuchsiaGymAfterBattleText3::
@@ -137,8 +150,7 @@ _FuchsiaGymBattleText4::
 	done
 
 _FuchsiaGymEndBattleText4::
-	text "Whoa!"
-	line "He's got it!"
+	text "Whoa! He's got it!"
 	prompt
 _FuchsiaGymAfterBattleText4::
 	text "You impressed me!"
@@ -178,8 +190,7 @@ _FuchsiaGymBattleText6::
 	done
 
 _FuchsiaGymEndBattleText6::
-	text "Dropped"
-	line "my balls!"
+	text "Dropped my balls!"
 	prompt
 
 _FuchsiaGymAfterBattleText6::

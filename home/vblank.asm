@@ -57,10 +57,11 @@ VBlank::
 	ld [H_FRAMECOUNTER], a
 
 .skipDec
-	call FadeOutAudio
+;	call FadeOutAudio
 
-	callbs Music_DoLowHealthAlarm
-	callbs Audio1_UpdateMusic
+	call UpdateSound
+;	callbs Music_DoLowHealthAlarm
+;	callbs Audio1_UpdateMusic
 
 	call SerialFunction
 

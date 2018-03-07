@@ -1,7 +1,7 @@
 Music_Lavender_Ch1::
 	tempo 152
 	volume 7, 7
-	duty 1
+	dutycycle 1
 	toggleperfectpitch
 	vibrato 0, 8, 8
 	notetype 12, 8, 7
@@ -64,7 +64,7 @@ Music_Lavender_branch_bb6b::
 
 Music_Lavender_Ch2::
 	vibrato 0, 3, 4
-	duty 3
+	dutycycle 3
 	notetype 12, 9, 1
 
 Music_Lavender_branch_bba5::

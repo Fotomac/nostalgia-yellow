@@ -1,7 +1,7 @@
 Music_SSAnne_Ch1::
 	tempo 128
 	volume 7, 7
-	duty 1
+	dutycycle 1
 	vibrato 8, 3, 4
 	toggleperfectpitch
 
@@ -108,7 +108,7 @@ Music_SSAnne_branch_b3b2::
 
 
 Music_SSAnne_Ch2::
-	duty 0
+	dutycycle 0
 	vibrato 12, 2, 4
 
 Music_SSAnne_branch_b41e::

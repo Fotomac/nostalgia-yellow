@@ -1,14 +1,14 @@
 IslandMons1:
 	db $0F
-	db 18,ZUBAT
+	db 18,PIKABLU
 	db 25,KRABBY
 	db 27,KRABBY
-	db 27,ZUBAT
-	db 36,ZUBAT
+	db 27,PIKABLU
+	db 36,PIKABLU
 	db 28,SLOWPOKE
 	db 30,SLOWPOKE
-	db 9,ZUBAT
-	db 27,GOLBAT
-	db 36,GOLBAT
+	db 9,PIKABLU
+	db 27,RAIBLU
+	db 36,RAIBLU
 	db $00
 

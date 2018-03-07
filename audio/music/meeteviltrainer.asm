@@ -1,7 +1,7 @@
 Music_MeetEvilTrainer_Ch1::
 	tempo 124
 	volume 7, 7
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 	notetype 12, 11, 1
 	rest 4
@@ -22,7 +22,7 @@ Music_MeetEvilTrainer_branch_7f6ae::
 
 
 Music_MeetEvilTrainer_Ch2::
-	duty 1
+	dutycycle 1
 	notetype 12, 11, 6
 	octave 3
 	B_ 2

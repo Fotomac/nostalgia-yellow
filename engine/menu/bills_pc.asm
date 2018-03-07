@@ -241,6 +241,7 @@ BillsPCDeposit:
 	callab PlayPikachuSoundClip
 	jr .asm_215cf
 .asm_215c9
+	call WaitForSoundToFinish
 	ld a, [wcf91]
 	call PlayCry
 .asm_215cf
@@ -304,6 +305,7 @@ BillsPCWithdraw:
 	callab PlayPikachuSoundClip
 	jr .asm_21666
 .asm_21660
+	call WaitForSoundToFinish
 	ld a, [wcf91]
 	call PlayCry
 .asm_21666

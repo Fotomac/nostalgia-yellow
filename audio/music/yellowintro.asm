@@ -1,7 +1,7 @@
 Music_YellowIntro_Ch1::
 	tempo 116
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 1, 4
 	notetype 12, 11, 2
 	octave 3
@@ -101,7 +101,7 @@ Music_YellowIntro_Ch1::
 
 
 Music_YellowIntro_Ch2::
-	duty 2
+	dutycycle 2
 	vibrato 6, 1, 5
 	notetype 12, 12, 2
 	octave 3

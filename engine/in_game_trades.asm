@@ -163,7 +163,7 @@ InGameTrade_PrepareTradeData:
 	ld de, wTradedPlayerMonOT
 	ld bc, NAME_LENGTH
 	call InGameTrade_CopyData
-	ld hl, InGameTrade_TrainerString
+	ld hl, wCurTrainerName
 	ld de, wTradedEnemyMonOT
 	call InGameTrade_CopyData
 	ld de, wLinkEnemyTrainerName
@@ -198,7 +198,7 @@ InGameTrade_CopyDataToReceivedMon:
 	ld hl, wPartyMonOT
 	ld bc, NAME_LENGTH
 	call InGameTrade_GetReceivedMonPointer
-	ld hl, InGameTrade_TrainerString
+	ld hl, wCurTrainerName
 	ld bc, NAME_LENGTH
 	call CopyData
 	ld hl, wPartyMon1OTID
@@ -248,10 +248,6 @@ InGameTrade_CheckForTradeEvo:
 	xor a ; LINK_STATE_NONE
 	ld [wLinkState],a
 	jp PlayDefaultMusic
-
-InGameTrade_TrainerString:
-	; "TRAINER@@@@@@@@@@"
-	db $5d, "@@@@@@@@@@"
 
 InGameTradeTextPointers:
 	dw TradeTextPointers1

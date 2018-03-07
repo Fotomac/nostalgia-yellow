@@ -226,14 +226,44 @@ INCLUDE "text/maps/rock_tunnel_b2f.asm"
 INCLUDE "text/maps/seafoam_islands_b4f.asm"
 
 _AIBattleWithdrawText::
+	text "The @"
 	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
 	text " with-"
-	line "drew @"
+	cont "drew @"
+	TX_RAM wEnemyMonNick
+	text "!"
+	prompt
+
+_AIBattleWithdrawText2::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
+	line "withdrew"
+	cont "@"
 	TX_RAM wEnemyMonNick
 	text "!"
 	prompt
 
 _AIBattleUseItemText::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
+	text ""
+	cont "used @"
+	TX_RAM wcd6d
+	text ""
+	cont "on @"
+	TX_RAM wEnemyMonNick
+	text "!"
+	prompt
+
+_AIBattleUseItemText2::
+	text "The @"
 	TX_RAM wTrainerName
 	text ""
 	line "used @"
@@ -1134,7 +1164,17 @@ _MoneyForWinningText::
 
 _TrainerDefeatedText::
 	text "<PLAYER> defeated"
-	line "@"
+	line "the @"
+	TX_RAM wTrainerName
+	text ""
+	cont "@"
+	TX_RAM wCurTrainerName
+	text "!"
+	prompt
+
+_TrainerDefeatedText2::
+	text "<PLAYER> defeated"
+	line "the @"
 	TX_RAM wTrainerName
 	text "!"
 	prompt
@@ -1170,9 +1210,13 @@ _LinkBattleLostText::
 	prompt
 
 _TrainerAboutToUseText::
+	text "The @"
 	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
 	text " is"
-	line "about to use"
+	cont "about to use"
 	cont"@"
 	TX_RAM wEnemyMonNick
 	text "!"
@@ -1181,12 +1225,38 @@ _TrainerAboutToUseText::
 	line "change #MON?"
 	done
 
-_TrainerSentOutText::
+_TrainerAboutToUseText2::
+	text "The @"
 	TX_RAM wTrainerName
-	text " sent"
-	line "out @"
+	text ""
+	line "is about to use"
+	cont "@"
 	TX_RAM wEnemyMonNick
 	text "!"
+
+	para "Will <PLAYER>"
+	line "change #MON?"
+	done
+
+_TrainerSentOutText::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
+	text " sent"
+	cont "@"
+	TX_RAM wEnemyMonNick
+	text " out!"
+	done
+
+_TrainerSentOutText2::
+	text "The @"
+	TX_RAM wTrainerName
+	text " sent"
+	line "@"
+	TX_RAM wEnemyMonNick
+	text " out!"
 	done
 
 _NoWillText::
@@ -1551,9 +1621,20 @@ _EnemyAppearedText::
 	prompt
 
 _TrainerWantsToFightText::
+	text "The @"
 	TX_RAM wTrainerName
+	text ""
+	line "@"
+	TX_RAM wCurTrainerName
 	text " wants"
-	line "to fight!"
+	cont "to fight!"
+	prompt
+
+_TrainerWantsToFightText2::
+	text "The @"
+	TX_RAM wTrainerName
+	text ""
+	line "wants to fight!"
 	prompt
 
 _UnveiledGhostText::

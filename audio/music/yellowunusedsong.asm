@@ -1,7 +1,7 @@
 Music_YellowUnusedSong_Ch1::
 	tempo 140
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 8, 1, 4
 	notetype 8, 11, 2
 	octave 3
@@ -76,7 +76,7 @@ Music_YellowUnusedSong_branch_82fde::
 
 
 Music_YellowUnusedSong_Ch2::
-	duty 2
+	dutycycle 2
 	notetype 8, 12, 2
 	octave 4
 	D_ 6

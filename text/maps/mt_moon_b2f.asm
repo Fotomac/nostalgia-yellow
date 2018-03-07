@@ -8,15 +8,15 @@ _MtMoonJessieJamesText2::
 	cont "ROCKET's!"
 
 	para "JAMES: Surrender"
-	line "now, or  prepare"
+	line "now, or prepare"
 	cont "to fight!"
 
-	para "MEOWTH! Meowth!"
+	para "MEOWTH: Meowth!"
 	line "That's right!"
 	done
 
 _MtMoonJessieJamesText3::
-	text "A"
+	text "JESSIE: A"
 	line "brat beat us?"
 	prompt
 
@@ -36,7 +36,7 @@ _MtMoon3Text_49f64::
 	done
 
 _MtMoon3Text_49f6f::
-	text $52, " got the"
+	text "<PLAYER> got the"
 	line "@"
 	TX_RAM wcf4b
 	text "!@@"
@@ -54,8 +54,7 @@ _MtMoon3Text_49f85::
 	done
 
 _MtMoon3Text_49f8a::
-	text "OK!"
-	line "I'll share!"
+	text "OK! I'll share!"
 	prompt
 
 _MtMoon3Text_49f8f::
@@ -89,8 +88,7 @@ _MtMoon3BattleText3::
 	done
 
 _MtMoon3EndBattleText3::
-	text "I blew"
-	line "it!"
+	text "I blew it!"
 	prompt
 
 _MtMoon3AfterBattleText3::
@@ -106,8 +104,7 @@ _MtMoon3BattleText4::
 	done
 
 _MtMoon3EndBattleText4::
-	text "So, you"
-	line "are good."
+	text "So, you are good."
 	prompt
 
 _MtMoon3AfterBattleText4::
@@ -127,8 +124,7 @@ _MtMoon3BattleText5::
 	done
 
 _MtMoon3EndBattleText5::
-	text "I'm"
-	line "steamed!"
+	text "I'm steamed!"
 	prompt
 
 _MtMoon3AfterBattleText5::

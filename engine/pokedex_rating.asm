@@ -76,17 +76,17 @@ DexRatingsTable:
 	dw DexRatingText_Own80To89
 	db 100
 	dw DexRatingText_Own90To99
-	db 110
+	db 111
 	dw DexRatingText_Own100To109
-	db 120
+	db 121
 	dw DexRatingText_Own110To119
-	db 130
+	db 131
 	dw DexRatingText_Own120To129
-	db 140
+	db 141
 	dw DexRatingText_Own130To139
-	db 152
+	db 153
 	dw DexRatingText_Own140To149
-	db 154
+	db 155
 	dw DexRatingText_Own150To151
 
 DexRatingText_Own0To9:

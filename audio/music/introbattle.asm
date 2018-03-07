@@ -1,7 +1,7 @@
 Music_IntroBattle_Ch1::
 	tempo 98
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	vibrato 6, 3, 4
 	toggleperfectpitch
 	notetype 12, 11, 1
@@ -91,7 +91,7 @@ Music_IntroBattle_Ch1::
 
 
 Music_IntroBattle_Ch2::
-	duty 3
+	dutycycle 3
 	vibrato 8, 2, 5
 	notetype 12, 12, 2
 	rest 8

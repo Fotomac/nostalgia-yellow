@@ -1,7 +1,7 @@
 Music_MeetProfOak_Ch1::
 	tempo 112
 	volume 7, 7
-	duty 3
+	dutycycle 3
 	toggleperfectpitch
 	notetype 12, 11, 4
 	octave 3
@@ -76,7 +76,7 @@ Music_MeetProfOak_branch_af85::
 
 Music_MeetProfOak_Ch2::
 	vibrato 8, 1, 1
-	duty 2
+	dutycycle 2
 	notetype 12, 12, 4
 	octave 3
 	B_ 1

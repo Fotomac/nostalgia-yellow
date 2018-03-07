@@ -2,7 +2,7 @@ Music_Routes1_Ch1::
 	tempo 152
 	volume 7, 7
 	vibrato 4, 2, 3
-	duty 2
+	dutycycle 2
 	toggleperfectpitch
 
 Music_Routes1_branch_9be9::
@@ -107,7 +107,7 @@ Music_Routes1_branch_9be9::
 
 
 Music_Routes1_Ch2::
-	duty 2
+	dutycycle 2
 
 Music_Routes1_branch_9c53::
 	notetype 12, 13, 1
