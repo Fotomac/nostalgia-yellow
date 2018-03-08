@@ -1074,7 +1074,9 @@ TrainerDefeatedText2:
 
 PlayBattleVictoryMusic:
 	push af
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySoundWaitForCurrent
 	ld c, 0 ; BANK(Music_DefeatedTrainer)
 	pop af
 	call PlayMusic

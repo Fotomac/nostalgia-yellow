@@ -39,7 +39,7 @@ tbp: MACRO
 	tbp Music_BikeRiding
 	tbp Music_Surfing
 	tbp Music_RBYGameCorner
-	tbp Music_IntroBattle
+	tbp Music_YellowIntro
 	tbp Music_Dungeon1
 	tbp Music_Dungeon2
 	tbp Music_Dungeon3
@@ -53,4 +53,4 @@ tbp: MACRO
 	tbp Music_SurfingPikachu
 	tbp Music_MeetJessieJames
 	tbp Music_YellowUnusedSong
-	tbp Music_GBPrinter
+	tbp Music_Printer

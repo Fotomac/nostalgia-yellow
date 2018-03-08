@@ -1,12 +1,12 @@
 SFX_Get_Item1_1::
-	dbw ( $80 | CH4 ), SFX_Get_Item1_1_Ch1
-	dbw CH5, SFX_Get_Item1_1_Ch2
-	dbw CH6, SFX_Get_Item1_1_Ch3
+	dbw ( $80 | CH4 ), SFX_Get_Item1_1_Ch4
+	dbw CH5, SFX_Get_Item1_1_Ch5
+	dbw CH6, SFX_Get_Item1_1_Ch6
 
 SFX_Get_Item2_1::
-	dbw ( $80 | CH4 ), SFX_Get_Item2_1_Ch1
-	dbw CH5, SFX_Get_Item2_1_Ch2
-	dbw CH6, SFX_Get_Item2_1_Ch3
+	dbw ( $80 | CH4 ), SFX_Get_Item2_1_Ch4
+	dbw CH5, SFX_Get_Item2_1_Ch5
+	dbw CH6, SFX_Get_Item2_1_Ch6
 
 SFX_Tink_1::
 	dbw CH4, SFX_Tink_1_Ch1
@@ -24,14 +24,14 @@ SFX_Press_AB_1::
 	dbw CH4, SFX_Press_AB_1_Ch1
 
 SFX_Pokedex_Rating_1::
-	dbw ( $80 | CH4 ), SFX_Pokedex_Rating_1_Ch1
-	dbw CH5, SFX_Pokedex_Rating_1_Ch2
-	dbw CH6, SFX_Pokedex_Rating_1_Ch3
+	dbw ( $80 | CH4 ), SFX_Pokedex_Rating_1_Ch4
+	dbw CH5, SFX_Pokedex_Rating_1_Ch5
+	dbw CH6, SFX_Pokedex_Rating_1_Ch6
 
 SFX_Get_Key_Item_1::
-	dbw ( $80 | CH4 ), SFX_Get_Key_Item_1_Ch1
-	dbw CH5, SFX_Get_Key_Item_1_Ch2
-	dbw CH6, SFX_Get_Key_Item_1_Ch3
+	dbw ( $80 | CH4 ), SFX_Get_Key_Item_1_Ch4
+	dbw CH5, SFX_Get_Key_Item_1_Ch5
+	dbw CH6, SFX_Get_Key_Item_1_Ch6
 
 SFX_Poisoned_1::
 	dbw CH4, SFX_Poisoned_1_Ch1

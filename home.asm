@@ -1016,51 +1016,9 @@ ResetPlayerSpriteData_ClearSpriteData::
 	ret
 
 FadeOutAudio::
-	ld a, [wAudioFadeOutControl]
-	and a ; currently fading out audio?
-	jr nz, .fadingOut
-	ld a, [wd72c]
-	bit 1, a
-	ret nz
-	ld a, $77
-	ld [rNR50], a
-	ret
-.fadingOut
-	ld a, [wAudioFadeOutCounter]
-	and a
-	jr z, .counterReachedZero
-	dec a
-	ld [wAudioFadeOutCounter], a
-	ret
-.counterReachedZero
-	ld a, [wAudioFadeOutCounterReloadValue]
-	ld [wAudioFadeOutCounter], a
-	ld a, [rNR50]
-	and a ; has the volume reached 0?
-	jr z, .fadeOutComplete
-	ld b, a
-	and $f
-	dec a
-	ld c, a
-	ld a, b
-	and $f0
-	swap a
-	dec a
-	swap a
-	or c
-	ld [rNR50], a
-	ret
-.fadeOutComplete
-	ld a, [wAudioFadeOutControl]
-	ld b, a
-	xor a
-	ld [wAudioFadeOutControl], a
-	call StopAllMusic
-	ld a, [wAudioSavedROMBank]
-	ld [wAudioROMBank], a
-	ld a, b
-	ld [wNewSoundID], a
-	jp PlaySound
+	ld b, BANK(FadeOutAudio_)
+	ld hl, FadeOutAudio_
+	jp Bankswitch
 
 UnknownText_2812::
 	TX_FAR _PokemonText
@@ -2231,14 +2189,14 @@ UpdateGBCPal_OBP1::
 	ret
 
 Func_3082::
-	ld a, [H_LOADEDROMBANK]
-	push af
-	call FadeOutAudio
-	callbs Music_DoLowHealthAlarm
-	callbs Audio1_UpdateMusic
-	pop af
-	call BankswitchCommon
-	ret
+;	ld a, [H_LOADEDROMBANK]
+;	push af
+;	call FadeOutAudio
+;	callbs Music_DoLowHealthAlarm
+;	callbs Audio1_UpdateMusic
+;	pop af
+;	call BankswitchCommon
+;	ret
 
 ; not zero if an NPC movement script is running, the player character is
 ; automatically stepping down from a door, or joypad states are being simulated
@@ -2693,60 +2651,9 @@ TrainerEndBattleText::
 	jp TextScriptEnd
 
 PlayTrainerMusic::
-	ld a, [wEngagedTrainerClass]
-	cp OPP_SONY1
-	ret z
-	cp OPP_SONY2
-	ret z
-	cp OPP_SONY3
-	ret z
-	ld a, [wGymLeaderNo]
-	and a
-	ret nz
-	xor a
-	ld [wAudioFadeOutControl], a
-	call StopAllMusic ; stop music
-	ld a, 0 ; BANK(Music_MeetEvilTrainer)
-	ld [wAudioROMBank], a
-	ld [wAudioSavedROMBank], a
-	ld a, [wEngagedTrainerClass]
-	ld b, a
-	ld hl, EvilTrainerList
-.evilTrainerListLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .noEvilTrainer
-	cp b
-	jr nz, .evilTrainerListLoop
-	ld a, MUSIC_MEET_EVIL_TRAINER
-	jr .PlaySound
-.noEvilTrainer
-	ld hl, CuteTrainerList
-.cuteTrainerListLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .noCuteTrainer
-	cp b
-	jr nz, .cuteTrainerListLoop
-	ld a, MUSIC_MEET_CUTE_TRAINER
-	jr .PlaySound
-.noCuteTrainer
-	ld hl, FemaleTrainerList
-.femaleTrainerListLoop
-	ld a, [hli]
-	cp $ff
-	jr z, .maleTrainer
-	cp b
-	jr nz, .femaleTrainerListLoop
-	ld a, MUSIC_MEET_FEMALE_TRAINER
-	jr .PlaySound
-.maleTrainer
-	ld a, MUSIC_MEET_MALE_TRAINER
-.PlaySound
-	ld [wNewSoundID], a
-	jp PlayMusic
-
-INCLUDE "data/trainer_types.asm"
+	ld b, BANK(PlayTrainerMusic_)
+	ld hl, PlayTrainerMusic_
+	jp Bankswitch
 
 ; checks if the player's coordinates match an arrow movement tile's coordinates
 ; and if so, decodes the RLE movement data
@@ -4888,41 +4795,45 @@ const_value = 1
 	add_tx_pre SaffronCityPokecenterBenchGuyText    ; 1A
 	add_tx_pre MtMoonPokecenterBenchGuyText         ; 1B
 	add_tx_pre RockTunnelPokecenterBenchGuyText     ; 1C
-	add_tx_pre PokemonCenterPCText                  ; 1D
-	add_tx_pre ViridianSchoolNotebook               ; 1E
-	add_tx_pre ViridianSchoolBlackboard             ; 1F
-	add_tx_pre JustAMomentText                      ; 20
-	add_tx_pre OpenBillsPCText                      ; 21
-	add_tx_pre FoundHiddenItemText                  ; 22
-	add_tx_pre HiddenItemBagFullText                ; 23
-	add_tx_pre VermilionGymTrashText                ; 24
-	add_tx_pre IndigoPlateauHQText                  ; 25
-	add_tx_pre GameCornerOutOfOrderText             ; 26
-	add_tx_pre GameCornerOutToLunchText             ; 27
-	add_tx_pre GameCornerSomeonesKeysText           ; 28
-	add_tx_pre FoundHiddenCoinsText                 ; 29
-	add_tx_pre DroppedHiddenCoinsText               ; 2A
-	add_tx_pre BillsHouseMonitorText                ; 2B
-	add_tx_pre BillsHouseInitiatedText              ; 2C
-	add_tx_pre BillsHousePokemonList                ; 2D
-	add_tx_pre MagazinesText                        ; 2E
-	add_tx_pre CinnabarGymQuiz                      ; 2F
-	add_tx_pre GameCornerNoCoinsText                ; 30
-	add_tx_pre GameCornerCoinCaseText               ; 31
-	add_tx_pre LinkCableHelp                        ; 32
-	add_tx_pre TMNotebook                           ; 33
-	add_tx_pre FightingDojoText                     ; 34
-	add_tx_pre EnemiesOnEverySideText               ; 35
-	add_tx_pre WhatGoesAroundComesAroundText        ; 36
-	add_tx_pre NewBicycleText                       ; 37
-	add_tx_pre VermilionGymTrashSuccessText1        ; 38
-	add_tx_pre VermilionGymTrashSuccessText2        ; 39
-	add_tx_pre VermilionGymTrashSuccessText3        ; 3A
-	add_tx_pre VermilionGymTrashFailText            ; 3B
-	add_tx_pre TownMapText                          ; 3C
-	add_tx_pre BookOrSculptureText                  ; 3D
-	add_tx_pre ElevatorText                         ; 3E
-	add_tx_pre PokemonStuffText                     ; 3F
+	add_tx_pre UnusedBenchGuyText1                  ; 1D XXX unused
+	add_tx_pre UnusedBenchGuyText2                  ; 1E XXX unused
+	add_tx_pre UnusedBenchGuyText3                  ; 1F XXX unused
+	add_tx_pre PokemonCenterPCText                  ; 20
+	add_tx_pre ViridianSchoolNotebook               ; 21
+	add_tx_pre ViridianSchoolBlackboard             ; 22
+	add_tx_pre JustAMomentText                      ; 23
+	add_tx_pre OpenBillsPCText                      ; 24
+	add_tx_pre FoundHiddenItemText                  ; 25
+	add_tx_pre HiddenItemBagFullText                ; 26
+	add_tx_pre VermilionGymTrashText                ; 27
+	add_tx_pre IndigoPlateauHQText                  ; 28
+	add_tx_pre GameCornerOutOfOrderText             ; 29
+	add_tx_pre GameCornerOutToLunchText             ; 2A
+	add_tx_pre GameCornerSomeonesKeysText           ; 2B
+	add_tx_pre FoundHiddenCoinsText                 ; 2C
+	add_tx_pre DroppedHiddenCoinsText               ; 2D
+	add_tx_pre BillsHouseMonitorText                ; 2E
+	add_tx_pre BillsHouseInitiatedText              ; 2F
+	add_tx_pre BillsHousePokemonList                ; 30
+	add_tx_pre MagazinesText                        ; 31
+	add_tx_pre CinnabarGymQuiz                      ; 32
+	add_tx_pre GameCornerNoCoinsText                ; 33
+	add_tx_pre GameCornerCoinCaseText               ; 34
+	add_tx_pre LinkCableHelp                        ; 35
+	add_tx_pre TMNotebook                           ; 36
+	add_tx_pre FightingDojoText                     ; 37
+	add_tx_pre EnemiesOnEverySideText               ; 38
+	add_tx_pre WhatGoesAroundComesAroundText        ; 39
+	add_tx_pre NewBicycleText                       ; 3A
+	add_tx_pre IndigoPlateauStatues                 ; 3B
+	add_tx_pre VermilionGymTrashSuccessText1        ; 3C
+	add_tx_pre VermilionGymTrashSuccessText2        ; 3D
+	add_tx_pre VermilionGymTrashSuccessText3        ; 3E
+	add_tx_pre VermilionGymTrashFailText            ; 3F
+	add_tx_pre TownMapText                          ; 40
+	add_tx_pre BookOrSculptureText                  ; 41
+	add_tx_pre ElevatorText                         ; 42
+	add_tx_pre PokemonStuffText                     ; 43
 
 GoodCopyVideoData:
 	ld a,[rLCDC]
@@ -4941,7 +4852,7 @@ GoodCopyVideoData:
 	ld c, l
 	pop hl
 	pop de
-	jp FarCopyData2 ; if LCD is off, transfer all at once
+	jp FarCopyData ; if LCD is off, transfer all at once
 
 SetCustomName:
 ; INPUTS: hl = pointer to name

@@ -240,7 +240,19 @@ OverworldLoopLessDelay::
 	res 2, [hl]
 	xor a
 	ld [wd435], a
+	ld a, [wWalkBikeSurfState]
+	dec a ; riding a bike?
+	jr nz, .normalPlayerSpriteAdvancement
+	ld a, [wd736]
+	bit 6, a
+	jr nz, .normalPlayerSpriteAdvancement
 	call DoBikeSpeedup
+.normalPlayerSpriteAdvancement
+	ld a, [hJoyHeld]
+	and B_BUTTON
+	jr z, .notRunning
+	call DoBikeSpeedup
+.notRunning
 	call AdvancePlayerSprite
 	ld a, [wWalkCounter]
 	and a
@@ -337,24 +349,9 @@ NewBattle::
 
 ; function to make bikes twice as fast as walking
 DoBikeSpeedup::
-	ld a, [wWalkBikeSurfState]
-	dec a ; riding a bike?
-	ret nz
-	ld a, [wd736]
-	bit 6, a
-	ret nz
-	ld a, [wNPCMovementScriptPointerTableNum]
-	and a
-	ret nz
-	ld a, [wCurMap]
-	cp ROUTE_17 ; Cycling Road
-	jr nz, .goFaster
-	ld a, [hJoyHeld]
-	and D_UP | D_LEFT | D_RIGHT
-	ret nz
-.goFaster
-	call AdvancePlayerSprite
-	ret
+	ld b, BANK(DoBikeSpeedup_)
+	ld hl, DoBikeSpeedup_
+	jp Bankswitch
 
 ; check if the player has stepped onto a warp after having not collided
 CheckWarpsNoCollision::
@@ -735,34 +732,14 @@ MapEntryAfterBattle::
 	jp LoadGBPal
 
 HandleBlackOut::
-; For when all the player's pokemon faint.
-; Does not print the "blacked out" message.
-
-	call GBFadeOutToBlack
-	ld a, $08
-	call StopMusic
-	ld hl, wd72e
-	res 5, [hl]
-	switchbank SpecialWarpIn ; also Bank(SpecialEnterMap)
-	callab ResetStatusAndHalveMoneyOnBlackout
-	call SpecialWarpIn
-	call PlayDefaultMusicFadeOutCurrent
-	jp SpecialEnterMap
+	ld b, BANK(HandleBlackOut_)
+	ld hl, HandleBlackOut_
+	jp Bankswitch
 
 StopMusic::
-	xor a
-	ld [MusicFadeID], a
-	ld a, 1
-	ld [MusicFade], a
-.wait0
-	ld a, [MusicFadeCount]
-	and a
-	jr z, .wait0
-.wait1
-	ld a, [MusicFadeCount]
-	and a
-	jr nz, .wait1
-	ret
+	ld b, BANK(StopMusic_)
+	ld hl, StopMusic_
+	jp Bankswitch
 
 HandleFlyWarpOrDungeonWarp::
 	call UpdateSprites
@@ -1470,16 +1447,9 @@ LoadCurrentMapView::
 	ret
 
 AdvancePlayerSprite::
-	ld a, [wUpdateSpritesEnabled]
-	push af
-	ld a, $FF
-	ld [wUpdateSpritesEnabled], a
-	ld hl, _AdvancePlayerSprite
-	ld b, BANK(_AdvancePlayerSprite)
-	call Bankswitch
-	pop af
-	ld [wUpdateSpritesEnabled], a
-	ret
+	ld b, BANK(AdvancePlayerSprite_)
+	ld hl, AdvancePlayerSprite_
+	jp Bankswitch
 
 ; the following 6 functions are used to tell the V-blank handler to redraw
 ; the portion of the map that was newly exposed due to the player's movement

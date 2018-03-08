@@ -65,7 +65,8 @@ SafariZoneGameOver:
 	call EnableAutoTextBoxDrawing
 	xor a
 	ld [wAudioFadeOutControl], a
-	call StopAllMusic
+	dec a
+	call PlaySound
 	ld c, 0 ; BANK(SFX_Safari_Zone_PA)
 	ld a, SFX_SAFARI_ZONE_PA
 	call PlaySound
@@ -416,7 +417,9 @@ BillsHouseInitiatedText:
 	TX_FAR _BillsHouseInitiatedText
 	db $06
 	TX_ASM
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	ld c, 16
 	call DelayFrames
 	ld a, SFX_SWITCH

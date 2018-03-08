@@ -38,7 +38,8 @@ PalletTownScript0:
 	ld [wJoyIgnore], a
 	ld a, PLAYER_DIR_UP
 	ld [wPlayerMovingDirection], a
-	call StopAllMusic
+	ld a,$FF
+	call PlaySound ; stop music
 	ld a, 0 ; BANK(Music_MeetProfOak)
 	ld c, a
 	ld a, MUSIC_MEET_PROF_OAK

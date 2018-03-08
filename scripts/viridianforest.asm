@@ -208,7 +208,7 @@ ViridianForestEndBattleText6:
 	db "@"
 
 ViridianForestAfterBattleText6:
-	TX_FAR _ViridianForestAfterBattleText4
+	TX_FAR _ViridianFrstAfterBattleText4
 	db "@"
 
 ViridianForestBattleText7:
@@ -220,7 +220,7 @@ ViridianForestEndBattleText7:
 	db "@"
 
 ViridianForestAfterBattleText7:
-	TX_FAR _ViridianForestAfterBattleText5
+	TX_FAR _ViridianFrstAfterBattleText5
 	db "@"
 
 ViridianForestText10:

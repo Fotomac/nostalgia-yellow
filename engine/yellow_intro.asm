@@ -159,7 +159,7 @@ YellowIntroScene1:
 YellowIntroScene2:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $8
-	call UpdateMusicCTimes
+	call UpdateMusic6Times
 	xor a
 	ld [hLCDCPointer], a
 	ld hl, vBGMap0
@@ -275,7 +275,7 @@ YellowIntroScene3:
 YellowIntroScene4:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $5
-	call UpdateMusicCTimes
+	call UpdateMusic6Times
 	ld a, [hGBC]
 	and a
 	jr z, .dmg_sgb
@@ -322,7 +322,7 @@ YellowIntroScene5:
 YellowIntroScene6:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $5
-	call UpdateMusicCTimes
+	call UpdateMusic6Times
 	ld a, rSCY - $ff00
 	ld [hLCDCPointer], a
 	call YellowIntro_Copy8BitSineWave
@@ -383,7 +383,7 @@ YellowIntroScene7:
 YellowIntroScene8:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $5
-	call UpdateMusicCTimes
+	call UpdateMusic6Times
 	xor a
 	ld [hLCDCPointer], a
 	call Func_f9e5f
@@ -406,7 +406,7 @@ YellowIntroScene9:
 YellowIntroScene10:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $5
-	call UpdateMusicCTimes
+	call UpdateMusic6Times
 	xor a
 	ld [hLCDCPointer], a
 	ld hl, vBGMap0
@@ -498,7 +498,7 @@ YellowIntroCloudGFX2: INCBIN "gfx/unknown_f9c6c.2bpp" ; indirectly referenced
 YellowIntroScene12:
 	call YellowIntro_BlankPalsDelay2AndDisableLCD
 	ld c, $5
-	call UpdateMusicCTimes
+	call UpdateMusic6Times
 	xor a
 	ld [hLCDCPointer], a
 	ld hl, vBGMap0

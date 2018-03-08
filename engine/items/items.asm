@@ -99,7 +99,7 @@ ItemUsePtrTable:
 	dw ItemUsePPRestore  ; MAX_ETHER
 	dw ItemUsePPRestore  ; ELIXER
 	dw ItemUsePPRestore  ; MAX_ELIXER
-	dw UnusuableItem     ; STAR_PIECE
+	dw UnusableItem      ; STAR_PIECE
 
 ItemUseBall:
 
@@ -2052,7 +2052,8 @@ PlayedFluteHadEffectText:
 	and a
 	jr nz, .done
 ; play out-of-battle pokeflute music
-	call StopAllMusic ; turn off music
+	ld a,$ff
+	call PlaySound ; turn off music
 	ld a, SFX_POKEFLUTE
 	ld c, 0 ; BANK(SFX_Pokeflute)
 	call PlaySound

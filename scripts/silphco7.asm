@@ -130,7 +130,9 @@ SilphCo7Script0:
 	ld [wJoyIgnore], a
 	ld a, PLAYER_DIR_DOWN
 	ld [wPlayerMovingDirection], a
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
@@ -211,7 +213,9 @@ SilphCo7Script4:
 	ld a, $f
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStart
 	ld de, MovementData_51d1d
 	ld a, [wcf0d]

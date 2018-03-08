@@ -79,7 +79,7 @@ PalletMovementScript_OakMoveLeft:
 	ld a, $3
 	ld [wNPCMovementScriptFunctionNum], a
 .done
-	ld a, BANK(Music_MuseumGuy)
+	ld a, 0 ; BANK(Music_MuseumGuy)
 	ld c, a
 	ld a, MUSIC_MUSEUM_GUY
 	call PlayMusic

@@ -500,7 +500,9 @@ OaksLabScript19:
 	xor a
 	ld [hJoyHeld], a
 	call EnableAutoTextBoxDrawing
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStart
 	ld a, $13
 	ld [hSpriteIndexOrTextID], a
@@ -606,7 +608,9 @@ OaksLabScript20:
 	xor a
 	call FillMemory
 	ld [hl], $ff
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStart
 	ld a, $1
 	ld [hSpriteIndexOrTextID], a

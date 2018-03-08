@@ -181,13 +181,13 @@ const_value = 1
 	const SFX_BATTLE_26
 	const SFX_BATTLE_27
 	const SFX_BATTLE_28
-	const SFX_BATTLE_29
+	const SFX_EARTHQUAKE
 	const SFX_BATTLE_2A
 	const SFX_BATTLE_2B
 	const SFX_BATTLE_2C
 	const SFX_PSYBEAM
 	const SFX_BATTLE_2E
-	const SFX_BATTLE_2F
+	const SFX_THUNDERBOLT
 	const SFX_PSYCHIC_M
 	const SFX_BATTLE_31
 	const SFX_BATTLE_32

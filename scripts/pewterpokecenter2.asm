@@ -12,7 +12,7 @@ PewterJigglypuff:
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	ld hl, .Text
 	call PrintText
-	call StopAllMusic
+	StopAllMusic
 	ld c, 32
 	call DelayFrames
 	ld hl, JigglypuffSpinData

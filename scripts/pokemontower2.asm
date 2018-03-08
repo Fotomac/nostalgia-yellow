@@ -22,7 +22,9 @@ PokemonTower2Script0:
 	ld hl, CoordsData_6055e
 	call ArePlayerCoordsInArray
 	ret nc
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
 	call PlayMusic
@@ -77,7 +79,9 @@ PokemonTower2Script1:
 	ld a, $1
 	ld [H_SPRITEINDEX], a
 	call MoveSprite
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStart
 	ld a, $2
 	ld [wPokemonTower2CurScript], a

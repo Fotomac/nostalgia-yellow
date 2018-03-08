@@ -30,7 +30,7 @@ MomHealPokemon:
 	ld a, MUSIC_PKMN_HEALED
 	ld [wNewSoundID], a
 	call PlayMusic
-	call WaitForMusicToFinish
+	call WaitForSoundToFinish
 	ld a, [wMapMusicSoundID]
 	ld [wNewSoundID], a
 	call PlayMusic

@@ -2380,7 +2380,7 @@ SurfingPikachuMinigameIntro:
 	call UpdateGBCPal_OBP1
 	call DelayFrame
 	ld a, MUSIC_SURFING_PIKACHU
-	ld c, BANK(Music_SurfingPikachu)
+	ld c, 0 ; BANK(Music_SurfingPikachu)
 	call PlayMusic
 	xor a
 	ld [wSurfingMinigameIntroAnimationFinished], a

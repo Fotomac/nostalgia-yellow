@@ -2333,9 +2333,9 @@ TradingAnimationGraphics2End:
 SeelSprite:            INCBIN "gfx/sprites/seel.2bpp"
 LaprasSprite:          INCBIN "gfx/sprites/lapras.2bpp"
 
-SlowbroSprite:        INCBIN "gfx/sprites/slowbro.2bpp"
-BirdSprite:           INCBIN "gfx/sprites/bird.2bpp"
-ClefairySprite:       INCBIN "gfx/sprites/clefairy.2bpp"
+SlowbroSprite:         INCBIN "gfx/sprites/slowbro.2bpp"
+BirdSprite:            INCBIN "gfx/sprites/bird.2bpp"
+ClefairySprite:        INCBIN "gfx/sprites/clefairy.2bpp"
 
 BrockOverworld:        INCBIN "gfx/sprites/brock.2bpp"
 MistyOverworld:        INCBIN "gfx/sprites/misty.2bpp"
@@ -2345,6 +2345,7 @@ KogaOverworld:         INCBIN "gfx/sprites/koga.2bpp"
 SabrinaOverworld:      INCBIN "gfx/sprites/sabrina.2bpp"
 BlaineOverworld:       INCBIN "gfx/sprites/blaine.2bpp"
 GiovanniSprite:        INCBIN "gfx/sprites/giovanni.2bpp"
+BillSprite:            INCBIN "gfx/sprites/bill.2bpp"
 
 BallSprite:            INCBIN "gfx/sprites/ball.2bpp"
 OmanyteSprite:         INCBIN "gfx/sprites/omanyte.2bpp"
@@ -2467,6 +2468,12 @@ BaseStats: INCLUDE "data/base_stats.asm"
 
 INCLUDE "engine/gamefreak.asm"
 INCLUDE "engine/battle/battle_transitions.asm"
+INCLUDE "engine/advance_player_sprite.asm"
+INCLUDE "engine/do_bike_speedup.asm"
+INCLUDE "engine/handle_black_out.asm"
+INCLUDE "engine/stop_music.asm"
+INCLUDE "engine/play_trainer_music.asm"
+INCLUDE "engine/fade_out_audio.asm"
 
 
 SECTION "bank43",ROMX,BANK[$43]

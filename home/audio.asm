@@ -342,71 +342,32 @@ GetNextMusicByte::
 	ret
 
 InitMusicVariables::
-	push hl
-	push de
-	push bc
-	homecall Audio2_InitMusicVariables
-	pop bc
-	pop de
-	pop hl
-	ret
+;	push hl
+;	push de
+;	push bc
+;	homecall Audio2_InitMusicVariables
+;	pop bc
+;	pop de
+;	pop hl
+;	ret
 
 InitSFXVariables::
-	push hl
-	push de
-	push bc
-	homecall Audio2_InitSFXVariables
-	pop bc
-	pop de
-	pop hl
-	ret
+;	push hl
+;	push de
+;	push bc
+;	homecall Audio2_InitSFXVariables
+;	pop bc
+;	pop de
+;	pop hl
+;	ret
 
 StopAllAudio::
-	push hl
-	push de
-	push bc
-	homecall Audio2_StopAllAudio
-	pop bc
-	pop de
-	pop hl
-	ret
-
-DetermineAudioFunction::
-	ld a, [H_LOADEDROMBANK]
-	push af
-	ld a, [wAudioROMBank]
-	call BankswitchCommon
-; determine the audio function, based on the bank
-	cp BANK(Audio1_PlaySound)
-	jr nz, .checkForBank08
-; bank 02 (audio 1)
-	ld a, b
-	call Audio1_PlaySound
-	jr .done
-
-.checkForBank08
-	cp BANK(Audio2_PlaySound)
-	jr nz, .checkForBank1F
-; bank 08 (audio 2)
-	ld a, b
-	call Audio2_PlaySound
-	jr .done
-
-.checkForBank1F
-	cp BANK(Audio3_PlaySound)
-	jr nz, .bank20
-; bank 1f (audio 3)
-	ld a, b
-	call Audio3_PlaySound
-	jr .done
-
-.bank20
-; invalid banks will default to XX:6bd4
-; this is seen when encountering Missingno, as its sprite dimensions overflow to wAudioROMBank
-	ld a, b
-	call Audio4_PlaySound
-.done
-	pop af
-	call BankswitchCommon
-	ret
+;	push hl
+;	push de
+;	push bc
+;	homecall Audio2_StopAllAudio
+;	pop bc
+;	pop de
+;	pop hl
+;	ret
 

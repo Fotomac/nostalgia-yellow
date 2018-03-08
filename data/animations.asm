@@ -182,7 +182,7 @@ AttackAnimationPointers:
 	dw SludgeBombAnim
 	dw CrossChopAnim
 	dw BrickBreakAnim
-	db BulkUpAnim
+	dw BulkUpAnim
 	dw PowderSnowAnim
 	dw GigaDrainAnim
 	dw BulletSeedAnim

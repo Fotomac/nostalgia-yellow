@@ -33,7 +33,9 @@ AnimateHealingMachine:
 	cp $1f ; 0 ; BANK(Audio3_UpdateMusic) XXXXX
 	ld [wAudioSavedROMBank], a
 	jr nz, .next
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	ld a, 0 ; BANK(Music_PkmnHealed)
 	ld [wAudioROMBank], a
 .next

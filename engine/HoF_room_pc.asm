@@ -23,7 +23,8 @@ HallOfFamePC:
 	ld [rBGP], a
 	call UpdateGBCPal_BGP
 	call EnableLCD
-	call StopAllMusic
+	ld a, $ff
+	call PlaySoundWaitForCurrent
 	ld hl, vBGMap1
 	call CreditsCopyTileMapToVRAM
 	ld hl, vBGMap0

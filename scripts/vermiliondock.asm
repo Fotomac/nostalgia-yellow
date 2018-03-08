@@ -40,7 +40,8 @@ VermilionDock_1db9b:
 	SetEventForceReuseHL EVENT_SS_ANNE_LEFT
 	ld a, $ff
 	ld [wJoyIgnore], a
-	call StopAllMusic
+	ld [wNewSoundID], a
+	call PlaySound
 	ld c, 0 ; BANK(Music_Surfing)
 	ld a, MUSIC_SURFING
 	call PlayMusic

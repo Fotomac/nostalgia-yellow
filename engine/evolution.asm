@@ -9,7 +9,9 @@ EvolveMon:
 	xor a
 	ld [wDanger], a
 	ld [wChannelSoundIDs + CH4], a
-	call StopAllMusic
+	dec a
+	ld [wNewSoundID], a
+	call PlaySound
 	ld a, $1
 	ld [H_AUTOBGTRANSFERENABLED], a
 	ld a, SFX_TINK
@@ -65,7 +67,9 @@ EvolveMon:
 	ld a, [wEvoNewSpecies]
 .done
 	ld [wWholeScreenPaletteMonSpecies], a
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	ld a, [wWholeScreenPaletteMonSpecies]
 	call PlayCry
 	ld c, 0

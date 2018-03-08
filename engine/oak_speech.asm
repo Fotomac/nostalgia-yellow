@@ -68,7 +68,8 @@ OakSpeech:
 	ld hl, wPlayerGender ; load ram address of Gender
 	set 2, [hl]      ; sets you as a girl
 .AfterSettingGirl: ; resume main intro, jumps here if you were a guy
-	call StopAllMusic ; stop music
+	ld a,$FF
+	call PlaySound ; stop music
 	ld a, 0 ; BANK(Music_Routes2)
 	ld c,a
 	ld a, MUSIC_ROUTES2
@@ -169,7 +170,9 @@ OakSpeech:
 	ld [wAudioSavedROMBank],a
 	ld a, 10
 	ld [wAudioFadeOutControl],a
-	call StopAllMusic ; stop music
+	ld a,$FF
+	ld [wNewSoundID],a
+	call PlaySound ; stop music
 	pop af
 	call BankswitchCommon
 	ld c,20

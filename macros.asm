@@ -470,6 +470,11 @@ object: MACRO
 	ENDC
 ENDM
 
+StopAllMusic: MACRO
+	ld a, $ff
+	call PlaySound
+ENDM
+
 ;1_channel	EQU $00
 ;2_channels	EQU $40
 ;3_channels	EQU $80

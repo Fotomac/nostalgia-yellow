@@ -402,7 +402,7 @@ PrinterDebug:
 	push bc
 	push de
 	push hl
-	call StopAllMusic
+	StopAllMusic
 	ld a, [rIE]
 	push af
 	xor a
@@ -504,7 +504,7 @@ Printer_PlayPrinterMusic:
 	call Printer_FadeOutMusicAndWait
 	ld a, [wAudioROMBank]
 	ld [wAudioSavedROMBank], a
-	ld a, BANK(Music_GBPrinter)
+	ld a, 0 ; BANK(Music_Printer)
 	ld [wAudioROMBank], a
 	ld a, MUSIC_GB_PRINTER
 	ld [wNewSoundID], a
@@ -519,11 +519,8 @@ Printer_PlayMapMusic:
 Printer_FadeOutMusicAndWait:
 	ld a, $4
 	ld [wAudioFadeOutControl], a
-	call StopAllMusic
-.wait_music_stop
-	ld a, [wAudioFadeOutControl]
-	and a
-	jr nz, .wait_music_stop
+	call PlayMusic
+	call WaitForSoundToFinish
 	ret
 
 GBPrinter_CheckForErrors:

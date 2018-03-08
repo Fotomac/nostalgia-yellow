@@ -1,7 +1,7 @@
 SFX_Level_Up::
-	dbw ( $80 | CH4 ), SFX_Level_Up_Ch1
-	dbw CH5, SFX_Level_Up_Ch2
-	dbw CH6, SFX_Level_Up_Ch3
+	dbw ( $80 | CH4 ), SFX_Level_Up_Ch4
+	dbw CH5, SFX_Level_Up_Ch5
+	dbw CH6, SFX_Level_Up_Ch6
 
 SFX_Ball_Toss::
 	dbw ( $40 | CH4 ), SFX_Ball_Toss_Ch1
@@ -23,9 +23,9 @@ SFX_Dex_Page_Added::
 	dbw CH5, SFX_Dex_Page_Added_Ch2
 
 SFX_Caught_Mon::
-	dbw ( $80 | CH4 ), SFX_Caught_Mon_Ch1
-	dbw CH5, SFX_Caught_Mon_Ch2
-	dbw CH6, SFX_Caught_Mon_Ch3
+	dbw ( $80 | CH4 ), SFX_Caught_Mon_Ch4
+	dbw CH5, SFX_Caught_Mon_Ch5
+	dbw CH6, SFX_Caught_Mon_Ch6
 
 SFX_Peck::
 	dbw CH7, SFX_Peck_Ch1
@@ -191,8 +191,8 @@ SFX_Battle_34::
 	dbw CH7, SFX_Battle_34_Ch3
 
 SFX_Battle_35::
-	dbw ( $40 | CH4 ), SFX_Battle_35_Ch1
-	dbw CH5, SFX_Battle_35_Ch2
+	dbw ( $40 | CH4 ), SFX_Battle_35_Ch4
+	dbw CH5, SFX_Battle_35_Ch5
 
 SFX_Battle_36::
 	dbw ( $80 | CH4 ), SFX_Battle_36_Ch1

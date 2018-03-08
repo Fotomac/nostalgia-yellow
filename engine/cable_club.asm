@@ -118,7 +118,6 @@ CableClub_DoBattleOrTradeAgain:
 	ld [rSC], a
 .skipSendingTwoZeroBytes
 	call Delay3
-	call StopAllMusic
 	ld a, (1 << SERIAL)
 	ld [rIE], a
 	ld hl, wSerialRandomNumberListBlock
@@ -259,7 +258,8 @@ CableClub_DoBattleOrTradeAgain:
 	ld [wUnusedCF8D + 1], a
 	xor a
 	ld [wTradeCenterPointerTableIndex], a
-	call StopAllMusic
+	ld a, $ff
+	call PlaySound
 	ld a, [hSerialConnectionStatus]
 	cp USING_INTERNAL_CLOCK
 	ld c, 66

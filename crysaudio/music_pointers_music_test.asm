@@ -160,7 +160,7 @@
 	dbw BANK(Music_MeetMaleTrainer), Music_MeetMaleTrainer 
 	dbw BANK(Music_MeetFemaleTrainer), Music_MeetFemaleTrainer 
 	dbw BANK(Music_MeetCuteTrainer), Music_MeetCuteTrainer
-	dbw BANK(Music_MeetEvilTrainer), Music_MeetEvilTrainer 
+	dbw BANK(Music_MeetEvilTrainer), Music_MeetEvilTrainer
 	dbw BANK(Music_WildBattle), Music_WildBattle ; 0xec9fa
 	dbw BANK(Music_TrainerBattle), Music_TrainerBattle ; 0xec9fa
 	dbw BANK(Music_GymLeaderBattle), Music_GymLeaderBattle ; 0xec9fa
@@ -169,7 +169,7 @@
 	dbw BANK(Music_DefeatedTrainer), Music_DefeatedTrainer 
 	dbw BANK(Music_DefeatedGymLeader), Music_DefeatedGymLeader 
 	dbw BANK(Music_UnusedSong), Music_UnusedSong 
-	dbw BANK(Music_YellowUnusedSong), Music_YellowUnusedSong 
+	dbw BANK(Music_YellowUnusedSong), Music_YellowUnusedSong
 
 ;Diamond and Pearl
 	dbw BANK(Music_SinnohWildBattle), Music_SinnohWildBattle 

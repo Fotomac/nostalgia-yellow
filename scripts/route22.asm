@@ -91,7 +91,9 @@ Route22Script0:
 	ld a, [wWalkBikeSurfState]
 	and a
 	jr z, .asm_50f4e
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 .asm_50f4e
 	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
@@ -175,7 +177,9 @@ Route22Script2:
 	ld a, $1
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStart
 	ld a, [wcf0d]
 	cp $1
@@ -247,9 +251,13 @@ Route22Script_5104e:
 	ld a, [wWalkBikeSurfState]
 	and a
 	jr z, .skipYVisibilityTesta
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 .skipYVisibilityTesta
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateTempo
 	ld a, $2
 	ld [H_SPRITEINDEX], a
@@ -330,7 +338,9 @@ Route22Script5:
 	ld a, $2
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStartAndTempo
 	ld a, [wcf0d]
 	cp $1

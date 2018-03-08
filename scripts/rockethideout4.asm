@@ -92,8 +92,10 @@ RocketHideout4Script_455a5:
 	ld [hJoyHeld], a
 	ld a, $fc
 	ld [wJoyIgnore], a
-	call StopAllMusic
-	ld c, BANK(Music_MeetJessieJames)
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
+	ld c, 0 ; BANK(Music_MeetJessieJames)
 	ld a, MUSIC_MEET_JESSIE_JAMES
 	call PlayMusic
 	call UpdateSprites
@@ -236,8 +238,10 @@ RocketHideout4Script11:
 	call DisplayTextID
 	xor a
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
-	call StopAllMusic
-	ld c, BANK(Music_MeetJessieJames)
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
+	ld c, 0 ; BANK(Music_MeetJessieJames)
 	ld a, MUSIC_MEET_JESSIE_JAMES
 	call PlayMusic
 	ld a, $ff

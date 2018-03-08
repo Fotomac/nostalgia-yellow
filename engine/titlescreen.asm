@@ -146,7 +146,6 @@ DisplayTitleScreen:
 	ld e, 0
 	call TitleScreen_PlayPikachuPCM
 	call WaitForSoundToFinish
-	call StopAllMusic
 	ld a, MUSIC_TITLE_SCREEN
 	ld [wNewSoundID], a
 	call PlayMusic
@@ -218,7 +217,8 @@ DisplayTitleScreen:
 
 .doTitlescreenReset
 	ld [wAudioFadeOutControl], a
-	call StopAllMusic
+	ld a, $ff
+	call PlaySound
 .audioFadeLoop
 	ld a, [wAudioFadeOutControl]
 	and a

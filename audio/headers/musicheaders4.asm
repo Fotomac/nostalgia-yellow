@@ -14,5 +14,5 @@ Music_YellowUnusedSong::
 	dbw CH2, Music_YellowUnusedSong_Ch3
 	dbw CH3, Music_YellowUnusedSong_Ch4
 
-Music_GBPrinter::
-	dbw ((1 - 1) << 6) | CH2, Music_GBPrinter_Ch3
+Music_Printer::
+	dbw ((1 - 1) << 6) | CH2, Music_Printer_Ch3

@@ -92,13 +92,13 @@ RedSfxHeaderPointers:
 	dbw BANK(SFX_Battle_26), SFX_Battle_26
 	dbw BANK(SFX_Battle_27), SFX_Battle_27
 	dbw BANK(SFX_Battle_28), SFX_Battle_28
-	dbw BANK(SFX_Battle_29), SFX_Battle_29
+	dbw BANK(SFX_Earthquake), SFX_Earthquake
 	dbw BANK(SFX_Battle_2A), SFX_Battle_2A
 	dbw BANK(SFX_Battle_2B), SFX_Battle_2B
 	dbw BANK(SFX_Battle_2C), SFX_Battle_2C
 	dbw BANK(SFX_Psybeam), SFX_Psybeam
 	dbw BANK(SFX_Battle_2E), SFX_Battle_2E
-	dbw BANK(SFX_Battle_2F), SFX_Battle_2F
+	dbw BANK(SFX_Thunderbolt), SFX_Thunderbolt
 	dbw BANK(SFX_Psychic_M), SFX_Psychic_M
 	dbw BANK(SFX_Battle_31), SFX_Battle_31
 	dbw BANK(SFX_Battle_32), SFX_Battle_32

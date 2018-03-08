@@ -48,7 +48,9 @@ SSAnne7RubText:
 	cp $1f ; 0 ; BANK(Audio3_UpdateMusic) XXXXX
 	ld [wAudioSavedROMBank], a
 	jr nz, .asm_61908
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	ld a, 0 ; Bank(Music_PkmnHealed)
 	ld [wAudioROMBank], a
 .asm_61908

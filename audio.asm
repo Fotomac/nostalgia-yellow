@@ -369,9 +369,11 @@ PlayBattleMusic::
 	ld [wAudioFadeOutControl], a
 	ld [wLowHealthAlarm], a
 	ld [MusicFade], a
-	call StopAllMusic
+	dec a
+	ld [wNewSoundID], a
+	call PlayMusic ; stop music
 	call DelayFrame
-	ld c, 0 ; BANK(Music_GymLeaderBattle)
+;	ld c, BANK(Music_GymLeaderBattle)
 	ld a, [wGymLeaderNo]
 	and a
 	jr z, .notGymLeaderBattle
@@ -380,7 +382,7 @@ PlayBattleMusic::
 .notGymLeaderBattle
 	ld a, [wIsTrainerBattle]
 	and a
-	jr c, .wildBattle
+	jr z, .wildBattle
 	ld a, [wCurOpponent]
 	cp OPP_SONY3
 	jr z, .finalBattle
@@ -462,7 +464,9 @@ PlayPokedexRatingSfx::
 	jr .getSfxPointer
 .gotSfxPointer
 	push bc
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySoundWaitForCurrent
 	pop bc
 	ld b, $0
 	ld hl, PokedexRatingSfxPointers

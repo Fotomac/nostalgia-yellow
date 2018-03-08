@@ -64,7 +64,9 @@ CeruleanCityScript0:
 	ld a, [wWalkBikeSurfState]
 	and a
 	jr z, .asm_19512
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 .asm_19512
 	ld c, 0 ; BANK(Music_MeetRival)
 	ld a, MUSIC_MEET_RIVAL
@@ -158,7 +160,9 @@ CeruleanCityScript2:
 	ld a, $1
 	ld [hSpriteIndexOrTextID], a
 	call DisplayTextID
-	call StopAllMusic
+	ld a, $ff
+	ld [wNewSoundID], a
+	call PlaySound
 	callba Music_RivalAlternateStart
 	ld a, $1
 	ld [H_SPRITEINDEX], a
